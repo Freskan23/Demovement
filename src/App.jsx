@@ -10,7 +10,8 @@ function App() {
         <Router>
             <div className="flex flex-col min-h-screen">
                 <Navbar />
-                <main className="flex-grow">
+                {/* Padding superior para compensar la Navbar fija */}
+                <main className="flex-grow pt-20 md:pt-24">
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/readaptacion/:slug" element={<InjuryPage />} />

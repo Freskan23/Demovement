@@ -28,33 +28,35 @@ export const Navbar = () => {
         <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'}`}>
             <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
                 {/* Logo */}
-                <Link to="/" className="flex items-center">
+                <Link to="/" className="flex items-center min-w-[150px]">
                     <img
                         src="/imagenes/logos/header-logo.svg"
                         alt="De Movement"
-                        className={`h-12 md:h-16 w-auto transition-all ${!scrolled && isHome ? 'brightness-0 invert' : ''}`}
+                        className={`h-10 md:h-14 w-auto transition-all ${!scrolled && isHome ? 'brightness-0 invert' : ''}`}
                     />
                 </Link>
 
-                {/* Desktop Links */}
-                <div className="hidden lg:flex items-center gap-8">
-                    {navLinks.map((link) => (
-                        <Link
-                            key={link.name}
-                            to={link.path}
-                            className={`text-sm font-bold uppercase tracking-wider transition-colors hover:text-primary ${location.pathname === link.path
-                                    ? 'text-primary'
-                                    : (scrolled || !isHome ? 'text-gray-900' : 'text-white')
-                                }`}
-                        >
-                            {link.name}
-                        </Link>
-                    ))}
+                {/* Desktop Links - Usando clases explicitas para evitar clumping */}
+                <div className="hidden lg:flex items-center">
+                    <div className="flex items-center gap-1 md:gap-4 mr-6">
+                        {navLinks.map((link) => (
+                            <Link
+                                key={link.name}
+                                to={link.path}
+                                className={`navbar-link text-xs md:text-sm font-bold tracking-wider transition-colors hover:text-primary ${location.pathname === link.path
+                                        ? 'text-primary'
+                                        : (scrolled || !isHome ? 'text-gray-900' : 'text-white')
+                                    }`}
+                            >
+                                {link.name}
+                            </Link>
+                        ))}
+                    </div>
                     <Link
                         to="/contacto"
-                        className={`px-8 py-3 rounded-xl font-bold uppercase tracking-widest text-sm transition-all ${scrolled || !isHome
-                                ? 'bg-primary text-white hover:bg-primary-dark shadow-lg shadow-primary/20'
-                                : 'bg-white text-primary hover:bg-gray-100'
+                        className={`px-8 py-3 rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg ${scrolled || !isHome
+                                ? 'bg-[#4341EC] text-white hover:bg-[#4E36A3]'
+                                : 'bg-white text-[#4341EC] hover:bg-gray-100'
                             }`}
                     >
                         Contacto
@@ -72,8 +74,8 @@ export const Navbar = () => {
             </div>
 
             {/* Mobile Menu Overlay */}
-            <div className={`fixed inset-0 bg-white z-[60] flex flex-col items-center justify-center gap-8 transition-all duration-300 md:hidden ${isOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full pointer-events-none'}`}>
-                <button onClick={() => setIsOpen(false)} className="absolute top-8 right-8 text-black">
+            <div className={`fixed inset-0 bg-white z-[60] flex flex-col items-center justify-center gap-8 transition-all duration-300 ${isOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full pointer-events-none'}`}>
+                <button onClick={() => setIsOpen(false)} className="absolute top-8 right-8 text-black p-4">
                     <X size={40} />
                 </button>
                 {navLinks.map((link) => (
@@ -81,7 +83,7 @@ export const Navbar = () => {
                         key={link.name}
                         to={link.path}
                         onClick={() => setIsOpen(false)}
-                        className="text-3xl font-bold text-gray-900 uppercase tracking-tighter hover:text-primary transition-colors"
+                        className="text-3xl font-black text-gray-900 uppercase tracking-tighter hover:text-primary transition-colors"
                     >
                         {link.name}
                     </Link>
@@ -89,7 +91,7 @@ export const Navbar = () => {
                 <Link
                     to="/contacto"
                     onClick={() => setIsOpen(false)}
-                    className="bg-primary text-white px-12 py-5 rounded-xl font-bold uppercase tracking-widest text-lg shadow-2xl"
+                    className="bg-[#4341EC] text-white px-12 py-5 rounded-xl font-bold uppercase tracking-widest text-lg shadow-2xl"
                 >
                     Contacta ahora
                 </Link>

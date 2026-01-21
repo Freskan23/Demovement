@@ -5,9 +5,6 @@
   --color-primary-dark: #4E36A3;
   --color-accent: #CC3366;
   --font-sans: 'Work Sans', system-ui, sans-serif;
-
-  --breakpoint-xs: 475px;
-  --container-max: 1240px;
 }
 
 @layer base {
@@ -22,22 +19,37 @@
     color: #333333;
     background-color: #ffffff;
     overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
   }
 }
 
 @layer components {
+
+  /* Forzamos estilos de botón para que no dependan solo de utilidades puras si el build falla */
   .btn-primary {
-    @apply inline-block bg-primary text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-primary-dark transition-all shadow-xl hover:scale-105 active:scale-95 text-center;
+    display: inline-block;
+    background-color: #4341EC;
+    color: white;
+    padding: 1.25rem 2.5rem;
+    border-radius: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    text-align: center;
+    box-shadow: 0 10px 15px -3px rgba(67, 65, 236, 0.3);
   }
 
-  .nav-link {
-    @apply text-sm font-bold uppercase tracking-wider transition-all hover:text-primary;
+  .btn-primary:hover {
+    background-color: #4E36A3;
+    transform: translateY(-2px);
   }
 
-  .section-padding {
-    @apply py-20 md:py-32;
+  /* Forzamos el espaciado de la Navbar */
+  .navbar-link {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 1rem;
+    transition: color 0.2s;
   }
 }
 
@@ -55,21 +67,4 @@
 
 .animate-fade-up {
   animation: fadeInUp 0.8s ease-out forwards;
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f8f8f8;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #4341EC;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #4E36A3;
 }
