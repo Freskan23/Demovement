@@ -8,16 +8,20 @@ export default {
         extend: {
             colors: {
                 primary: {
-                    DEFAULT: '#000000',
-                    dark: '#1a1a1a',
+                    DEFAULT: '#4341EC', // El azul vibrante original
+                    dark: '#4E36A3',    // El purpura de los gradientes
                 },
                 accent: {
-                    DEFAULT: '#fbbf24', // Un amarillo/dorado premium para contrastar con el negro
-                    light: '#fde68a',
+                    DEFAULT: '#CC3366', // El magenta/rosa del logo y acentos
+                },
+                neutral: {
+                    bg: '#F4F4F4',
+                    text: '#333333',
                 }
             },
             fontFamily: {
-                sans: ['Inter', 'system-ui', 'sans-serif'],
+                sans: ['"Work Sans"', 'inter', 'system-ui', 'sans-serif'],
+                heading: ['"Nebulica"', 'sans-serif'],
             }
         },
     },

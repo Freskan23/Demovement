@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Activity } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -24,23 +24,26 @@ export const Navbar = () => {
     ];
 
     return (
-        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'glass py-3' : 'bg-transparent py-5'}`}>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-sm py-3' : 'bg-transparent py-5'}`}>
+            <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center">
-                    <Link to="/" className="flex items-center space-x-2 group">
-                        <Activity className="h-8 w-8 text-accent group-hover:scale-110 transition-transform" />
-                        <span className="text-2xl font-bold tracking-tighter text-white">
-                            DE<span className="text-accent">MOVEMENT</span>
-                        </span>
+                    <Link to="/" className="flex items-center group">
+                        <img
+                            src="/imagenes/logos/header-logo.svg"
+                            alt="De Movement"
+                            className={`h-12 w-auto transition-all ${!scrolled && location.pathname === '/' ? 'brightness-0 invert' : ''}`}
+                        />
                     </Link>
 
                     {/* Desktop Menu */}
-                    <div className="hidden md:flex items-center space-x-8">
+                    <div className="hidden md:flex items-center space-x-10">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.name}
                                 to={link.path}
-                                className={`text-sm font-medium transition-colors hover:text-accent ${location.pathname === link.path ? 'text-accent' : 'text-gray-300'
+                                className={`text-[15px] font-bold transition-colors hover:text-primary ${location.pathname === link.path
+                                        ? 'text-primary'
+                                        : (scrolled || location.pathname !== '/' ? 'text-gray-900' : 'text-white')
                                     }`}
                             >
                                 {link.name}
@@ -50,15 +53,15 @@ export const Navbar = () => {
                             href="https://wa.me/34600000000"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-accent text-black px-5 py-2 rounded-full font-bold text-sm hover:bg-accent-light transition-all transform hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(251,191,36,0.3)]"
+                            className="bg-primary text-white px-9 py-[13px] rounded-lg font-bold text-[14px] hover:bg-primary-dark transition-all transform hover:scale-[1.02] active:scale-95 shadow-lg shadow-primary/25 uppercase tracking-wider"
                         >
-                            Cita Previa
+                            Contacto
                         </a>
                     </div>
 
                     {/* Mobile Button */}
                     <div className="md:hidden">
-                        <button onClick={() => setIsOpen(!isOpen)} className="text-white hover:text-accent focus:outline-none">
+                        <button onClick={() => setIsOpen(!isOpen)} className={`${scrolled || location.pathname !== '/' ? 'text-gray-900' : 'text-white'}`}>
                             {isOpen ? <X size={28} /> : <Menu size={28} />}
                         </button>
                     </div>
@@ -72,25 +75,25 @@ export const Navbar = () => {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden glass border-t border-white/10 overflow-hidden"
+                        className="md:hidden bg-white border-t border-gray-100 overflow-hidden shadow-2xl"
                     >
-                        <div className="px-4 pt-2 pb-6 space-y-2">
+                        <div className="px-4 pt-2 pb-8 space-y-2 text-center">
                             {navLinks.map((link) => (
                                 <Link
                                     key={link.name}
                                     to={link.path}
                                     onClick={() => setIsOpen(false)}
-                                    className="block px-3 py-3 rounded-lg text-base font-medium text-gray-300 hover:text-accent hover:bg-white/5 transition-all"
+                                    className="block px-3 py-4 rounded-lg text-lg font-bold text-gray-900 hover:text-primary hover:bg-gray-50 transition-all font-heading uppercase"
                                 >
                                     {link.name}
                                 </Link>
                             ))}
-                            <div className="pt-4">
+                            <div className="pt-6">
                                 <a
                                     href="https://wa.me/34600000000"
-                                    className="block w-full text-center bg-accent text-black py-3 rounded-xl font-bold"
+                                    className="block w-full text-center bg-primary text-white py-4 rounded-xl font-bold uppercase tracking-widest shadow-xl shadow-primary/20"
                                 >
-                                    Cita Previa
+                                    Contacto
                                 </a>
                             </div>
                         </div>

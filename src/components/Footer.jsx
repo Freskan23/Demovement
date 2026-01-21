@@ -1,64 +1,86 @@
-import React from 'react';
-import { Activity, Instagram, Facebook, MapPin, Phone, Mail } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronDown, MapPin, Activity, Shield, Activity as ActivitySmall } from 'lucide-react';
 
-export const Footer = () => {
+const Footer = () => {
     return (
-        <footer className="bg-primary-dark border-t border-white/5 pt-16 pb-8">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-                    <div className="col-span-1 md:col-span-2">
-                        <div className="flex items-center space-x-2 mb-6">
-                            <Activity className="h-8 w-8 text-accent" />
-                            <span className="text-2xl font-bold tracking-tighter text-white">
-                                DE<span className="text-accent">MOVEMENT</span>
-                            </span>
-                        </div>
-                        <p className="text-gray-400 max-w-sm mb-6">
-                            Especialistas en readaptación avanzada en Las Rozas. Recupera tu rendimiento con un método basado en la ciencia y la individualización.
+        <footer className="bg-[#0A0A0A] text-white pt-24 pb-12 border-t border-white/5">
+            <div className="max-w-[1240px] mx-auto px-4">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
+                    <div className="md:col-span-2">
+                        <img
+                            src="/imagenes/logos/footer-logo.svg"
+                            alt="De Movement"
+                            className="h-20 w-auto mb-10"
+                        />
+                        <p className="text-gray-400 text-lg max-w-md leading-relaxed mb-10">
+                            Especialistas en readaptación de lesiones y entrenamiento personal en Las Rozas de Madrid. Ciencia, rigor y empatía en cada sesión.
                         </p>
-                        <div className="flex space-x-4">
-                            <a href="#" className="p-2 bg-white/5 rounded-full hover:bg-accent hover:text-black transition-all">
-                                <Instagram size={20} />
-                            </a>
-                            <a href="#" className="p-2 bg-white/5 rounded-full hover:bg-accent hover:text-black transition-all">
-                                <Facebook size={20} />
-                            </a>
+                        <div className="flex space-x-6">
+                            {[
+                                { name: 'Plan Transformación', src: '/imagenes/footer/footer-logo-plan-transformacion-eu.webp' },
+                                { name: 'Next Generation', src: '/imagenes/footer/footer-logo-next-generation-eu.webp' }
+                            ].map((logo) => (
+                                <img
+                                    key={logo.name}
+                                    src={logo.src}
+                                    alt={logo.name}
+                                    className="h-12 w-auto grayscale opacity-50 hover:opacity-100 transition-opacity"
+                                />
+                            ))}
                         </div>
                     </div>
 
                     <div>
-                        <h4 className="text-white font-bold mb-6">Ubicación</h4>
-                        <ul className="space-y-4 text-gray-400">
+                        <h4 className="text-xl font-bold mb-8 uppercase tracking-widest text-primary">Navegación</h4>
+                        <ul className="space-y-4 text-gray-400 font-medium">
+                            <li><a href="/" className="hover:text-white transition-colors">Inicio</a></li>
+                            <li><a href="/nosotros" className="hover:text-white transition-colors">Nosotros</a></li>
+                            <li><a href="/blog" className="hover:text-white transition-colors">Blog</a></li>
+                            <li><a href="/contacto" className="hover:text-white transition-colors">Contacto</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 className="text-xl font-bold mb-8 uppercase tracking-widest text-primary">Contacto</h4>
+                        <ul className="space-y-4 text-gray-400 font-medium">
                             <li className="flex items-start space-x-3">
-                                <MapPin className="text-accent shrink-0 mt-1" size={18} />
-                                <span>Las Rozas, Madrid.<br /><span className="text-accent/60 text-sm">A 5 min de Majadahonda</span></span>
+                                <MapPin size={20} className="text-primary shrink-0" />
+                                <span>C. Real, 7, 28231 <br /> Las Rozas de Madrid, Madrid</span>
                             </li>
                             <li className="flex items-center space-x-3">
-                                <Phone className="text-accent" size={18} />
+                                <Activity size={20} className="text-primary shrink-0" />
                                 <span>+34 600 000 000</span>
                             </li>
-                            <li className="flex items-center space-x-3">
-                                <Mail className="text-accent" size={18} />
-                                <span>info@demovement.es</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h4 className="text-white font-bold mb-6">Navegación</h4>
-                        <ul className="space-y-3 text-gray-400">
-                            <li><a href="/" className="hover:text-accent transition-colors">Inicio</a></li>
-                            <li><a href="/readaptacion/rodilla-lca" className="hover:text-accent transition-colors">Rodilla</a></li>
-                            <li><a href="/readaptacion/espalda-lumbalgia" className="hover:text-accent transition-colors">Espalda</a></li>
-                            <li><a href="/readaptacion/hombro-rotador" className="hover:text-accent transition-colors">Hombro</a></li>
                         </ul>
                     </div>
                 </div>
 
-                <div className="border-t border-white/5 pt-8 text-center text-gray-500 text-sm">
-                    <p>© {new Date().getFullYear()} Demovement. Todos los derechos reservados.</p>
+                <div className="pt-12 border-t border-white/10 flex flex-col md:row justify-between items-center space-y-6 md:space-y-0 text-gray-500 text-sm font-bold uppercase tracking-wider">
+                    <p>© {new Date().getFullYear()} DE MOVEMENT. TODOS LOS DERECHOS RESERVADOS.</p>
+                    <div className="flex space-x-8">
+                        <a href="/legal" className="hover:text-white transition-colors">Aviso Legal</a>
+                        <a href="/privacidad" className="hover:text-white transition-colors">Privacidad</a>
+                        <a href="/cookies" className="hover:text-white transition-colors">Cookies</a>
+                    </div>
                 </div>
             </div>
+
+            {/* WhatsApp Floating Button */}
+            <a
+                href="https://wa.me/34600000000"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="fixed bottom-8 right-8 z-50 transition-transform hover:scale-110 active:scale-95"
+            >
+                <img
+                    src="/imagenes/iconos/icon-whatsapp-button.png"
+                    alt="WhatsApp"
+                    className="h-16 w-16 drop-shadow-2xl"
+                />
+            </a>
         </footer>
     );
 };
+
+export default Footer;

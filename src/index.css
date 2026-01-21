@@ -3,25 +3,37 @@
 @tailwind utilities;
 
 :root {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #333333;
 }
 
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-heading {
+  font-family: 'Work Sans', sans-serif;
+  /* Nebulica es custom, uso Work Sans Bold por ahora */
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .glass {
-  background: rgba(26, 26, 26, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .text-gradient {
-  background: linear-gradient(to right, #ffffff, #fbbf24);
+  background: linear-gradient(135deg, #4341EC 0%, #CC3366 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
