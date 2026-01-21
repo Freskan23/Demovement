@@ -9,13 +9,25 @@ const Home = () => {
             {/* ========== HERO SECTION ========== */}
             <section className="relative min-h-screen flex items-center overflow-hidden">
                 {/* Background Image */}
+                {/* Background Video */}
                 <div className="absolute inset-0">
-                    <img
-                        src="/imagenes/hero/hero-image.jpg"
-                        alt="Readaptación Deportiva"
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        poster="/imagenes/hero/hero-image.jpg"
                         className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent" />
+                        onLoadedData={() => console.log("VIDEO CARGADO CORRECTAMENTE")}
+                        onError={(e) => {
+                            console.error("ERROR VIDEO:", e);
+                            alert("ERROR CARGANDO VIDEO: " + e.currentTarget.error.message);
+                        }}
+                    >
+                        <source src="/imagenes/hero/hero-video-web.mp4" type="video/mp4" />
+                        Tu navegador no soporta video HTML5.
+                    </video>
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-transparent" />
                 </div>
 
                 {/* Content */}
@@ -305,7 +317,7 @@ const Home = () => {
                     <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-16">
                         <div>
                             <span className="text-primary font-black uppercase tracking-[0.3em] text-sm mb-4 block">Especialidades</span>
-                            <h2 className="text-4xl md:text-5xl font-black text-gray-900 uppercase tracking-tighter">LESIONES QUE TRATAMOS</h2>
+                            <h2 className="text-4xl md:text-5xl font-black text-gray-900 uppercase tracking-tighter">EN QUÉ TE AYUDAMOS</h2>
                         </div>
                         <Link to="/lesiones" className="inline-flex items-center gap-3 text-primary font-black uppercase tracking-widest hover:gap-5 transition-all shrink-0">
                             Ver todas <ArrowRight size={20} />

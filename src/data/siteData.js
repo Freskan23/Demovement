@@ -1,494 +1,461 @@
 // Datos de Servicios - Contenido Completo y Profesional
 export const servicios = {
-    'readaptacion-deportiva': {
-        title: 'Readaptación Deportiva',
-        subtitle: 'Vuelve a tu Deporte con Confianza',
+    'readaptacion-lesiones': {
+        title: 'Readaptación de Lesiones',
+        subtitle: 'Vuelve a Moverte Sin Dolor',
         heroImage: '/imagenes/hero/hero-image.jpg',
-        description: 'La readaptación deportiva es el proceso de recuperación activa de una lesión mediante el ejercicio físico. No se trata solo de rehabilitar, sino de prepararte para volver a tu deporte con la misma o mayor capacidad que antes.',
+        description: 'Proceso individualizado para personas con dolor o lesión. Recupera tu calidad de vida mediante el ejercicio guiado.',
         longDescription: `
-            En DE MOVEMENT, entendemos que una lesión deportiva no es solo un problema físico, sino también un desafío mental. 
-            Nuestro programa de readaptación deportiva está diseñado para llevarte desde el momento de la lesión hasta tu retorno completo a la competición.
+            En DE MOVEMENT, entendemos que el dolor no es solo físico. Trabajamos contigo para superar el miedo al movimiento y recuperar tu confianza.
             
-            Trabajamos con deportistas de todos los niveles: desde aficionados que quieren volver a correr sin dolor, 
-            hasta profesionales que necesitan volver a la élite con garantías.
+            No sustituimos a tu médico o fisio, colaboramos con ellos. Nosotros nos encargamos de la "fase activa": enseñarte a moverte de forma segura para que tu cuerpo se fortalezca y deje de doler.
         `,
         metodologia: [
             {
-                fase: 'Fase 1: Evaluación Inicial',
+                fase: 'Paso 1: Entender',
                 duracion: 'Sesión 1',
-                desc: 'Realizamos una evaluación exhaustiva: entrevista clínica, análisis de movimiento, tests de fuerza y movilidad. Identificamos exactamente dónde estás y hacia dónde vamos.',
-                objetivos: ['Diagnóstico funcional', 'Establecer baseline de capacidades', 'Definir objetivos SMART']
+                desc: 'Analizamos cómo te mueves y qué te limita. Escuchamos tu historia y definimos objetivos reales.',
+                objetivos: ['Valoración funcional', 'Objetivos personales', 'Plan de acción']
             },
             {
-                fase: 'Fase 2: Protección Activa',
-                duracion: 'Semanas 1-4',
-                desc: 'Iniciamos el trabajo respetando los tiempos biológicos de curación. Ejercicios de bajo impacto que mantienen la movilidad y evitan la atrofia muscular.',
-                objetivos: ['Mantener rango articular', 'Activación muscular controlada', 'Gestión de la inflamación']
+                fase: 'Paso 2: Activar',
+                duracion: 'Inicial',
+                desc: 'Ejercicios suaves y controlados para recuperar la confianza en tu cuerpo sin despertar dolor.',
+                objetivos: ['Movilidad segura', 'Activación muscular', 'Reducción de miedo']
             },
             {
-                fase: 'Fase 3: Fortalecimiento Progresivo',
-                duracion: 'Semanas 4-12',
-                desc: 'Aumentamos progresivamente la carga. Trabajo de fuerza específico para las estructuras afectadas y las compensaciones desarrolladas.',
-                objetivos: ['Recuperar fuerza máxima', 'Mejorar resistencia muscular', 'Corregir desequilibrios']
+                fase: 'Paso 3: Fortalecer',
+                duracion: 'Progresión',
+                desc: 'Aumentamos la intensidad poco a poco. Tu cuerpo se adapta y se vuelve más resistente.',
+                objetivos: ['Ganancia de fuerza', 'Mejorar capacidad', 'Vida diaria sin dolor']
             },
             {
-                fase: 'Fase 4: Preparación Específica',
-                duracion: 'Semanas 12-16',
-                desc: 'Introducimos gestos deportivos específicos. Simulamos las demandas de tu deporte en un entorno controlado.',
-                objetivos: ['Trabajo pliométrico', 'Cambios de dirección', 'Gestos técnicos adaptados']
-            },
-            {
-                fase: 'Fase 5: Retorno al Deporte',
-                duracion: 'Semanas 16+',
-                desc: 'Tests de alta y transición gradual a la actividad deportiva completa. Seguimiento durante las primeras semanas de vuelta.',
-                objetivos: ['Superar criterios de alta', 'Integración con entrenamiento de equipo', 'Prevención de recaídas']
+                fase: 'Paso 4: Autonomía',
+                duracion: 'Mantenimiento',
+                desc: 'Te damos herramientas para que mantengas los resultados y sepas gestionar tu cuerpo a largo plazo.',
+                objetivos: ['Hábitos saludables', 'Prevención', 'Libertad de movimiento']
             }
         ],
         beneficios: [
-            'Retorno más rápido y seguro al deporte',
-            'Menor riesgo de recaída (hasta un 60% menos)',
-            'Recuperación de la confianza en tu cuerpo',
-            'Mejora de rendimiento post-lesión',
-            'Aprendizaje de estrategias de prevención'
+            'Recupera tu vida diaria sin limitaciones',
+            'Pierde el miedo a moverte',
+            'Atención 1:1 en espacio privado',
+            'Profesionales que te escuchan y entienden',
+            'Coordianción con tu equipo de salud'
         ],
         paraQuien: [
-            'Deportistas lesionados que quieren volver a competir',
-            'Personas post-operadas (LCA, menisco, hombro...)',
-            'Atletas con lesiones recurrentes',
-            'Deportistas que sienten miedo al volver a su actividad'
+            'Mujeres y hombres con dolor de espalda recurrente',
+            'Personas que han terminado la "rehabilitación" pero no están bien',
+            'Gente que quiere evitar operarse o acaba de hacerlo',
+            'Quienes buscan un entorno seguro y profesional'
         ],
         precio: 'Desde 60€/sesión',
         duracionSesion: '60 minutos',
-        icon: 'activity'
+        icon: 'heart'
     },
-    'entrenamiento-personal': {
-        title: 'Entrenamiento Personal',
-        subtitle: 'Tu Objetivo, Nuestra Metodología',
+    'entrenamiento-salud': {
+        title: 'Entrenamiento y Salud',
+        subtitle: 'Invierte en tu Calidad de Vida',
         heroImage: '/imagenes/testimonios/testimonio-video-juanjo.jpg',
-        description: 'Sesiones individuales 1:1 diseñadas específicamente para ti. No es un plan genérico: es un programa construido a partir de tu evaluación, tus objetivos y tu disponibilidad.',
+        description: 'Entrenamiento personal o en pareja orientado a la salud. Para quienes huyen de los gimnasios tradicionales y buscan un trato humano.',
         longDescription: `
-            El entrenamiento personal en DE MOVEMENT es diferente. No somos un gimnasio comercial donde te dan una tabla y te dejan solo.
+            ¿Los gimnasios te parecen hostiles? ¿Te da miedo hacerte daño entrenando? No estás solo/a.
             
-            Cada sesión está supervisada al 100% por un profesional colegiado. Corregimos técnica en tiempo real, 
-            ajustamos cargas según tu estado del día y te enseñamos a entender tu cuerpo.
-            
-            Trabajamos con personas que valoran la calidad sobre la cantidad, que prefieren entrenar bien 2-3 días a la semana 
-            que mal 6 días. Si buscas resultados reales y duraderos, este es tu lugar.
+            Nuestro entrenamiento de salud está diseñado para personas reales. Sin competición, sin juicios y sin gritos. 
+            Solo tú, tu entrenador y un plan adaptado a tu ritmo, tus necesidades y tu vida.
         `,
         metodologia: [
             {
-                fase: 'Valoración Inicial',
-                duracion: 'Primera sesión',
-                desc: 'Evaluamos tu punto de partida: composición corporal, patrones de movimiento, fuerza, movilidad y objetivos.',
-                objetivos: ['Conocer tu historial', 'Establecer métricas base', 'Diseñar tu plan']
+                fase: 'Valoración',
+                duracion: 'Inicio',
+                desc: 'Conocemos tu punto de partida y tus necesidades específicas (osteoporosis, menopausia, falta de tiempo...).',
+                objetivos: ['Salud ósea', 'Metabolismo', 'Bienestar general']
             },
             {
-                fase: 'Fase de Aprendizaje',
-                duracion: 'Semanas 1-4',
-                desc: 'Te enseñamos los patrones básicos de movimiento con técnica impecable. Sentadilla, peso muerto, press, dominadas...',
-                objetivos: ['Dominar técnica', 'Crear hábito de entrenamiento', 'Adaptación neuromuscular']
+                fase: 'Adaptación',
+                duracion: 'Primeras semanas',
+                desc: 'Aprendes a ejercitarte con técnica perfecta. Te sentirás cómodo/a y seguro/a desde el primer día.',
+                objetivos: ['Técnica correcta', 'Seguridad', 'Hábito']
             },
             {
-                fase: 'Fase de Desarrollo',
-                duracion: 'Semanas 4-12',
-                desc: 'Aumentamos progresivamente la intensidad y el volumen. Aquí es donde empiezas a ver cambios reales.',
-                objetivos: ['Ganancia de fuerza', 'Mejora de composición corporal', 'Aumento de capacidad de trabajo']
-            },
-            {
-                fase: 'Fase de Especialización',
-                duracion: 'Semanas 12+',
-                desc: 'Personalizamos aún más el programa según tus objetivos específicos y preferencias de entrenamiento.',
-                objetivos: ['Objetivos avanzados', 'Autonomía progresiva', 'Mantenimiento a largo plazo']
+                fase: 'Progreso',
+                duracion: 'Continuo',
+                desc: 'Mejoras tu fuerza y resistencia. Te sentirás con más energía y menos dolores cotidianos.',
+                objetivos: ['Más energía', 'Menos fatiga', 'Cuerpo fuerte']
             }
         ],
         beneficios: [
-            'Atención 100% personalizada',
-            'Corrección técnica en tiempo real',
-            'Programación basada en evidencia',
-            'Seguimiento de progreso con métricas',
-            'Flexibilidad horaria',
-            'Sin esperas ni aglomeraciones'
+            'Espacio privado y tranquilo',
+            'Entrenadores empáticos y cualificados',
+            'Adaptado a patologías (osteoporosis, embarazo...)',
+            'Horarios flexibles',
+            'Ambiente seguro y acogedor'
         ],
         paraQuien: [
-            'Personas que nunca han entrenado y quieren empezar bien',
-            'Deportistas que quieren mejorar su rendimiento',
-            'Personas con poco tiempo que buscan eficiencia',
-            'Gente que se ha lesionado entrenando mal'
+            'Mujeres +40 en perimenopausia/menopausia',
+            'Personas sedentarias que quieren empezar a cuidarse',
+            'Embarazo y postparto',
+            'Tercera edad que quiere mantener independencia'
         ],
         precio: 'Desde 50€/sesión',
         duracionSesion: '60 minutos',
         icon: 'user'
     },
-    'valoracion-funcional': {
-        title: 'Valoración Funcional',
-        subtitle: 'Conoce tu Punto de Partida',
+    'grupos-reducidos': {
+        title: 'Grupos Reducidos',
+        subtitle: 'Entrena en Compañía, con Atención Personal',
         heroImage: '/imagenes/hero/hero-image.jpg',
-        description: 'Una evaluación exhaustiva de 75 minutos donde analizamos cómo te mueves, cuánta fuerza tienes, qué limitaciones presentas y qué riesgos de lesión existen. El punto de partida de cualquier plan serio.',
+        description: 'Máximo 5 personas. Rutina individualizada para cada uno, pero compartiendo energía. Económico, divertido y efectivo.',
         longDescription: `
-            "Si no lo mides, no lo puedes mejorar". La valoración funcional es el primer paso obligatorio para cualquier proceso de readaptación o entrenamiento.
+            La opción perfecta si buscas la calidad del entrenamiento personal con un coste menor y un ambiente más social.
             
-            En 75 minutos, evaluamos todos los aspectos que determinan tu capacidad física: movilidad articular, patrones de movimiento, 
-            fuerza relativa, equilibrio, coordinación y capacidad cardiovascular básica.
-            
-            Al finalizar, recibes un informe detallado con tus resultados, puntos fuertes, áreas de mejora y recomendaciones específicas.
-            Este informe es la base sobre la que construimos tu programa personalizado.
+            Aunque sea en grupo, TU plan es único. No hacemos "la clase de las 10". Cada persona hace SU rutina, supervisada 
+            en todo momento por el entrenador.
         `,
         contenido: [
             {
-                test: 'Entrevista Clínica',
-                duracion: '15 min',
-                desc: 'Historial de lesiones, objetivos, estilo de vida, nivel de actividad actual.'
+                test: 'Individualización',
+                duracion: 'Siempre',
+                desc: 'Tu tabla de ejercicios es solo tuya, adaptada a tus dolencias y nivel.'
             },
             {
-                test: 'Análisis Postural',
-                duracion: '10 min',
-                desc: 'Evaluación de la alineación corporal en bipedestación y sedestación.'
+                test: 'Supervisión',
+                duracion: 'Constante',
+                desc: 'El entrenador corrige, motiva y adapta los ejercicios sobre la marcha.'
             },
             {
-                test: 'Movilidad Articular',
-                duracion: '15 min',
-                desc: 'Rangos de movimiento de tobillo, cadera, columna y hombro.'
-            },
-            {
-                test: 'Patrones de Movimiento',
-                duracion: '15 min',
-                desc: 'Sentadilla, bisagra de cadera, zancada, empuje, tracción.'
-            },
-            {
-                test: 'Tests de Fuerza',
-                duracion: '15 min',
-                desc: 'Fuerza de agarre, capacidad de salto, tests isométricos específicos.'
-            },
-            {
-                test: 'Conclusiones y Plan',
-                duracion: '5 min',
-                desc: 'Resumen verbal de hallazgos y próximos pasos.'
+                test: 'Comunidad',
+                duracion: 'Social',
+                desc: 'Entrena con personas afines a ti, en un ambiente relajado y de apoyo mutuo.'
             }
         ],
         entregables: [
-            'Informe PDF detallado (8-10 páginas)',
-            'Gráficos comparativos con población de referencia',
-            'Identificación de factores de riesgo',
-            'Recomendaciones específicas de trabajo',
-            'Propuesta de programa personalizado'
+            'Plan mensual personalizado',
+            'Evaluación trimestral de progreso',
+            'Acceso a comunidad',
+            'Corrección técnica constante'
         ],
         paraQuien: [
-            'Cualquier persona que quiera empezar a entrenar',
-            'Deportistas que quieren conocer sus debilidades',
-            'Personas con dolores inespecíficos',
-            'Atletas que buscan prevenir lesiones'
+            'Quienes buscan una opción más económica',
+            'Personas que les gusta entrenar acompañadas',
+            'Mantenimiento tras una readaptación',
+            'Mejora de condición física general'
+        ],
+        precio: 'Consultar tarifas',
+        duracionSesion: '60 minutos',
+        icon: 'users'
+    },
+    'valoracion-inicial': {
+        title: 'Valoración Inicial',
+        subtitle: 'El Primer Paso es Conocerte',
+        heroImage: '/imagenes/hero/hero-image.jpg',
+        description: 'Imprescindible para empezar. 75 minutos para evaluar tu historia, tu cuerpo y tus objetivos. Sin esto, no entrenamos.',
+        longDescription: `
+            En DE MOVEMENT no dejamos nada al azar. Antes de sudar, necesitamos entender.
+            
+            Esta sesión es una conversación profunda sobre tu salud y una evaluación física detallada pero suave. 
+            Queremos saber qué te duele, qué te preocupa y qué quieres conseguir.
+        `,
+        contenido: [
+            {
+                test: 'Tu Historia',
+                duracion: '30 min',
+                desc: 'Escuchamos tu trayectoria, lesiones previas y experiencias pasadas.'
+            },
+            {
+                test: 'Tu Cuerpo',
+                duracion: '30 min',
+                desc: 'Tests de movilidad y fuerza adaptados a ti. Sin dolor, sin forzar.'
+            },
+            {
+                test: 'Tu Plan',
+                duracion: '15 min',
+                desc: 'Te explicamos qué hemos visto y proponemos el camino a seguir.'
+            }
+        ],
+        entregables: [
+            'Informe de estado inicial',
+            'Propuesta de trabajo clara',
+            'Resolución de dudas y miedos',
+            'Hoja de ruta personalizada'
+        ],
+        paraQuien: [
+            'Todo el que quiera empezar en DE MOVEMENT',
+            'Obligatorio para cualquier servicio'
         ],
         precio: '90€',
         duracionSesion: '75 minutos',
         icon: 'clipboard'
-    },
-    'recuperacion-lesiones': {
-        title: 'Recuperación de Lesiones',
-        subtitle: 'El Movimiento como Medicina',
-        heroImage: '/imagenes/testimonios/testimonio-video-mamen.jpg',
-        description: 'Abordaje integral de lesiones musculoesqueléticas mediante el ejercicio terapéutico. Desde lumbalgias hasta tendinopatías, el movimiento controlado es tu mejor aliado.',
-        longDescription: `
-            El paradigma del reposo absoluto ha quedado obsoleto. La ciencia actual nos dice que el movimiento controlado 
-            acelera la recuperación, reduce el dolor y previene la cronicidad.
-            
-            En DE MOVEMENT, trabajamos lesiones de todo tipo: lumbalgias, cervicalgias, tendinopatías (rotuliana, aquílea, codo), 
-            dolor de hombro, fascitis plantar... Nuestro enfoque es activo: te enseñamos a moverte de forma que tu cuerpo se cure.
-            
-            Colaboramos con fisioterapeutas, médicos y traumatólogos. No sustituimos la atención sanitaria, la complementamos 
-            ofreciendo la parte activa del proceso de recuperación.
-        `,
-        lesionesComunes: [
-            {
-                nombre: 'Lumbalgia / Dolor de Espalda',
-                desc: 'Desensibilización, fortalecimiento de core, educación en dolor.'
-            },
-            {
-                nombre: 'Tendinopatías',
-                desc: 'Protocolos de carga progresiva: isometría, HSR, pliometría.'
-            },
-            {
-                nombre: 'Dolor de Hombro',
-                desc: 'Control escapular, fortalecimiento de manguito rotador.'
-            },
-            {
-                nombre: 'Fascitis Plantar',
-                desc: 'Trabajo de flexores del pie, gestión de carga en carrera.'
-            },
-            {
-                nombre: 'Síndrome Patelofemoral',
-                desc: 'Fortalecimiento de cuádriceps, control de rodilla.'
-            }
-        ],
-        diferenciador: [
-            'No hacemos terapia pasiva: tú eres el protagonista',
-            'Enfoque biopsicosocial del dolor',
-            'Educación para que entiendas tu lesión',
-            'Colaboración con tu equipo sanitario',
-            'Objetivos funcionales, no solo alivio del dolor'
-        ],
-        precio: 'Desde 55€/sesión',
-        duracionSesion: '60 minutos',
-        icon: 'heart'
-    },
-    'prevencion-lesiones': {
-        title: 'Prevención de Lesiones',
-        subtitle: 'La Mejor Lesión es la que No Ocurre',
-        heroImage: '/imagenes/hero/hero-image.jpg',
-        description: 'Programas específicos para reducir el riesgo de lesiones en tu práctica deportiva. Identificamos tus factores de riesgo y los corregimos antes de que se conviertan en problema.',
-        longDescription: `
-            ¿Sabías que hasta el 70% de las lesiones deportivas son prevenibles? El problema es que la mayoría de deportistas 
-            solo se preocupan de la prevención cuando ya se han lesionado.
-            
-            Nuestro programa de prevención analiza tus factores de riesgo específicos: desequilibrios musculares, 
-            déficits de movilidad, patrones de movimiento incorrectos, mala gestión de cargas...
-            
-            Diseñamos un programa complementario a tu entrenamiento habitual que te hará más resistente y menos propenso a lesiones.
-            Es especialmente útil para deportistas que han tenido lesiones recurrentes o que están aumentando su volumen de entrenamiento.
-        `,
-        factoresRiesgo: [
-            'Desequilibrios musculares (cuádriceps/isquio, aductores/abductores)',
-            'Déficits de movilidad articular',
-            'Debilidad del core estabilizador',
-            'Mala técnica de carrera o de gestos deportivos',
-            'Incrementos bruscos de carga de entrenamiento',
-            'Historial previo de lesiones'
-        ],
-        programa: [
-            {
-                componente: 'Valoración de Riesgo',
-                desc: 'Tests específicos para identificar tus puntos débiles.'
-            },
-            {
-                componente: 'Trabajo de Movilidad',
-                desc: 'Rutinas específicas para las articulaciones más comprometidas.'
-            },
-            {
-                componente: 'Fortalecimiento Preventivo',
-                desc: 'Ejercicios para equilibrar musculatura y proteger articulaciones.'
-            },
-            {
-                componente: 'Gestión de Cargas',
-                desc: 'Te enseñamos a planificar tus entrenamientos para no pasarte.'
-            }
-        ],
-        paraQuien: [
-            'Corredores que aumentan kilometraje',
-            'Deportistas de equipo (fútbol, baloncesto, pádel)',
-            'Personas con historial de lesiones recurrentes',
-            'Atletas en pretemporada'
-        ],
-        precio: 'Desde 50€/sesión',
-        duracionSesion: '60 minutos',
-        icon: 'shield'
     }
 };
 
 // Datos de Lesiones - Contenido Clínico Completo
+// Datos de Lesiones - Contenido Específico
 export const lesiones = {
-    rodilla: {
-        title: 'Lesiones de Rodilla',
-        description: 'La rodilla es una de las articulaciones más complejas y lesionadas del cuerpo. Nuestra especialización en readaptación de rodilla abarca desde lesiones ligamentosas hasta problemas degenerativos.',
-        intro: 'La rodilla soporta entre 2 y 4 veces tu peso corporal en actividades cotidianas, y hasta 8 veces en deportes de impacto. Esta demanda la hace especialmente vulnerable a lesiones.',
+    espalda: {
+        title: 'Espalda y Cuello',
+        description: 'Dolor lumbar, cervical, hernias y molestias crónicas. Enfoque seguro para perder el miedo a moverse.',
+        intro: 'El 80% de la población tendrá dolor de espalda alguna vez. En DE MOVEMENT te ayudamos a que el dolor no controle tu vida.',
         subcategorias: {
-            lca: {
-                title: 'Ligamento Cruzado Anterior (LCA)',
-                description: 'Readaptación post-quirúrgica y conservadora para lesiones del LCA. Protocolos actualizados con la evidencia más reciente.',
+            dolor_lumbar: {
+                title: 'Dolor Lumbar',
+                description: 'Lumbalgia, ciática y rigidez. Aprende a moverte sin miedo.',
                 content: {
-                    intro: 'La rotura del LCA es una de las lesiones más temidas por los deportistas. Afecta principalmente a deportes con cambios de dirección, saltos y contacto: fútbol, baloncesto, esquí, pádel... La buena noticia es que, con un proceso de readaptación adecuado, la mayoría de deportistas pueden volver a su nivel previo de actividad.',
-                    estadisticas: [
-                        '85-90% de los deportistas vuelven a hacer deporte después de una reconstrucción de LCA',
-                        'El riesgo de re-rotura se reduce un 51% por cada mes que se retrasa el retorno al deporte (hasta los 9 meses)',
-                        'Los programas de prevención pueden reducir el riesgo de lesión de LCA hasta un 50%'
-                    ],
+                    intro: 'El dolor lumbar suele venir acompañado de miedo: "me voy a romper", "tengo la espalda débil". Nada más lejos de la realidad. Tu espalda es fuerte y robusta, y necesita movimiento para estar sana.',
                     fases: [
                         {
-                            title: 'Fase 1: Protección (Semanas 0-6)',
-                            desc: 'Control de inflamación, recuperación del rango de movimiento completo, activación del cuádriceps. Objetivo: extensión completa y flexión >120°.',
-                            ejercicios: ['Cuádriceps isométricos', 'Bombeos de tobillo', 'Deslizamientos de talón', 'Elevaciones de pierna recta']
+                            title: 'Fase 1: Confianza y Movilidad',
+                            desc: 'El objetivo es reducir el miedo al movimiento. Trabajamos la movilidad pélvica y respiración sin dolor.',
+                            ejemplos: ['Gato-Camello suave', 'Respiración diafragmática', 'Movilidad de cadera en suelo']
                         },
                         {
-                            title: 'Fase 2: Control (Semanas 6-12)',
-                            desc: 'Normalización de la marcha, fortalecimiento progresivo, inicio de trabajo propioceptivo.',
-                            ejercicios: ['Sentadillas parciales', 'Prensa de piernas', 'Step-ups', 'Equilibrio monopodal']
+                            title: 'Fase 2: Estabilidad Central (Core)',
+                            desc: 'Activación de la musculatura profunda que da soporte a tu columna. No se trata de hacer "abdominales", sino de generar estabilidad.',
+                            ejemplos: ['Dead Bug', 'Plancha modificada', 'Bird-Dog']
                         },
                         {
-                            title: 'Fase 3: Fuerza (Semanas 12-20)',
-                            desc: 'Desarrollo de fuerza máxima, simetría entre piernas, inicio de carrera en línea recta.',
-                            ejercicios: ['Sentadilla completa', 'Peso muerto', 'Extensiones de cuádriceps', 'Curl de isquiotibiales']
-                        },
-                        {
-                            title: 'Fase 4: Potencia (Semanas 20-28)',
-                            desc: 'Trabajo pliométrico, cambios de dirección controlados, gestos deportivos adaptados.',
-                            ejercicios: ['Saltos bipodales', 'Saltos unipodales', 'Cortes a 45° y 90°', 'Trabajo de agilidad']
-                        },
-                        {
-                            title: 'Fase 5: Retorno (Semanas 28+)',
-                            desc: 'Tests de alta, integración con entrenamiento de equipo, seguimiento de las primeras semanas.',
-                            ejercicios: ['Entrenamiento específico de deporte', 'Partidos adaptados', 'Tests funcionales de alta']
+                            title: 'Fase 3: Fuerza y Carga',
+                            desc: 'Tu espalda necesita ser fuerte para soportar tu vida diaria. Introducimos peso de forma muy controlada.',
+                            ejemplos: ['Peso muerto con kettlebell', 'Sentadilla goblet', 'Transporte de carga (Farm Walk)']
                         }
                     ],
-                    criteriosAlta: [
-                        'Fuerza de cuádriceps >90% de la pierna sana',
-                        'Fuerza de isquiotibiales >90% de la pierna sana',
-                        'Índice de simetría en salto >90%',
-                        'Superar batería de tests de cambio de dirección',
-                        'Confianza psicológica en la rodilla'
-                    ]
+                    semasforo: {
+                        si: [
+                            'Mantenerse activo: caminar es tu mejor aliado.',
+                            'Cambiar de postura frecuentemente si trabajas sentado.',
+                            'Ejercicios de movilidad suave al levantarte.',
+                            'Aplicar calor si sientes mucha tensión muscular.'
+                        ],
+                        no: [
+                            'Reposo absoluto en cama (retrasará tu curación).',
+                            'Evitar agacharte por miedo (te enseñamos cómo hacerlo bien).',
+                            'Usar fajas lumbares todo el día (debilitan tu musculatura).',
+                            'Esperar que el dolor desaparezca al 100% para empezar a moverte.'
+                        ]
+                    },
+                    limites: 'Empezamos sin dolor o con molestia muy leve (<3/10). No buscamos "sufrir" para mejorar.',
+                    cta: 'Hablar con especialista en espalda'
                 }
             },
-            menisco: {
-                title: 'Lesiones de Menisco',
-                description: 'Abordaje conservador y post-quirúrgico de lesiones meniscales. Diferenciamos entre meniscectomía parcial y reparación meniscal.',
+            hernia_discal: {
+                title: 'Hernia Discal',
+                description: 'Diagnóstico de hernia o protusión. Evita la cirugía con ejercicio.',
                 content: {
-                    intro: 'Los meniscos son estructuras de fibrocartílago que actúan como amortiguadores entre el fémur y la tibia. Las lesiones meniscales son muy comunes, especialmente en deportistas y en población mayor de 40 años.',
-                    tipos: [
-                        'Rotura degenerativa: más común en >40 años, a menudo responde bien al tratamiento conservador.',
-                        'Rotura traumática: típica de deportistas jóvenes, puede requerir cirugía.',
-                        'Meniscectomía parcial: se retira la parte dañada, recuperación más rápida.',
-                        'Reparación meniscal: se sutura el menisco, recuperación más lenta pero mejor pronóstico a largo plazo.'
-                    ],
+                    intro: 'Tener una hernia discal NO es una sentencia de por vida. De hecho, muchas hernias se reabsorben solas con el tiempo. Lo importante es tener una musculatura fuerte que proteja ese disco.',
                     fases: [
                         {
-                            title: 'Fase 1: Desensibilización',
-                            desc: 'Reducir el dolor y la inflamación mediante movimiento controlado y ejercicios de bajo impacto.'
+                            title: 'Fase 1: Descompresión y Alivio',
+                            desc: 'Buscaremos posiciones que alivien la presión sobre el nervio y reduzcan la irradiación (ciática).',
+                            ejemplos: ['Extensiones McKenzie (si tolera)', 'Tracciones suaves', 'Movilidad neurodinámica']
                         },
                         {
-                            title: 'Fase 2: Movilidad y Carga',
-                            desc: 'Recuperar el rango de movimiento completo e introducir carga progresiva.'
+                            title: 'Fase 2: Fortalecimiento Isométrico',
+                            desc: 'Generar tensión muscular sin mover la columna para proteger la zona lesionada.',
+                            ejemplos: ['Plancha lateral isométrica', 'Press Pallof', 'Puente de glúteo']
                         },
                         {
-                            title: 'Fase 3: Fortalecimiento',
-                            desc: 'Desarrollo de fuerza de cuádriceps, isquiotibiales y estabilizadores de cadera.'
-                        },
-                        {
-                            title: 'Fase 4: Funcionalidad',
-                            desc: 'Trabajo de equilibrio, propiocepción y gestos específicos del deporte.'
+                            title: 'Fase 3: Integración de Movimiento',
+                            desc: 'Aprendes a disociar el movimiento de cadera del de columna. "Bisagra de cadera" es la clave.',
+                            ejemplos: ['Bisagra de cadera en pared', 'Peso muerto rumano parcial']
                         }
-                    ]
+                    ],
+                    semasforo: {
+                        si: [
+                            'Seguir las pautas de tu médico/neurocirujano.',
+                            'Caminar distancias cortas y frecuentes.',
+                            'Fortalecer glúteos (son el soporte de tu espalda).',
+                            'Dormir con una almohada entre las piernas (si duermes de lado).'
+                        ],
+                        no: [
+                            'Levantar objetos pesados lejos del cuerpo.',
+                            'Movimientos bruscos de rotación con flexión (curvarse y girar).',
+                            'Pasar más de 1 hora sentado sin levantarte.',
+                            'Ejercicios de alto impacto (correr/saltar) en fase aguda.'
+                        ]
+                    },
+                    limites: 'Evitamos estrictamente cualquier movimiento que aumente el dolor irradiado (hacia la pierna).',
+                    cta: 'Evaluar mi hernia'
+                }
+            },
+            cervical: {
+                title: 'Dolor Cervical',
+                description: 'Tensión cuello, hombros y dolor de cabeza tensional.',
+                content: {
+                    intro: 'El "cuello de texto" y el estrés se acumulan en tus cervicales. La solución no es solo masajear, es fortalecer la musculatura profunda del cuello para que tu cabeza "pese menos".',
+                    fases: [
+                        {
+                            title: 'Fase 1: Movilidad y Conciencia',
+                            desc: 'Recuperar el rango de movimiento suave y aprender a colocar la cabeza sobre los hombros (no adelantada).',
+                            ejemplos: ['Retracciones cervicales (doble mentón)', 'Rotaciones suaves']
+                        },
+                        {
+                            title: 'Fase 2: Fortalecimiento Escapular',
+                            desc: 'Tus cervicales sufren si tus hombros no trabajan. Fortalecemos la base del cuello.',
+                            ejemplos: ['Remo en anillas', 'Y-T-W con bandas', 'Face pull']
+                        },
+                        {
+                            title: 'Fase 3: Fuerza Cervical',
+                            desc: 'Trabajo específico de los flexores profundos del cuello.',
+                            ejemplos: ['Isométricos manuales', 'Flexión craneocervical en supino']
+                        }
+                    ],
+                    semasforo: {
+                        si: [
+                            'Ajustar la pantalla del ordenador a la altura de los ojos.',
+                            'Hacer descansos visuales cada 20 minutos.',
+                            'Ejercicios de doble mentón en el coche o sofá.',
+                            'Fortalecer la espalda alta.'
+                        ],
+                        no: [
+                            'Mirar el móvil agachando la cabeza (súbelo a la altura de los ojos).',
+                            'Dormir boca abajo (fuerza mucha rotación).',
+                            'Hacer giros bruscos de cuello ("crackearlo").',
+                            'Aguantar la tensión sin moverte.'
+                        ]
+                    },
+                    limites: 'Si tienes mareos o vértigos, avísanos inmediatamente para adaptar los ejercicios.',
+                    cta: 'Aliviar mi cuello'
                 }
             }
         }
     },
     hombro: {
-        title: 'Lesiones de Hombro',
-        description: 'El hombro es la articulación más móvil del cuerpo, lo que la hace especialmente vulnerable. Nos especializamos en tendinopatías, inestabilidades y dolor de hombro inespecífico.',
-        intro: 'El hombro sacrifica estabilidad por movilidad. Esta característica lo hace ideal para movimientos como lanzar o nadar, pero también más propenso a lesiones.',
+        title: 'Hombro',
+        description: 'Tendinitis, dolor al levantar el brazo, hombro congelado.',
+        intro: 'El hombro necesita un equilibrio fino entre movilidad y estabilidad. Recuperamos ese equilibrio.',
         subcategorias: {
-            'manguito-rotador': {
+            manguito: {
                 title: 'Manguito Rotador',
-                description: 'Tendinopatías, roturas parciales y completas del manguito rotador. Tratamiento conservador y post-quirúrgico.',
+                description: 'Dolor e imposibilidad para levantar el brazo o dormir sobre ese lado.',
                 content: {
-                    intro: 'El manguito rotador está formado por cuatro músculos (supraespinoso, infraespinoso, redondo menor y subescapular) que estabilizan el hombro. Las tendinopatías de manguito son muy comunes, especialmente el supraespinoso.',
-                    causas: [
-                        'Movimientos repetitivos sobre la cabeza (voleibol, natación, tenis)',
-                        'Debilidad de la musculatura escapular',
-                        'Mala postura mantenida',
-                        'Desequilibrio entre músculos anteriores y posteriores del hombro'
-                    ],
-                    fases: [
-                        {
-                            title: 'Fase 1: Control del Dolor',
-                            desc: 'Ejercicios isométricos, modificación de actividad, educación. Evitar movimientos que provocan dolor.'
-                        },
-                        {
-                            title: 'Fase 2: Activación Escapular',
-                            desc: 'Trabajo de estabilizadores de escápula (trapecio, serrato, romboides). Fundamental para la mecánica del hombro.'
-                        },
-                        {
-                            title: 'Fase 3: Fortalecimiento en Rango',
-                            desc: 'Ejercicios de rotadores en rangos progresivos. Trabajo excéntrico y concéntrico.'
-                        },
-                        {
-                            title: 'Fase 4: Integración',
-                            desc: 'Ejercicios de empuje y tracción, trabajo sobre la cabeza controlado, gestos deportivos.'
-                        }
-                    ],
-                    ejerciciosClave: [
-                        'Rotación externa/interna con banda',
-                        'Face pulls',
-                        'Retracción escapular',
-                        'YTW en banco inclinado',
-                        'Push-up plus'
-                    ]
-                }
-            }
-        }
-    },
-    tobillo: {
-        title: 'Lesiones de Tobillo',
-        description: 'El esguince de tobillo es la lesión deportiva más frecuente. Nuestro enfoque va más allá del reposo: prevenimos la inestabilidad crónica que afecta al 40% de los esguinces mal tratados.',
-        intro: 'Cada día se producen miles de esguinces de tobillo. El problema es que la mayoría se tratan solo con reposo y hielo, sin readaptación activa, lo que lleva a recaídas constantes.',
-        subcategorias: {
-            esguince: {
-                title: 'Esguince de Tobillo',
-                description: 'Abordaje de esguinces agudos y crónicos. Prevención de la inestabilidad crónica de tobillo.',
-                content: {
-                    intro: 'El esguince de tobillo afecta principalmente al ligamento lateral externo (peroneoastragalino anterior). Un mal manejo inicial puede derivar en inestabilidad crónica: esa sensación de que el tobillo "falla" al pisar en terreno irregular.',
+                    intro: 'Muy común en mujeres +40 y deportistas de raqueta. A veces se confunde con "hombro congelado". El trabajo de fuerza suave es clave para dejar de sentir pinzamientos.',
                     mitos: [
-                        'MITO: "Solo necesitas hielo y reposo" → REALIDAD: La carga temprana acelera la recuperación.',
-                        'MITO: "Ya no duele, estoy curado" → REALIDAD: Pueden quedar déficits de propiocepción y fuerza.',
-                        'MITO: "Es solo un esguince" → REALIDAD: Un esguince mal tratado predispone a más esguinces.'
+                        'MITO: "No puedo mover el brazo nunca más" → REALIDAD: El movimiento controlado cura.',
+                        'MITO: "La cirugía es la única opción" → REALIDAD: El tratamiento conservador (ejercicio) tiene tasas de éxito altísimas.',
+                        'MITO: "Si cruje es malo" → REALIDAD: Los ruidos articulares sin dolor son normales.'
                     ],
                     fases: [
                         {
-                            title: 'Fase Aguda (0-7 días)',
-                            desc: 'Protección relativa, carga temprana según tolerancia, movilidad activa. El reposo absoluto NO está recomendado.'
+                            title: 'Fase 1: Rango Sin Dolor',
+                            desc: 'Movilizaciones pasivas y asistidas. Recuperar grados de movimiento sin activar el dolor.',
+                            ejemplos: ['Péndulos', 'Mesa de deslizamiento', 'Bastón asistido']
                         },
                         {
-                            title: 'Fase Subaguda (1-3 semanas)',
-                            desc: 'Normalización de la marcha, trabajo de movilidad, inicio de fortalecimiento.'
+                            title: 'Fase 2: Estabilidad Escapular',
+                            desc: 'El hombro necesita una base estable (la escápula) para moverse bien.',
+                            ejemplos: ['Protracción en pared', 'Remo isométrico', 'Serrato anterior']
                         },
                         {
-                            title: 'Fase de Estabilidad (3-6 semanas)',
-                            desc: 'Entrenamiento propioceptivo intensivo: superficies inestables, ojos cerrados, perturbaciones.'
-                        },
-                        {
-                            title: 'Fase de Impacto (6+ semanas)',
-                            desc: 'Pliometría, carrera, cambios de dirección, retorno progresivo al deporte.'
+                            title: 'Fase 3: Fuerza Overhead',
+                            desc: 'Volver a levantar el brazo por encima de la cabeza con carga.',
+                            ejemplos: ['Press militar con mancuerna', 'Turkish Get Up parcial', 'Landmine Press']
                         }
-                    ]
+                    ],
+                    semasforo: {
+                        si: [
+                            'Dormir del lado contrario al dolor (o boca arriba).',
+                            'Mantener los codos pegados al cuerpo al cargar peso al principio.',
+                            'Ejercicios de movilidad torácica (espalda alta).',
+                            'Usar el brazo en rangos bajos (no anularlo por completo).'
+                        ],
+                        no: [
+                            'Dormir con el brazo bajo la almohada (corta la circulación y pinza).',
+                            'Levantar objetos pesados con el brazo estirado (momento de fuerza alto).',
+                            'Hacer movimientos repetitivos por encima de la cabeza (limpiar cristales altos) en fase aguda.'
+                        ]
+                    },
+                    limites: 'Evitamos la sensación de "pinzamiento" agudo. La molestia muscular es aceptable, el dolor articular no.',
+                    cta: 'Recuperar mi hombro'
                 }
             }
         }
     },
-    espalda: {
-        title: 'Lesiones de Espalda',
-        description: 'El dolor de espalda afecta al 80% de la población en algún momento de su vida. Nuestro enfoque biopsicosocial aborda no solo el dolor, sino también los factores que lo perpetúan.',
-        intro: 'La lumbalgia es la primera causa de discapacidad en el mundo. Sin embargo, la mayoría de casos no tienen una causa estructural grave y responden muy bien al movimiento.',
+    rodilla: {
+        title: 'Rodilla',
+        description: 'Lesiones de ligamentos, menisco o desgaste.',
+        intro: 'La rodilla soporta gran carga. Recuperar su función es vital para volver a caminar o correr sin dolor.',
         subcategorias: {
-            lumbar: {
-                title: 'Dolor Lumbar',
-                description: 'Gestión del dolor lumbar inespecífico, hernias discales y ciáticas. Enfoque activo y educación en dolor.',
+            lca: {
+                title: 'Ligamento Cruzado (LCA)',
+                description: 'Recuperación tras operación o tratamiento conservador.',
                 content: {
-                    intro: 'El dolor lumbar inespecífico representa el 90% de los casos de dolor de espalda. Paradójicamente, las pruebas de imagen (resonancias, TACs) rara vez aportan información útil y pueden incluso empeorar el pronóstico al generar miedo.',
-                    claves: [
-                        'El dolor no es igual a daño: tu espalda es fuerte aunque duela.',
-                        'El movimiento es la mejor medicina: evitar moverse empeora el dolor.',
-                        'Los factores psicosociales son tan importantes como los físicos.',
-                        'Las hernias discales son comunes en personas SIN dolor (hallazgos incidentales).'
+                    intro: 'La lesión más temida, pero con un camino muy claro. Sea operado o conservador, tu rodilla puede volver a ser estable y fuerte si respetamos los tiempos biológicos.',
+                    mitos: [
+                        'MITO: "No podré volver a esquiar/jugar" → REALIDAD: Con buena readaptación, la vuelta al deporte es el objetivo.',
+                        'MITO: "La rodillera me protege" → REALIDAD: Tu mejor rodillera es tu cuádriceps.',
+                        'MITO: "Cuanto antes corra, mejor" → REALIDAD: Las prisas son la causa #1 de recaída.'
                     ],
                     fases: [
                         {
-                            title: 'Fase 1: Educación',
-                            desc: 'Desmitificamos el dolor de espalda. Reducimos el miedo al movimiento. Entendemos qué NO es peligroso.'
+                            title: 'Fase 1: Extensión y Activación',
+                            desc: 'Lo más importante es estirar la rodilla del todo y despertar el cuádriceps.',
+                            ejemplos: ['Extensiones pasivas', 'Cuádriceps isométrico', 'Movilidad de rótula']
                         },
                         {
-                            title: 'Fase 2: Movimiento Gradual',
-                            desc: 'Reintroducimos movimientos temidos de forma gradual y segura. Caminatas, extensiones, rotaciones.'
+                            title: 'Fase 2: Carga y Fuerza',
+                            desc: 'Empezamos a cargar peso. Sentadillas, peso muerto y trabajo unipodal.',
+                            ejemplos: ['Sentadilla cajón', 'Puente unipodal', 'Subidas al cajón']
                         },
                         {
-                            title: 'Fase 3: Fortalecimiento',
-                            desc: 'Trabajo de core, peso muerto, sentadillas. Tu espalda se adapta a la carga y se vuelve más resistente.'
-                        },
-                        {
-                            title: 'Fase 4: Autogestión',
-                            desc: 'Te damos las herramientas para gestionar brotes futuros. Porque sí, pueden volver, pero ya sabrás qué hacer.'
+                            title: 'Fase 3: Impacto y Agilidad',
+                            desc: 'Preparación para correr y saltar. Aterrizajes controlados.',
+                            ejemplos: ['Saltos a la comba', 'Drop Jumps', 'Cambios de dirección previstos']
                         }
-                    ]
+                    ],
+                    semasforo: {
+                        si: [
+                            'Trabajar la extensión completa desde el día 1.',
+                            'Caminar con técnica correcta (sin cojear) antes de dejar las muletas.',
+                            'Hielo si hay inflamación aguda tras el ejercicio.',
+                            'Entrenar el resto del cuerpo (core, brazos, la otra pierna).'
+                        ],
+                        no: [
+                            'Poner una almohada bajo la rodilla al dormir (provoca flexo).',
+                            'Volver a correr antes de tener fuerza simétrica en las piernas.',
+                            'Ignorar la inflamación persistente.',
+                            'Pivotar o girar sobre la rodilla en fases tempranas.'
+                        ]
+                    },
+                    limites: 'Respetamos estrictamente los plazos de cicatrización del injerto (si hay cirugía).',
+                    cta: 'Plan recuperar rodilla'
+                }
+            },
+            menisco: {
+                title: 'Menisco',
+                description: 'Dolor al girar o bloquear la rodilla. Evita el "bloqueo".',
+                content: {
+                    intro: 'El menisco es el amortiguador de tu rodilla. Muchas roturas degenerativas NO necesitan operación, sino mejorar la estabilidad de la pierna.',
+                    fases: [
+                        { title: 'Fase 1: Desinflamación', desc: 'Movimiento sin carga para nutrir el cartílago.', ejemplos: ['Bicicleta estática suave', 'Movilidad en agua'] },
+                        { title: 'Fase 2: Estabilidad', desc: 'Evitar que la rodilla "baile". Trabajo de propiocepción.', ejemplos: ['Equilibrio a una pierna', 'Bosu suave'] },
+                        { title: 'Fase 3: Fuerza', desc: 'Proteger el impacto con musculatura.', ejemplos: ['Prensa de piernas', 'Sentadilla búlgara'] }
+                    ],
+                    semasforo: {
+                        si: ['Fortalecer cuádriceps e isquios.', 'Usar calzado con buena amortiguación.', 'Perder peso si hay sobrepeso (reduce carga drásticamente).'],
+                        no: ['Giros bruscos con el pie fijo en el suelo.', 'Sentadillas profundas sin control previo.', 'Correr en asfalto duro en fase inicial.']
+                    },
+                    cta: 'Valorar mi menisco'
+                }
+            },
+            desgaste: {
+                title: 'Artrosis / Desgaste',
+                description: 'Mejorar la fuerza muscular alivia la carga sobre la articulación.',
+                content: {
+                    intro: 'El desgaste es normal con la edad (como las canas). "Hueso contra hueso" suena terrible, pero el dolor disminuye drásticamente si tus músculos absorben el impacto en lugar de tu articulación.',
+                    fases: [
+                        { title: 'Fase 1: Movilidad Suave', desc: 'Engrasar la articulación. El movimiento genera líquido sinovial.', ejemplos: ['Caminar en piscina', 'Bici suave'] },
+                        { title: 'Fase 2: Fuerza sin Impacto', desc: 'Construir músculo sin machacar la articulación.', ejemplos: ['Isométricos fuertes', 'Gomas elásticas'] },
+                        { title: 'Fase 3: Vida Activa', desc: 'Caminar más, subir escaleras con seguridad.', ejemplos: ['Caminatas progresivas', 'Subir escaleras técnica'] }
+                    ],
+                    semasforo: {
+                        si: ['Movimiento diario constante (no "atracones" de fin de semana).', 'Calzado cómodo.', 'Entrenamiento de fuerza regular.'],
+                        no: ['Inmovilidad absoluta (oxida la articulación).', 'Impactos de alta intensidad sin preparación.', 'Ignorar el dolor agudo punzante.']
+                    },
+                    cta: 'Programa Artrosis'
                 }
             }
         }
-    }
+    },
 };
 
 // Datos de Deportes - Contenido Específico
