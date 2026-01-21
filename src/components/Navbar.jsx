@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Activity } from 'lucide-react';
+import { Menu, X, Activity, ChevronDown } from 'lucide-react';
 
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,12 +13,12 @@ export const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const navLinks = [
+    const mainLinks = [
         { name: 'Inicio', path: '/' },
-        { name: 'Rodilla', path: '/readaptacion/rodilla-lca' },
-        { name: 'Espalda', path: '/readaptacion/espalda-lumbalgia' },
-        { name: 'Hombro', path: '/readaptacion/hombro-rotador' },
-        { name: 'Tobillo', path: '/readaptacion/tobillo-esguince' },
+        { name: 'Nosotros', path: '/nosotros' },
+        { name: 'Servicios', path: '/servicios' },
+        { name: 'Lesiones', path: '/lesiones' },
+        { name: 'Precios', path: '/precios' },
     ];
 
     const isHome = location.pathname === '/';
@@ -37,12 +37,12 @@ export const Navbar = () => {
 
                 {/* Desktop Links */}
                 <div className="hidden lg:flex items-center">
-                    <div className="flex items-center gap-1 md:gap-4 mr-8">
-                        {navLinks.map((link) => (
+                    <div className="flex items-center gap-1 md:gap-6 mr-8">
+                        {mainLinks.map((link) => (
                             <Link
                                 key={link.name}
                                 to={link.path}
-                                className={`text-[11px] md:text-[13px] font-black uppercase tracking-widest transition-colors hover:text-primary ${location.pathname === link.path
+                                className={`text-[12px] font-black uppercase tracking-widest transition-colors hover:text-primary px-3 py-2 ${location.pathname === link.path || location.pathname.startsWith(link.path + '/')
                                         ? 'text-primary'
                                         : (scrolled || !isHome ? 'text-gray-900' : 'text-white')
                                     }`}
@@ -51,16 +51,16 @@ export const Navbar = () => {
                             </Link>
                         ))}
                     </div>
-                    <a
-                        href="#valoracion"
+                    <Link
+                        to="/reservar/valoracion-inicial"
                         className={`flex items-center gap-2 px-8 py-3.5 rounded-2xl font-black uppercase tracking-widest text-xs transition-all shadow-xl ${scrolled || !isHome
                                 ? 'bg-primary text-white hover:bg-primary-dark shadow-primary/20'
                                 : 'bg-white text-primary hover:bg-gray-100'
                             }`}
                     >
                         <Activity size={16} />
-                        Pedir Valoración
-                    </a>
+                        Pedir Cita
+                    </Link>
                 </div>
 
                 {/* Mobile Toggle */}
@@ -73,29 +73,29 @@ export const Navbar = () => {
                 </button>
             </div>
 
-            {/* Mobile Menu Overlay */}
-            <div className={`fixed inset-0 bg-white z-[60] flex flex-col items-center justify-center gap-8 transition-all duration-300 ${isOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full pointer-events-none'}`}>
+            {/* Mobile Menu */}
+            <div className={`fixed inset-0 bg-white z-[60] flex flex-col items-center justify-center gap-6 transition-all duration-300 ${isOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full pointer-events-none'}`}>
                 <button onClick={() => setIsOpen(false)} className="absolute top-8 right-8 text-black p-4">
                     <X size={40} />
                 </button>
-                {navLinks.map((link) => (
+                {mainLinks.map((link) => (
                     <Link
                         key={link.name}
                         to={link.path}
                         onClick={() => setIsOpen(false)}
-                        className="text-4xl font-black text-gray-900 uppercase tracking-tighter hover:text-primary transition-colors"
+                        className="text-3xl font-black text-gray-900 uppercase tracking-tighter hover:text-primary transition-colors"
                     >
                         {link.name}
                     </Link>
                 ))}
-                <a
-                    href="#valoracion"
+                <Link
+                    to="/reservar/valoracion-inicial"
                     onClick={() => setIsOpen(false)}
-                    className="bg-primary text-white px-12 py-5 rounded-2xl font-black uppercase tracking-widest text-lg shadow-2xl flex items-center gap-4"
+                    className="bg-primary text-white px-12 py-5 rounded-2xl font-black uppercase tracking-widest text-lg shadow-2xl flex items-center gap-4 mt-4"
                 >
                     <Activity size={24} />
-                    Valoración Inicial
-                </a>
+                    Pedir Cita
+                </Link>
             </div>
         </nav>
     );
