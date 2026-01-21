@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, MapPin, Activity, Shield, Activity as ActivitySmall } from 'lucide-react';
 
-const Footer = () => {
+export const Footer = () => {
     return (
         <footer className="bg-[#0A0A0A] text-white pt-24 pb-12 border-t border-white/5">
             <div className="max-w-[1240px] mx-auto px-4">
@@ -83,4 +83,4 @@ const Footer = () => {
     );
 };
 
-export default Footer;
+export default { Footer };

@@ -3,37 +3,62 @@
 @tailwind utilities;
 
 :root {
-  background-color: #ffffff;
-  color: #333333;
+  /* Marca De Movement - Colores Originales */
+  --primary: #4341EC;
+  --primary-dark: #4E36A3;
+  --accent: #CC3366;
+  --bg-main: #FFFFFF;
+  --bg-soft: #F4F4F4;
+  --bg-card: #F9F9F9;
+  --text-main: #333333;
+  --text-muted: #666666;
+
+  /* Layout */
+  --container-max: 1240px;
 }
 
 body {
   margin: 0;
   font-family: 'Work Sans', sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-main);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
-h1,
-h2,
-h3,
-h4,
-.font-heading {
+/* Tipografía Base */
+.font-work {
   font-family: 'Work Sans', sans-serif;
-  /* Nebulica es custom, uso Work Sans Bold por ahora */
-  font-weight: 700;
-  letter-spacing: -0.02em;
 }
 
+/* Animaciones Custom */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Glassmorphism Refinado */
 .glass {
-  background-color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.text-gradient {
-  background: linear-gradient(135deg, #4341EC 0%, #CC3366 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.glass-dark {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
