@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import { Container } from './ui/Container';
-import { Button } from './ui/Button';
 
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -28,77 +25,75 @@ export const Navbar = () => {
     const isHome = location.pathname === '/';
 
     return (
-        <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-white shadow-sm py-3' : 'bg-transparent py-6'}`}>
-            <Container>
-                <div className="flex justify-between items-center">
-                    <Link to="/" className="flex items-center group">
-                        <img
-                            src="/imagenes/logos/header-logo.svg"
-                            alt="De Movement"
-                            className={`h-12 md:h-14 w-auto transition-all duration-500 ${!scrolled && isHome ? 'brightness-0 invert' : ''}`}
-                        />
-                    </Link>
+        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'}`}>
+            <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+                {/* Logo */}
+                <Link to="/" className="flex items-center">
+                    <img
+                        src="/imagenes/logos/header-logo.svg"
+                        alt="De Movement"
+                        className={`h-12 md:h-16 w-auto transition-all ${!scrolled && isHome ? 'brightness-0 invert' : ''}`}
+                    />
+                </Link>
 
-                    {/* Desktop Menu */}
-                    <div className="hidden md:flex items-center space-x-12">
-                        {navLinks.map((link) => (
-                            <Link
-                                key={link.name}
-                                to={link.path}
-                                className={`text-[15px] font-bold uppercase tracking-wide transition-all hover:scale-105 ${location.pathname === link.path
-                                        ? 'text-[#4341EC]'
-                                        : (scrolled || !isHome ? 'text-gray-900 border-transparent' : 'text-white border-transparent')
-                                    }`}
-                            >
-                                {link.name}
-                            </Link>
-                        ))}
-                        <Button
-                            size="md"
-                            className="ml-4"
-                            onClick={() => window.open('https://wa.me/34600000000', '_blank')}
+                {/* Desktop Links */}
+                <div className="hidden lg:flex items-center gap-8">
+                    {navLinks.map((link) => (
+                        <Link
+                            key={link.name}
+                            to={link.path}
+                            className={`text-sm font-bold uppercase tracking-wider transition-colors hover:text-primary ${location.pathname === link.path
+                                    ? 'text-primary'
+                                    : (scrolled || !isHome ? 'text-gray-900' : 'text-white')
+                                }`}
                         >
-                            Contacto
-                        </Button>
-                    </div>
-
-                    {/* Mobile Button */}
-                    <div className="md:hidden">
-                        <button onClick={() => setIsOpen(!isOpen)} className={`${scrolled || !isHome ? 'text-gray-900' : 'text-white'}`}>
-                            {isOpen ? <X size={32} /> : <Menu size={32} />}
-                        </button>
-                    </div>
-                </div>
-            </Container>
-
-            {/* Mobile Menu */}
-            <AnimatePresence>
-                {isOpen && (
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0.95 }}
-                        className="fixed inset-0 top-0 bg-white z-50 flex flex-col items-center justify-center space-y-8 md:hidden"
+                            {link.name}
+                        </Link>
+                    ))}
+                    <Link
+                        to="/contacto"
+                        className={`px-8 py-3 rounded-xl font-bold uppercase tracking-widest text-sm transition-all ${scrolled || !isHome
+                                ? 'bg-primary text-white hover:bg-primary-dark shadow-lg shadow-primary/20'
+                                : 'bg-white text-primary hover:bg-gray-100'
+                            }`}
                     >
-                        <button onClick={() => setIsOpen(false)} className="absolute top-8 right-8 text-gray-900">
-                            <X size={40} />
-                        </button>
-                        {navLinks.map((link) => (
-                            <Link
-                                key={link.name}
-                                to={link.path}
-                                onClick={() => setIsOpen(false)}
-                                className="text-3xl font-black text-gray-900 uppercase tracking-tighter hover:text-[#4341EC] transition-colors"
-                            >
-                                {link.name}
-                            </Link>
-                        ))}
-                        <Button size="lg" className="w-4/5 mt-10" onClick={() => window.open('https://wa.me/34600000000', '_blank')}>
-                            Contacto Directo
-                        </Button>
-                    </motion.div>
-                )}
-            </AnimatePresence>
+                        Contacto
+                    </Link>
+                </div>
+
+                {/* Mobile Toggle */}
+                <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden p-2">
+                    {isOpen ? (
+                        <X size={32} className={scrolled || !isHome ? 'text-gray-900' : 'text-white'} />
+                    ) : (
+                        <Menu size={32} className={scrolled || !isHome ? 'text-gray-900' : 'text-white'} />
+                    )}
+                </button>
+            </div>
+
+            {/* Mobile Menu Overlay */}
+            <div className={`fixed inset-0 bg-white z-[60] flex flex-col items-center justify-center gap-8 transition-all duration-300 md:hidden ${isOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full pointer-events-none'}`}>
+                <button onClick={() => setIsOpen(false)} className="absolute top-8 right-8 text-black">
+                    <X size={40} />
+                </button>
+                {navLinks.map((link) => (
+                    <Link
+                        key={link.name}
+                        to={link.path}
+                        onClick={() => setIsOpen(false)}
+                        className="text-3xl font-bold text-gray-900 uppercase tracking-tighter hover:text-primary transition-colors"
+                    >
+                        {link.name}
+                    </Link>
+                ))}
+                <Link
+                    to="/contacto"
+                    onClick={() => setIsOpen(false)}
+                    className="bg-primary text-white px-12 py-5 rounded-xl font-bold uppercase tracking-widest text-lg shadow-2xl"
+                >
+                    Contacta ahora
+                </Link>
+            </div>
         </nav>
     );
 };

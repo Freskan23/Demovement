@@ -6,356 +6,259 @@ import { Link } from 'react-router-dom';
 const Home = () => {
     return (
         <div className="bg-white">
-            {/* Hero Section - Fondo azul gradiente como el original */}
+            {/* Hero Section */}
             <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#4341EC] via-[#5951F0] to-[#4E36A3]">
-                <div className="relative z-10 max-w-5xl mx-auto px-6 text-center py-32">
+                <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]" />
+
+                <div className="relative z-10 max-w-7xl mx-auto px-6 text-center py-32">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+                        transition={{ duration: 1 }}
                     >
-                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-white leading-tight">
+                        <h1 className="text-5xl md:text-8xl font-black mb-8 text-white leading-[0.9] tracking-tighter uppercase">
                             ENTRENAR PARA<br />
-                            SER <span className="relative inline-block">
+                            SER <span className="relative inline-block text-white italic">
                                 CAPAZ
-                                <svg className="absolute -bottom-2 left-0 w-full" height="12" viewBox="0 0 200 12" fill="none">
-                                    <path d="M0 6 Q50 0, 100 6 T200 6" stroke="white" strokeWidth="3" fill="none" />
+                                <svg className="absolute -bottom-4 left-0 w-full h-4 text-white" viewBox="0 0 200 20" fill="none" preserveAspectRatio="none">
+                                    <path d="M0 10 Q50 0, 100 10 T200 10" stroke="currentColor" strokeWidth="4" fill="none" />
                                 </svg>
                             </span>
                         </h1>
 
-                        <div className="max-w-3xl mx-auto space-y-6 mb-10">
-                            <p className="text-xl md:text-2xl text-white font-semibold">
-                                READAPTACIÓN AVANZADA, ENTRENAMIENTO Y GRUPOS REDUCIDOS<br />
-                                EN LAS ROZAS.
+                        <div className="max-w-4xl mx-auto space-y-8 mb-16">
+                            <p className="text-xl md:text-3xl text-white font-bold tracking-tight uppercase">
+                                READAPTACIÓN AVANZADA, ENTRENAMIENTO Y GRUPOS REDUCIDOS EN LAS ROZAS.
                             </p>
-                            <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-                                Metodología eficiente, ciencia, empatía y un equipo experto que te acompaña en cada fase del camino.
-                            </p>
-                            <p className="text-lg md:text-xl text-white/90 italic">
-                                Porque tu bienestar es nuestro máximo compromiso.
+                            <p className="text-lg md:text-xl text-white/80 leading-relaxed font-medium max-w-2xl mx-auto">
+                                Metodología eficiente, ciencia y empatía acompañándote en cada fase del camino. Porque tu bienestar es nuestro máximo compromiso.
                             </p>
                         </div>
 
                         <a
                             href="#formulario-home"
-                            className="inline-block bg-white text-primary px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-50 transition-all shadow-xl hover:scale-105 active:scale-95"
+                            className="inline-block bg-white text-primary px-12 py-5 rounded-2xl font-black text-xl hover:bg-gray-50 transition-all shadow-2xl hover:scale-105 active:scale-95 uppercase tracking-widest"
                         >
                             Contacta ahora
                         </a>
                     </motion.div>
                 </div>
 
-                {/* Botón de WhatsApp flotante */}
+                {/* WhatsApp Button */}
                 <a
                     href="https://wa.me/34690285023"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform"
+                    className="fixed bottom-8 right-8 z-50 transition-transform hover:scale-110 active:scale-95"
                 >
-                    <img src="/imagenes/iconos/icon-whatsapp-button.png" alt="WhatsApp" className="w-12 h-12" />
+                    <img src="/imagenes/iconos/icon-whatsapp-button.png" alt="WhatsApp" className="w-16 h-16 drop-shadow-2xl" />
                 </a>
             </section>
 
-            {/* Sección: ¿Para qué quieres entrenar? */}
-            <section className="py-20 bg-white">
-                <div className="max-w-6xl mx-auto px-6 text-center">
-                    <h2 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900">
-                        Y TÚ, ¿PARA QUÉ QUIERES <span className="relative inline-block">
+            {/* ¿Para qué quieres entrenar? */}
+            <section className="py-32 bg-white">
+                <div className="max-w-5xl mx-auto px-6 text-center">
+                    <h2 className="text-4xl md:text-7xl font-black mb-10 text-gray-900 uppercase leading-none tracking-tighter">
+                        Y TÚ, ¿PARA QUÉ QUIERES <br />
+                        <span className="text-primary italic relative">
                             ENTRENAR?
-                            <svg className="absolute -bottom-2 left-0 w-full" height="8" viewBox="0 0 200 8" fill="none">
-                                <path d="M0 4 Q50 0, 100 4 T200 4" stroke="#4341EC" strokeWidth="2" fill="none" />
+                            <svg className="absolute -bottom-2 left-0 w-full h-2 text-primary/30" viewBox="0 0 200 10" fill="none" preserveAspectRatio="none">
+                                <path d="M0 5 Q50 0, 100 5 T200 5" stroke="currentColor" strokeWidth="2" fill="none" />
                             </svg>
                         </span>
                     </h2>
-                    <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed">
-                        Recuerda que no todo el mundo entrena para cambiar su físico. Muchos buscamos <strong>calmar nuestra mente, hacernos más fuertes, volver a ser libres</strong> recuperando nuestra libertad de movimiento.
+                    <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-16 leading-relaxed font-medium">
+                        Recuerda que no todo el mundo entrena para cambiar su físico. Muchos buscamos <strong className="text-gray-900">calmar nuestra mente, hacernos más fuertes, volver a ser libres</strong> recuperando nuestra libertad de movimiento.
                     </p>
                     <a
                         href="#formulario-home"
-                        className="inline-block bg-primary text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-primary-dark transition-all shadow-lg hover:scale-105"
+                        className="btn-primary"
                     >
-                        Contacta ahora
+                        Empezar mi cambio
                     </a>
                 </div>
             </section>
 
-            {/* Sección: Nuestros Servicios */}
-            <section className="py-20 bg-gray-50">
-                <div className="max-w-6xl mx-auto px-6">
-                    <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-gray-900">
-                        NUESTROS SERVICIOS
-                    </h2>
+            {/* Nuestros Servicios */}
+            <section className="py-32 bg-gray-50/50 border-y border-gray-100">
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                        <div>
+                            <span className="text-primary font-black uppercase tracking-[0.3em] text-sm mb-4 block">Excelencia en el Servicio</span>
+                            <h2 className="text-5xl md:text-6xl font-black text-gray-900 uppercase tracking-tighter">NUESTROS SERVICIOS</h2>
+                        </div>
+                    </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                         {[
                             {
                                 title: 'Readaptación de lesiones',
                                 desc: 'Fortalece tus estructuras, recupera su función y vuelve a sentirte libre.',
-                                icon: '/imagenes/iconos/icon-servicios-readaptacion.svg',
-                                link: '/servicios'
+                                icon: '/imagenes/iconos/icon-servicios-readaptacion.svg'
                             },
                             {
                                 title: 'Entrenamiento personal',
-                                desc: 'Aprende a entrenar y mejora todas tus capacidades físicas en un espacio más íntimo.',
-                                icon: '/imagenes/iconos/icon-servicios-entrenamiento.svg',
-                                link: '/servicios'
+                                desc: 'Aprende a entrenar y mejora todas tus capacidades físicas en un espacio íntimo.',
+                                icon: '/imagenes/iconos/icon-servicios-entrenamiento.svg'
                             },
                             {
                                 title: 'Grupos reducidos',
                                 desc: 'Mejora tu adherencia, ponte muy fuerte y disfruta entrenando acompañado.',
-                                icon: '/imagenes/iconos/icon-servicios-grupos.svg',
-                                link: '/servicios'
+                                icon: '/imagenes/iconos/icon-servicios-grupos.svg'
                             },
                         ].map((service, i) => (
                             <motion.div
                                 key={i}
-                                whileHover={{ y: -8 }}
-                                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all"
+                                whileHover={{ y: -12 }}
+                                className="bg-white p-12 rounded-[32px] shadow-sm border border-gray-100 hover:shadow-2xl transition-all group"
                             >
-                                <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-                                    <img src={service.icon} className="w-8 h-8" alt={service.title} />
+                                <div className="w-20 h-20 bg-primary/5 rounded-2xl flex items-center justify-center mb-10 group-hover:bg-primary group-hover:text-white transition-all">
+                                    <img src={service.icon} className="w-10 h-10 group-hover:brightness-0 group-hover:invert" alt={service.title} />
                                 </div>
-                                <h3 className="text-2xl font-bold mb-4 text-gray-900">{service.title}</h3>
-                                <p className="text-gray-600 mb-6 leading-relaxed">{service.desc}</p>
+                                <h3 className="text-3xl font-black mb-6 text-gray-900 uppercase tracking-tighter leading-none">{service.title}</h3>
+                                <p className="text-gray-600 mb-10 leading-relaxed font-medium text-lg">{service.desc}</p>
                                 <Link
-                                    to={service.link}
-                                    className="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all"
+                                    to="/servicios"
+                                    className="text-primary font-black flex items-center gap-3 hover:gap-5 transition-all uppercase tracking-widest text-sm"
                                 >
-                                    Ver más <ChevronRight size={18} />
+                                    Ver más <ChevronRight size={20} />
                                 </Link>
                             </motion.div>
                         ))}
                     </div>
-
-                    <div className="text-center mt-12">
-                        <a
-                            href="#formulario-home"
-                            className="inline-block bg-primary text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-primary-dark transition-all shadow-lg"
-                        >
-                            Empieza hoy
-                        </a>
-                    </div>
                 </div>
             </section>
 
-            {/* Sección: ¿Por qué De Movement? */}
-            <section className="py-20 bg-white">
-                <div className="max-w-6xl mx-auto px-6">
-                    <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-gray-900">
-                        ¿POR QUÉ NUESTROS USUARIOS PREFIEREN DE MOVEMENT?
+            {/* ¿Por qué De Movement? */}
+            <section className="py-32 bg-white">
+                <div className="max-w-7xl mx-auto px-6">
+                    <h2 className="text-4xl md:text-6xl font-black text-center mb-24 text-gray-900 uppercase tracking-tighter leading-[0.9]">
+                        ¿POR QUÉ NUESTROS USUARIOS <br /> PREFIEREN <span className="text-primary italic">DE MOVEMENT?</span>
                     </h2>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
                         {[
-                            {
-                                title: 'Profesionales',
-                                desc: 'titulados y colegiados con amplia experiencia'
-                            },
-                            {
-                                title: 'Recuperación de la función',
-                                desc: 'y fortalecimiento de las estructuras para ayudarte a ser libre y autónomo en tu movimiento.'
-                            },
-                            {
-                                title: 'Entrenamientos individualizados',
-                                desc: 'y adaptados, siempre con un trato cercano.'
-                            },
-                            {
-                                title: 'Espacio libre de juicios',
-                                desc: 'y sin aglomeraciones.'
-                            },
-                            {
-                                title: 'Especialistas en readaptación',
-                                desc: 'de personas con lesiones mediante el movimiento.'
-                            },
-                            {
-                                title: 'Análisis de patrones de movimiento',
-                                desc: 'y rangos de fuerza, con una atención integral a tu contexto biopsicosocial.'
-                            },
+                            { title: 'Profesionales', desc: 'titulados y colegiados con amplia experiencia' },
+                            { title: 'Recuperación de la función', desc: 'y fortalecimiento de las estructuras para ayudarte a ser libre y autónomo.' },
+                            { title: 'Trato Cercano', desc: 'entrenamientos individualizados y adaptados a tu contexto.' },
+                            { title: 'Espacio Seguro', desc: 'espacio libre de juicios y sin aglomeraciones agobiantes.' },
+                            { title: 'Especialización', desc: 'expertos en readaptación de personas con lesiones.' },
+                            { title: 'Atención Integral', desc: 'análisis de patrones de movimiento y contexto biopsicosocial.' },
                         ].map((item, i) => (
-                            <div key={i} className="flex items-start gap-4">
-                                <div className="flex-shrink-0 w-6 h-6 bg-primary rounded-full flex items-center justify-center mt-1">
-                                    <Check size={14} className="text-white" />
+                            <div key={i} className="flex gap-6 items-start group">
+                                <div className="flex-shrink-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                    <Check size={20} strokeWidth={3} />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-gray-900 mb-1">{item.title}</h4>
-                                    <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+                                    <h4 className="font-black text-xl text-gray-900 mb-3 uppercase tracking-tight">{item.title}</h4>
+                                    <p className="text-gray-600 text-[17px] leading-relaxed font-medium">{item.desc}</p>
                                 </div>
                             </div>
                         ))}
                     </div>
-
-                    <div className="text-center mt-12">
-                        <a
-                            href="#formulario-home"
-                            className="inline-block bg-primary text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-primary-dark transition-all shadow-lg"
-                        >
-                            Entrena con nosotros
-                        </a>
-                    </div>
                 </div>
             </section>
 
-            {/* Sección: Testimonios */}
-            <section className="py-20 bg-gray-50">
-                <div className="max-w-6xl mx-auto px-6">
-                    <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 text-gray-900">
-                        Testimonios que nos recuerdan por qué hacemos lo que hacemos
-                    </h2>
-                    <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-                        En DE MOVEMENT no trabajamos con números, trabajamos con personas. Cada historia que acompañamos es única.
-                    </p>
+            {/* Testimonios */}
+            <section className="py-32 bg-[#F8F8F8]">
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="text-center mb-20">
+                        <h2 className="text-4xl md:text-6xl font-black mb-8 text-gray-900 uppercase tracking-tighter">
+                            HISTORIAS REALES
+                        </h2>
+                        <p className="text-xl text-gray-600 max-w-2xl mx-auto font-medium">
+                            No trabajamos con números, trabajamos con personas. Cada historia que acompañamos es una victoria compartida.
+                        </p>
+                    </div>
 
                     {/* Estadísticas */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-24">
                         {[
                             { num: '+7', label: 'años de experiencia' },
                             { num: '+300', label: 'personas readaptadas' },
-                            { num: '95%', label: 'de tasa de retención' },
+                            { num: '95%', label: 'tasa de éxito' },
                         ].map((stat, i) => (
-                            <div key={i} className="text-center">
-                                <div className="text-5xl font-bold text-primary mb-2">{stat.num}</div>
-                                <div className="text-gray-600 font-semibold">{stat.label}</div>
+                            <div key={i} className="text-center p-12 bg-white rounded-[40px] shadow-sm border border-gray-100">
+                                <div className="text-7xl font-black text-primary mb-4 tracking-tighter">{stat.num}</div>
+                                <div className="text-gray-500 font-bold uppercase tracking-widest text-sm">{stat.label}</div>
                             </div>
                         ))}
                     </div>
 
-                    {/* Videos de testimonios */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    {/* Videos */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                         {[
                             { name: 'Juanjo', img: '/imagenes/testimonios/testimonio-video-juanjo.jpg' },
                             { name: 'Mamen', img: '/imagenes/testimonios/testimonio-video-mamen.jpg' },
                             { name: 'Patricia', img: '/imagenes/testimonios/testimonio-video-patricia.jpg' },
                             { name: 'David', img: '/imagenes/testimonios/testimonio-video-david.jpg' },
                         ].map((test, i) => (
-                            <div key={i} className="relative aspect-video rounded-xl overflow-hidden group cursor-pointer shadow-lg">
+                            <div key={i} className="relative aspect-video rounded-[32px] overflow-hidden group cursor-pointer shadow-xl border-4 border-white">
                                 <img
                                     src={test.img}
-                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                                     alt={`Testimonio de ${test.name}`}
                                 />
                                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-                                    <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                                        <img src="/imagenes/iconos/icon-play-video.svg" className="w-8 h-8" alt="Play" />
+                                    <div className="w-20 h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                        <img src="/imagenes/iconos/icon-play-video.svg" className="w-10 h-10" alt="Play" />
                                     </div>
                                 </div>
-                                <div className="absolute bottom-4 left-4">
-                                    <span className="text-white font-bold text-lg">{test.name}</span>
+                                <div className="absolute bottom-10 left-10">
+                                    <span className="text-white font-black text-2xl uppercase tracking-tighter drop-shadow-md">{test.name}</span>
                                 </div>
                             </div>
                         ))}
                     </div>
-
-                    <div className="text-center">
-                        <a
-                            href="#formulario-home"
-                            className="inline-block bg-primary text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-primary-dark transition-all shadow-lg"
-                        >
-                            Quiero ser el siguiente
-                        </a>
-                    </div>
                 </div>
             </section>
 
-            {/* Sección: Formulario de Contacto */}
-            <section id="formulario-home" className="py-20 bg-white">
-                <div className="max-w-2xl mx-auto px-6">
-                    <div className="text-center mb-12">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">Escríbenos</h2>
-                        <p className="text-gray-600">Nuestro equipo contesta en menos de 6 horas</p>
+            {/* Formulario */}
+            <section id="formulario-home" className="py-32 bg-white">
+                <div className="max-w-3xl mx-auto px-6">
+                    <div className="text-center mb-20">
+                        <span className="text-primary font-black uppercase tracking-[0.3em] text-sm mb-4 block">Primer Paso</span>
+                        <h2 className="text-5xl md:text-6xl font-black mb-6 text-gray-900 uppercase tracking-tighter">CONTÁCTANOS</h2>
+                        <p className="text-xl text-gray-500 font-medium">Contestamos en menos de 6 horas laborables.</p>
                     </div>
 
-                    <form className="space-y-6">
-                        <div>
-                            <label className="block text-sm font-semibold text-gray-700 mb-2">
-                                Nombre y Apellido*
-                            </label>
-                            <input
-                                type="text"
-                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
-                                required
-                            />
+                    <form className="space-y-8 p-12 bg-gray-50 rounded-[40px] border border-gray-100 shadow-sm">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div className="space-y-2">
+                                <label className="text-xs font-black uppercase tracking-widest text-gray-400 ml-4">Nombre y Apellido*</label>
+                                <input type="text" className="w-full px-6 py-5 bg-white border-0 rounded-2xl shadow-sm focus:ring-4 focus:ring-primary/10 outline-none transition-all" required />
+                            </div>
+                            <div className="space-y-2">
+                                <label className="text-xs font-black uppercase tracking-widest text-gray-400 ml-4">Email*</label>
+                                <input type="email" className="w-full px-6 py-5 bg-white border-0 rounded-2xl shadow-sm focus:ring-4 focus:ring-primary/10 outline-none transition-all" required />
+                            </div>
                         </div>
 
-                        <div>
-                            <label className="block text-sm font-semibold text-gray-700 mb-2">
-                                Email*
-                            </label>
-                            <input
-                                type="email"
-                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
-                                required
-                            />
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div className="space-y-2">
+                                <label className="text-xs font-black uppercase tracking-widest text-gray-400 ml-4">¿Tienes alguna lesión?*</label>
+                                <input type="text" className="w-full px-6 py-5 bg-white border-0 rounded-2xl shadow-sm focus:ring-4 focus:ring-primary/10 outline-none transition-all" required />
+                            </div>
+                            <div className="space-y-2">
+                                <label className="text-xs font-black uppercase tracking-widest text-gray-400 ml-4">Teléfono*</label>
+                                <input type="tel" className="w-full px-6 py-5 bg-white border-0 rounded-2xl shadow-sm focus:ring-4 focus:ring-primary/10 outline-none transition-all" required />
+                            </div>
                         </div>
 
-                        <div>
-                            <label className="block text-sm font-semibold text-gray-700 mb-2">
-                                ¿Tienes alguna lesión?*
-                            </label>
-                            <input
-                                type="text"
-                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
-                                required
-                            />
+                        <div className="space-y-2">
+                            <label className="text-xs font-black uppercase tracking-widest text-gray-400 ml-4">Mensaje</label>
+                            <textarea rows="5" className="w-full px-6 py-5 bg-white border-0 rounded-2xl shadow-sm focus:ring-4 focus:ring-primary/10 outline-none transition-all resize-none"></textarea>
                         </div>
 
-                        <div>
-                            <label className="block text-sm font-semibold text-gray-700 mb-2">
-                                Teléfono*
-                            </label>
-                            <input
-                                type="tel"
-                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
-                                required
-                            />
+                        <div className="flex items-center gap-4 ml-4">
+                            <input type="checkbox" id="privacy" className="w-5 h-5 rounded border-gray-300 text-primary focus:ring-primary" required />
+                            <label htmlFor="privacy" className="text-sm font-bold text-gray-600">Acepto la <Link to="/privacidad" className="text-primary underline">Política de privacidad</Link></label>
                         </div>
 
-                        <div>
-                            <label className="block text-sm font-semibold text-gray-700 mb-2">
-                                Mensaje
-                            </label>
-                            <textarea
-                                rows="4"
-                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none resize-none"
-                                placeholder="Déjanos tu mensaje"
-                            ></textarea>
-                        </div>
-
-                        <div className="flex items-start gap-3">
-                            <input
-                                type="checkbox"
-                                id="privacy"
-                                className="mt-1 w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
-                                required
-                            />
-                            <label htmlFor="privacy" className="text-sm text-gray-600">
-                                He leído y acepto la <a href="/politica-de-privacidad" className="text-primary underline">Política de privacidad</a>
-                            </label>
-                        </div>
-
-                        <button
-                            type="submit"
-                            className="w-full bg-primary text-white py-4 rounded-lg font-bold text-lg hover:bg-primary-dark transition-all shadow-lg hover:scale-[1.02] active:scale-95"
-                        >
-                            Enviar
+                        <button type="submit" className="w-full btn-primary py-6 text-xl">
+                            Enviar Solicitud
                         </button>
                     </form>
-                </div>
-            </section>
-
-            {/* Sección: ¿Te ayudamos? */}
-            <section className="py-20 bg-gradient-to-br from-primary via-[#5951F0] to-primary-dark text-white">
-                <div className="max-w-4xl mx-auto px-6 text-center">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6">¿Te ayudamos?</h2>
-                    <p className="text-xl mb-10 leading-relaxed opacity-90">
-                        Nuestro equipo estará siempre a tu disposición: abierto a escucharte, comprender tu contexto y proponerte el camino más adecuado para ti.
-                    </p>
-                    <a
-                        href="/contacto"
-                        className="inline-block bg-white text-primary px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-50 transition-all shadow-xl hover:scale-105"
-                    >
-                        Contáctanos
-                    </a>
                 </div>
             </section>
         </div>
