@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Activity } from 'lucide-react';
 
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +19,6 @@ export const Navbar = () => {
         { name: 'Espalda', path: '/readaptacion/espalda-lumbalgia' },
         { name: 'Hombro', path: '/readaptacion/hombro-rotador' },
         { name: 'Tobillo', path: '/readaptacion/tobillo-esguince' },
-        { name: 'Tendinitis', path: '/readaptacion/tendinitis' },
     ];
 
     const isHome = location.pathname === '/';
@@ -36,14 +35,14 @@ export const Navbar = () => {
                     />
                 </Link>
 
-                {/* Desktop Links - Usando clases explicitas para evitar clumping */}
+                {/* Desktop Links */}
                 <div className="hidden lg:flex items-center">
-                    <div className="flex items-center gap-1 md:gap-4 mr-6">
+                    <div className="flex items-center gap-1 md:gap-4 mr-8">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.name}
                                 to={link.path}
-                                className={`navbar-link text-xs md:text-sm font-bold tracking-wider transition-colors hover:text-primary ${location.pathname === link.path
+                                className={`text-[11px] md:text-[13px] font-black uppercase tracking-widest transition-colors hover:text-primary ${location.pathname === link.path
                                         ? 'text-primary'
                                         : (scrolled || !isHome ? 'text-gray-900' : 'text-white')
                                     }`}
@@ -52,15 +51,16 @@ export const Navbar = () => {
                             </Link>
                         ))}
                     </div>
-                    <Link
-                        to="/contacto"
-                        className={`px-8 py-3 rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg ${scrolled || !isHome
-                                ? 'bg-[#4341EC] text-white hover:bg-[#4E36A3]'
-                                : 'bg-white text-[#4341EC] hover:bg-gray-100'
+                    <a
+                        href="#valoracion"
+                        className={`flex items-center gap-2 px-8 py-3.5 rounded-2xl font-black uppercase tracking-widest text-xs transition-all shadow-xl ${scrolled || !isHome
+                                ? 'bg-primary text-white hover:bg-primary-dark shadow-primary/20'
+                                : 'bg-white text-primary hover:bg-gray-100'
                             }`}
                     >
-                        Contacto
-                    </Link>
+                        <Activity size={16} />
+                        Pedir Valoración
+                    </a>
                 </div>
 
                 {/* Mobile Toggle */}
@@ -83,18 +83,19 @@ export const Navbar = () => {
                         key={link.name}
                         to={link.path}
                         onClick={() => setIsOpen(false)}
-                        className="text-3xl font-black text-gray-900 uppercase tracking-tighter hover:text-primary transition-colors"
+                        className="text-4xl font-black text-gray-900 uppercase tracking-tighter hover:text-primary transition-colors"
                     >
                         {link.name}
                     </Link>
                 ))}
-                <Link
-                    to="/contacto"
+                <a
+                    href="#valoracion"
                     onClick={() => setIsOpen(false)}
-                    className="bg-[#4341EC] text-white px-12 py-5 rounded-xl font-bold uppercase tracking-widest text-lg shadow-2xl"
+                    className="bg-primary text-white px-12 py-5 rounded-2xl font-black uppercase tracking-widest text-lg shadow-2xl flex items-center gap-4"
                 >
-                    Contacta ahora
-                </Link>
+                    <Activity size={24} />
+                    Valoración Inicial
+                </a>
             </div>
         </nav>
     );

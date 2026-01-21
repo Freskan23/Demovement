@@ -1,7 +1,8 @@
 import React from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { CheckCircle2, ChevronRight, Activity, MapPin } from 'lucide-react';
+import { Activity, Shield, MapPin, ChevronLeft, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { injuries } from '../data/injuries';
 
 const InjuryPage = () => {
@@ -11,72 +12,77 @@ const InjuryPage = () => {
     if (!injury) return <Navigate to="/" />;
 
     return (
-        <div className="pt-20 min-h-screen bg-white">
-            {/* Hero Section - Branding de fidelidad */}
-            <section className="relative h-[50vh] flex items-center overflow-hidden bg-primary">
-                <div className="absolute inset-0 z-0 opacity-30">
-                    <img
-                        src={injury.heroImage}
-                        className="w-full h-full object-cover grayscale"
-                        alt={injury.title}
-                    />
-                    <div className="absolute inset-0 bg-primary/60 mix-blend-multiply" />
-                </div>
+        <div className="bg-white min-h-screen">
+            {/* Hero Minimalista y Profesional */}
+            <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-gray-50 overflow-hidden">
+                <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 translate-x-20" />
 
-                <div className="relative z-20 max-w-7xl mx-auto px-4 w-full text-center md:text-left">
+                <div className="relative z-10 max-w-7xl mx-auto px-6">
+                    <Link to="/" className="inline-flex items-center gap-2 text-primary font-black uppercase tracking-widest text-xs mb-12 hover:gap-4 transition-all">
+                        <ChevronLeft size={16} />
+                        Volver a Inicio
+                    </Link>
+
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
+                        initial={{ opacity: 0, x: -30 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8 }}
                     >
-                        <div className="inline-flex items-center space-x-2 bg-white/20 px-3 py-1 rounded-full text-white text-xs font-black uppercase tracking-widest mb-6">
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary/10 rounded-full text-primary text-xs font-black uppercase tracking-widest mb-8">
                             <Activity size={14} />
-                            <span>Readaptación Especializada</span>
+                            <span>Especialidad en Readaptación</span>
                         </div>
-                        <h1 className="text-5xl md:text-7xl font-black mb-4 uppercase text-white tracking-tighter">
+                        <h1 className="text-5xl md:text-8xl font-black text-gray-900 uppercase tracking-tighter leading-none mb-8">
                             {injury.title} <br />
-                            <span className="text-white/80">{injury.subtitle}</span>
+                            <span className="text-primary italic">{injury.subtitle}</span>
                         </h1>
-                        <p className="flex items-center justify-center md:justify-start text-white/90 font-bold uppercase tracking-tight">
-                            <MapPin size={18} className="mr-2" />
-                            Sede Las Rozas | A 5 minutos de Majadahonda
+                        <p className="flex items-center text-gray-500 font-bold uppercase tracking-widest text-sm">
+                            <MapPin size={18} className="mr-2 text-primary" />
+                            Unidad de Readaptación Avanzada | Las Rozas
                         </p>
                     </motion.div>
                 </div>
             </section>
 
-            {/* Content Section */}
+            {/* Content Section: Enfoque Clínico */}
             <section className="py-24 bg-white">
-                <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-16">
-                    <div className="lg:col-span-2 space-y-16">
+                <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-20">
+                    <div className="lg:col-span-2 space-y-20">
+                        {/* Intro */}
                         <div>
-                            <h2 className="text-3xl font-black mb-6 uppercase text-gray-900">El Plan de Recuperación</h2>
+                            <span className="text-primary font-black uppercase tracking-[0.3em] text-xs mb-4 block">Evaluación Inicial</span>
+                            <h2 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-tight mb-8">ABORDAJE BASADO EN CIENCIA</h2>
                             <p className="text-xl text-gray-600 leading-relaxed font-medium">
                                 {injury.content.intro}
                             </p>
                         </div>
 
+                        {/* Why Us / Context */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             {injury.content.whyUs.map((item, i) => (
-                                <div key={i} className="p-10 bg-[#F9F9F9] rounded-[32px] border border-gray-100 hover:shadow-xl transition-all">
-                                    <h4 className="text-primary text-xl font-black mb-4 uppercase">{item.title}</h4>
+                                <div key={i} className="p-10 bg-gray-50 rounded-[40px] border border-gray-100 hover:shadow-2xl hover:bg-white transition-all">
+                                    <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-gray-100 text-primary">
+                                        <Shield size={24} />
+                                    </div>
+                                    <h4 className="text-gray-900 text-xl font-black mb-4 uppercase tracking-tight">{item.title}</h4>
                                     <p className="text-gray-600 font-medium leading-relaxed">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
 
-                        <div className="bg-[#1A1A1A] p-12 rounded-[40px] text-white relative overflow-hidden shadow-2xl">
-                            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 blur-[100px] rounded-full translate-x-10 -translate-y-10" />
-                            <h3 className="text-3xl font-black mb-10 uppercase italic">Fases de Trabajo</h3>
-                            <div className="space-y-8 relative z-10">
+                        {/* Process Phases */}
+                        <div className="bg-gray-900 p-12 md:p-16 rounded-[60px] text-white relative overflow-hidden shadow-3xl">
+                            <div className="absolute top-0 right-0 w-80 h-80 bg-primary/20 blur-[100px] rounded-full translate-x-1/2 -translate-y-1/2" />
+                            <h3 className="text-3xl md:text-4xl font-black mb-12 uppercase italic relative z-10">FASES DE LA READAPTACIÓN</h3>
+                            <div className="space-y-12 relative z-10">
                                 {injury.content.process.map((step, i) => (
-                                    <div key={i} className="flex items-start space-x-6 group">
-                                        <div className="bg-primary text-white font-black h-10 w-10 rounded-2xl flex items-center justify-center shrink-0 mt-1 shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">
-                                            {i + 1}
+                                    <div key={i} className="flex flex-col md:flex-row gap-8 group">
+                                        <div className="text-primary font-black text-6xl tracking-tighter opacity-20 group-hover:opacity-100 transition-opacity">
+                                            {(i + 1).toString().padStart(2, '0')}
                                         </div>
-                                        <div>
-                                            <h4 className="text-white font-black text-xl mb-2 uppercase">{step.title}</h4>
-                                            <p className="text-gray-400 font-medium leading-relaxed">{step.desc}</p>
+                                        <div className="md:pt-4">
+                                            <h4 className="text-white font-black text-2xl mb-3 uppercase tracking-tight">{step.title}</h4>
+                                            <p className="text-gray-400 font-medium leading-relaxed text-lg max-w-xl">{step.desc}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -86,29 +92,31 @@ const InjuryPage = () => {
 
                     {/* Sidebar CTA */}
                     <div className="lg:col-span-1">
-                        <div className="bg-white p-10 rounded-[40px] sticky top-28 border border-gray-100 shadow-2xl">
-                            <h3 className="text-2xl font-black mb-6 uppercase text-gray-900">Agenda tu Valoración</h3>
-                            <p className="text-gray-500 mb-10 font-medium uppercase text-sm tracking-tighter">Sesiones 100% personalizadas en Las Rozas.</p>
+                        <div className="sticky top-32 p-10 bg-white rounded-[50px] border border-gray-100 shadow-2xl overflow-hidden">
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl -z-10" />
+                            <h3 className="text-2xl font-black mb-6 uppercase text-gray-900 tracking-tight leading-none">CITA DE VALORACIÓN</h3>
+                            <p className="text-gray-500 mb-8 font-medium italic">Evaluamos tu punto de partida para diseñar el camino hacia tu recuperación.</p>
 
-                            <div className="space-y-5 mb-10">
+                            <ul className="space-y-4 mb-10">
                                 {[
-                                    'Ciencia y Evidencia',
-                                    'Atención Directa',
-                                    'Resultados Deportivos',
-                                    'Fácil Aparcamiento'
+                                    'Análisis Biomecánico 1:1',
+                                    'Informe de Valoración',
+                                    'Propuesta de Tiempos',
+                                    'Acceso Preferente en Las Rozas'
                                 ].map((text, i) => (
-                                    <div key={i} className="flex items-center space-x-3 text-sm font-bold text-gray-700">
-                                        <div className="h-2 w-2 bg-primary rounded-full" />
-                                        <span className="uppercase">{text}</span>
-                                    </div>
+                                    <li key={i} className="flex items-center gap-3 text-xs font-black uppercase tracking-widest text-gray-700">
+                                        <div className="w-2 h-2 bg-primary rounded-full shadow-lg shadow-primary/30" />
+                                        {text}
+                                    </li>
                                 ))}
-                            </div>
+                            </ul>
 
                             <a
-                                href="https://wa.me/34600000000"
-                                className="block w-full text-center bg-primary text-white py-4 rounded-xl font-black uppercase hover:bg-primary-dark transition-all shadow-lg shadow-primary/20"
+                                href="#valoracion"
+                                className="block w-full text-center bg-primary text-white py-5 rounded-2xl font-black uppercase tracking-widest hover:bg-primary-dark transition-all shadow-xl shadow-primary/20 hover:scale-105 active:scale-95 flex items-center justify-center gap-3"
                             >
-                                Hablar con Readaptador
+                                <Activity size={18} />
+                                Iniciar Proceso
                             </a>
                         </div>
                     </div>
