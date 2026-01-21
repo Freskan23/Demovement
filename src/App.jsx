@@ -10,8 +10,8 @@ function App() {
         <Router>
             <div className="flex flex-col min-h-screen">
                 <Navbar />
-                {/* Padding superior para compensar la Navbar fija */}
-                <main className="flex-grow pt-20 md:pt-24">
+                {/* El padding se maneja ahora a nivel de página para permitir Hero transparente en Home */}
+                <main className="flex-grow">
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/readaptacion/:slug" element={<InjuryPage />} />
