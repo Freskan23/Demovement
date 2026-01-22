@@ -422,40 +422,190 @@ export const lesiones = {
             },
             menisco: {
                 title: 'Menisco',
-                description: 'Dolor al girar o bloquear la rodilla. Evita el "bloqueo".',
+                description: 'Dolor al girar o bloquear la rodilla. Recupera la función sin cirugía en la mayoría de casos.',
                 content: {
-                    intro: 'El menisco es el amortiguador de tu rodilla. Muchas roturas degenerativas NO necesitan operación, sino mejorar la estabilidad de la pierna.',
+                    intro: 'El menisco es el amortiguador de tu rodilla. Muchas roturas degenerativas NO necesitan operación, sino mejorar la estabilidad de la pierna y la absorción de impactos.',
+                    mitos: [
+                        'MITO: "Solo se cura operando" → REALIDAD: El ejercicio es igual de efectivo que la cirugía en la mayoría de roturas.',
+                        'MITO: "Tengo un trozo suelto" → REALIDAD: Tu cuerpo puede adaptar la articulación perfectamente.',
+                        'MITO: "No volveré a correr" → REALIDAD: Muchos corredores viven con roturas de menisco asintomáticas.'
+                    ],
                     fases: [
-                        { title: 'Fase 1: Desinflamación', desc: 'Movimiento sin carga para nutrir el cartílago.', ejemplos: ['Bicicleta estática suave', 'Movilidad en agua'] },
-                        { title: 'Fase 2: Estabilidad', desc: 'Evitar que la rodilla "baile". Trabajo de propiocepción.', ejemplos: ['Equilibrio a una pierna', 'Bosu suave'] },
-                        { title: 'Fase 3: Fuerza', desc: 'Proteger el impacto con musculatura.', ejemplos: ['Prensa de piernas', 'Sentadilla búlgara'] }
+                        {
+                            title: 'Fase 1: Desinflamación y Nutrición',
+                            desc: 'Movimiento sin carga para nutrir el cartílago y reducir la inflamación articular.',
+                            ejemplos: ['Bicicleta estática sin resistencia', 'Movilidad pendular', 'Activación isométrica de cuádriceps']
+                        },
+                        {
+                            title: 'Fase 2: Estabilidad y Propiocepción',
+                            desc: 'Evitar que la rodilla "baile". Enseñar al cerebro a controlar la articulación.',
+                            ejemplos: ['Equilibrio a una pierna sobre suelo firme', 'Sentadilla corta controlada', 'Peso muerto unipodal asistido']
+                        },
+                        {
+                            title: 'Fase 3: Fuerza y Absorción',
+                            desc: 'Proteger el menisco con una "prensa" muscular potente. Introducción gradual de impactos.',
+                            ejemplos: ['Sentadilla búlgara', 'Prensa de piernas unilateral', 'Saltos controlados (Landing)']
+                        }
                     ],
                     semasforo: {
-                        si: ['Fortalecer cuádriceps e isquios.', 'Usar calzado con buena amortiguación.', 'Perder peso si hay sobrepeso (reduce carga drásticamente).'],
-                        no: ['Giros bruscos con el pie fijo en el suelo.', 'Sentadillas profundas sin control previo.', 'Correr en asfalto duro en fase inicial.']
+                        si: [
+                            'Fortalecer cuádriceps e isquios (son tus amortiguadores).',
+                            'Mantener un peso saludable para reducir la carga mecánica.',
+                            'Usar calzado con buena amortiguación.',
+                            'Actividad física regular de bajo impacto (caminar, nadar).'
+                        ],
+                        no: [
+                            'Giros bruscos con el pie fijo en el suelo.',
+                            'Sentadillas profundas (>90º) sin control previo.',
+                            'Correr en asfalto duro en fase de inflamación aguda.',
+                            'Ignorar el dolor punzante "de bloqueo".'
+                        ]
                     },
+                    limites: 'Evitamos el dolor de tipo "pinchazo" interno. La fatiga muscular es buena.',
                     cta: 'Valorar mi menisco'
                 }
             },
             desgaste: {
                 title: 'Artrosis / Desgaste',
-                description: 'Mejorar la fuerza muscular alivia la carga sobre la articulación.',
+                description: 'El movimiento es el mejor tratamiento para el desgaste articular.',
                 content: {
                     intro: 'El desgaste es normal con la edad (como las canas). "Hueso contra hueso" suena terrible, pero el dolor disminuye drásticamente si tus músculos absorben el impacto en lugar de tu articulación.',
+                    mitos: [
+                        'MITO: "Si me muevo se desgasta más" → REALIDAD: El sedentarismo oxida la articulación; el movimiento la engrasa.',
+                        'MITO: "Solo me queda la prótesis" → REALIDAD: Una buena musculatura puede retrasar o evitar la prótesis años.',
+                        'MITO: "Debo dejar de hacer deporte" → REALIDAD: Debes adaptar el deporte, no abandonarlo.'
+                    ],
                     fases: [
-                        { title: 'Fase 1: Movilidad Suave', desc: 'Engrasar la articulación. El movimiento genera líquido sinovial.', ejemplos: ['Caminar en piscina', 'Bici suave'] },
-                        { title: 'Fase 2: Fuerza sin Impacto', desc: 'Construir músculo sin machacar la articulación.', ejemplos: ['Isométricos fuertes', 'Gomas elásticas'] },
-                        { title: 'Fase 3: Vida Activa', desc: 'Caminar más, subir escaleras con seguridad.', ejemplos: ['Caminatas progresivas', 'Subir escaleras técnica'] }
+                        {
+                            title: 'Fase 1: Lubricación Articular',
+                            desc: 'El movimiento genera líquido sinovial (el aceite de tus juntas). Engrasamos la rodilla.',
+                            ejemplos: ['Movilidad activa sin peso', 'Caminar en piscina o llano', 'Bici suave']
+                        },
+                        {
+                            title: 'Fase 2: Fuerza de Soporte',
+                            desc: 'Construir músculo sin machacar la articulación para "liberar" al hueso de la carga.',
+                            ejemplos: ['Isométricos de muro', 'Gomas elásticas', 'Subidas al cajón lentas']
+                        },
+                        {
+                            title: 'Fase 3: Reincorporación Vida Activa',
+                            desc: 'Caminar más, subir escaleras con seguridad y disfrutar de tu autonomía.',
+                            ejemplos: ['Caminatas progresivas en desnivel', 'Subir escaleras con técnica de glúteo']
+                        }
                     ],
                     semasforo: {
-                        si: ['Movimiento diario constante (no "atracones" de fin de semana).', 'Calzado cómodo.', 'Entrenamiento de fuerza regular.'],
-                        no: ['Inmovilidad absoluta (oxida la articulación).', 'Impactos de alta intensidad sin preparación.', 'Ignorar el dolor agudo punzante.']
+                        si: [
+                            'Movimiento diario constante (no "atracones" de fin de semana).',
+                            'Calzado cómodo y flexible.',
+                            'Entrenamiento de fuerza regular al menos 2-3 veces por semana.',
+                            'Mantener la articulación caliente ante el frío.'
+                        ],
+                        no: [
+                            'Inmovilidad absoluta (la rodilla se "pega").',
+                            'Impactos de alta intensidad (saltos) sin preparación previa.',
+                            'Ignorar el dolor que persiste más de 24h tras el ejercicio.',
+                            'Reposo total salvo en crisis inflamatoria muy aguda.'
+                        ]
                     },
+                    limites: 'Respetamos el "dolor del día siguiente". Si al despertar estás mucho peor, bajamos la dosis.',
                     cta: 'Programa Artrosis'
                 }
             }
         }
     },
+    tobillo: {
+        title: 'Tobillo',
+        description: 'Esguinces crónicos, inestabilidad y recuperación post-fractura.',
+        intro: 'El tobillo es tu conexión con el suelo. Si falla, todo lo que hay arriba (rodilla, cadera, espalda) sufrirá las consecuencias.',
+        subcategorias: {
+            esguince: {
+                title: 'Esguince de Tobillo',
+                description: 'Recuperación tras torceduras. Evita que se vuelva crónico.',
+                content: {
+                    intro: 'Un esguince mal curado es el primer paso para una inestabilidad crónica. No se trata solo de que baje la inflamación, sino de recuperar el control y los reflejos de tu tobillo.',
+                    fases: [
+                        {
+                            title: 'Fase 1: Movilidad y Desinflamación',
+                            desc: 'Recuperar el rango de movimiento (especialmente la dorsiflexión) y drenar el edema.',
+                            ejemplos: ['Dibujar el abecedario con el pie', 'Movilidad con banda elástica', 'Baños de contraste']
+                        },
+                        {
+                            title: 'Fase 2: Equilibrio y Estabilidad',
+                            desc: 'Reentrenar los receptores del tobillo (propiocepción) para que reaccionen a tiempo.',
+                            ejemplos: ['Equilibrio a una pierna (Pata coja)', 'Estocadas con inestabilidad', 'Caminar sobre talones/puntas']
+                        },
+                        {
+                            title: 'Fase 3: Retorno a la Carga',
+                            desc: 'Impactos, saltos y cambios de dirección controlados.',
+                            ejemplos: ['Skips', 'Pliometría lateral', 'Trote en terrenos variados']
+                        }
+                    ],
+                    semasforo: {
+                        si: [
+                            'Caminar en cuanto el dolor lo permita (apoyo precoz).',
+                            'Trabajar el equilibrio desde la primera semana.',
+                            'Fortalecer los músculos peroneos (laterales del tobillo).',
+                            'Usar vendaje funcional o tobillera solo si es necesario para caminar.'
+                        ],
+                        no: [
+                            'Reposo prolongado con el pie en alto sin moverlo.',
+                            'Uso excesivo de antiinflamatorios (pueden frenar la cicatrización inicial).',
+                            'Ignorar la sensación de que el tobillo "se va" o está débil.',
+                            'Volver a jugar antes de recuperar el rango de movimiento completo.'
+                        ]
+                    },
+                    limites: 'Evitamos la inestabilidad. Si el tobillo flaquea, el ejercicio es demasiado difícil.',
+                    cta: 'Recuperar mi tobillo'
+                }
+            }
+        }
+    },
+    cadera: {
+        title: 'Cadera',
+        description: 'Bursitis, choque femoroacetabular y molestias en el glúteo.',
+        intro: 'La cadera es el motor de potencia de tu cuerpo. Unos glúteos fuertes son la mejor medicina para cualquier dolor de cadera o zona lumbar.',
+        subcategorias: {
+            bursitis: {
+                title: 'Bursitis / Trocanteritis',
+                description: 'Dolor en el lateral de la cadera, especialmente al dormir de lado.',
+                content: {
+                    intro: 'Lo que llamamos bursitis suele ser en realidad una tendinopatía de los glúteos. El reposo no lo cura; necesitamos fortalecer la zona para que soporte la carga.',
+                    fases: [
+                        {
+                            title: 'Fase 1: Gestión de Carga',
+                            desc: 'Evitar posturas que compriman el lateral de la cadera mientras empezamos a activar el glúteo.',
+                            ejemplos: ['Almohada entre las piernas al dormir', 'Activación isométrica de glúteo medio']
+                        },
+                        {
+                            title: 'Fase 2: Fortalecimiento Progresivo',
+                            desc: 'Cargar el tendón poco a poco para que se vuelva resistente.',
+                            ejemplos: ['Monster walk', 'Clamshells controlados', 'Plancha lateral modificada']
+                        },
+                        {
+                            title: 'Fase 3: Integración Funcional',
+                            desc: 'Llevar esa fuerza a movimientos del día a día.',
+                            ejemplos: ['Subidas al cajón laterales', 'Sentadilla a una pierna (Step down)']
+                        }
+                    ],
+                    semasforo: {
+                        si: [
+                            'Dormir con almohada entre las rodillas.',
+                            'Fortalecer el glúteo medio y mayor.',
+                            'Evitar cruzar las piernas al estar sentado.',
+                            'Perder peso si es necesario para reducir presión.'
+                        ],
+                        no: [
+                            'Dormir sobre el lado dolorido sin protección.',
+                            'Estiramientos agresivos del lateral (pueden irritar más).',
+                            'Permanecer de pie con el peso cargado en una sola cadera.',
+                            'Ignorar el dolor que impide el descanso nocturno.'
+                        ]
+                    },
+                    limites: 'Evitamos ejercicios que provoquen dolor sordo persistente después de entrenar.',
+                    cta: 'Aliviar mi cadera'
+                }
+            }
+        }
+    }
 };
 
 // Datos de Deportes - Contenido Específico
@@ -498,38 +648,112 @@ export const deportes = {
     },
     baloncesto: {
         title: 'Baloncesto',
-        description: 'Readaptación post-lesión para jugadores de baloncesto: saltos, recepciones, pivotes y contacto.',
+        subtitle: 'Salva tus rodillas y tobillos',
+        heroImage: '/imagenes/hero/hero-image.jpg',
+        description: 'Readaptación post-lesión para jugadores de baloncesto: saltos, recepciones, pivotes y contacto. Recupera tu explosividad.',
+        intro: 'El baloncesto es un deporte de alto impacto con constantes cambios de dirección y saltos. Tus articulaciones sufren si no tienes una buena base de fuerza y estabilidad.',
         lesionesComunes: [
-            { nombre: 'Esguince de Tobillo', prevalencia: '25% de todas las lesiones' },
-            { nombre: 'Lesión de LCA', prevalencia: '5% de todas las lesiones' },
-            { nombre: 'Tendinopatía Rotuliana', prevalencia: '15% de todas las lesiones' }
+            { nombre: 'Esguince de Tobillo', prevalencia: '25% de todas las lesiones', tiempoRecuperacion: '2-6 semanas' },
+            { nombre: 'Lesión de LCA', prevalencia: '5% de todas las lesiones', tiempoRecuperacion: '6-9 meses' },
+            { nombre: 'Tendinopatía Rotuliana', prevalencia: '15% de todas las lesiones', tiempoRecuperacion: '3-6 meses' },
+            { nombre: 'Fascitis Plantar', prevalencia: '8% de todas las lesiones', tiempoRecuperacion: '3-12 meses' }
+        ],
+        programaPrevencion: [
+            'Trabajo de propiocepción en fatiga',
+            'Técnica de aterrizaje (Landing Mechanics)',
+            'Fortalecimiento de glúteo medio',
+            'Movilidad de tobillo (dorsiflexión)'
         ]
     },
     crossfit: {
         title: 'CrossFit',
-        description: 'Abordaje de lesiones comunes en CrossFit: hombro, lumbar y técnica de levantamientos olímpicos.',
+        subtitle: 'Rendimiento sin Dolor',
+        heroImage: '/imagenes/hero/hero-image.jpg',
+        description: 'Abordaje de lesiones comunes en CrossFit: hombro, lumbar y técnica de levantamientos olímpicos. Sigue entrenando mientras te recuperas.',
+        intro: 'La alta intensidad requiere una técnica impecable. Muchas lesiones en CrossFit no son por el ejercicio en sí, sino por la fatiga y la pérdida de forma técnica.',
         lesionesComunes: [
-            { nombre: 'Dolor de Hombro', prevalencia: '25% de practicantes' },
-            { nombre: 'Dolor Lumbar', prevalencia: '20% de practicantes' },
-            { nombre: 'Lesiones de Muñeca', prevalencia: '10% de practicantes' }
+            { nombre: 'Dolor de Hombro', prevalencia: '25% de practicantes', tiempoRecuperacion: '4-12 semanas' },
+            { nombre: 'Dolor Lumbar', prevalencia: '20% de practicantes', tiempoRecuperacion: '2-8 semanas' },
+            { nombre: 'Lesiones de Muñeca', prevalencia: '10% de practicantes', tiempoRecuperacion: '2-6 semanas' },
+            { nombre: 'Rabdomiolisis (Grave)', prevalencia: 'Poco frecuente', tiempoRecuperacion: 'Médica inmediata' }
+        ],
+        programaPrevencion: [
+            'Movilidad torácica y de hombro diaria',
+            'Escalar ejercicios cuando la técnica falla',
+            'Descanso activo y gestión del estrés',
+            'Fortalecimiento accesorio (Core/Manguito)'
         ]
     },
     tenis: {
         title: 'Tenis',
-        description: 'Readaptación para tenistas: codo de tenista, hombro y extremidad inferior.',
+        subtitle: 'Potencia y Control sin Molestias',
+        heroImage: '/imagenes/hero/hero-image.jpg',
+        description: 'Readaptación para tenistas: codo de tenista, hombro y extremidad inferior. Vuelve a sacar con confianza.',
+        intro: 'El tenis es un deporte asimétrico que exige mucho a tus articulaciones. El "codo de tenista" es famoso, pero el hombro y la espalda también sufren grandes cargas.',
         lesionesComunes: [
-            { nombre: 'Epicondilitis (Codo de Tenista)', prevalencia: '40% de tenistas recreativos' },
-            { nombre: 'Dolor de Hombro', prevalencia: '24% de tenistas' },
-            { nombre: 'Lumbalgia', prevalencia: '15% de tenistas' }
+            { nombre: 'Epicondilitis (Codo)', prevalencia: '40% de tenistas', tiempoRecuperacion: '6-12 semanas' },
+            { nombre: 'Dolor de Hombro', prevalencia: '24% de tenistas', tiempoRecuperacion: '4-12 semanas' },
+            { nombre: 'Lumbalgia', prevalencia: '15% de tenistas', tiempoRecuperacion: '2-6 semanas' },
+            { nombre: 'Rotura de Gemelo', prevalencia: '10% de tenistas veteranos', tiempoRecuperacion: '4-8 semanas' }
+        ],
+        programaPrevencion: [
+            'Fortalecimiento de antebrazo y agarre',
+            'Cadena cinética (fuerza desde las piernas)',
+            'Movilidad de rotación torácica',
+            'Gestión de volumen de saques'
         ]
     },
     padel: {
         title: 'Pádel',
-        description: 'Prevención y recuperación de lesiones específicas del pádel: el deporte de moda con sus patologías particulares.',
+        subtitle: 'Disfruta del Deporte de Moda',
+        heroImage: '/imagenes/hero/hero-image.jpg',
+        description: 'Prevención y recuperación de lesiones específicas del pádel: giros bruscos, paredes y remates. Juega sin dolor.',
+        intro: 'El pádel parece lesivo, pero lo que lesiona es jugar 5 veces por semana sin preparación física previa. Te enseñamos a preparar tu cuerpo para la exigencia.',
         lesionesComunes: [
-            { nombre: 'Epicondilitis', prevalencia: '35% de jugadores' },
-            { nombre: 'Lumbalgia', prevalencia: '25% de jugadores' },
-            { nombre: 'Lesiones de Rodilla', prevalencia: '15% de jugadores' }
+            { nombre: 'Epicondilitis', prevalencia: '35% de jugadores', tiempoRecuperacion: '6-12 semanas' },
+            { nombre: 'Lumbalgia', prevalencia: '25% de jugadores', tiempoRecuperacion: '2-6 semanas' },
+            { nombre: 'Lesiones de Gemelo', prevalencia: '20% de jugadores', tiempoRecuperacion: '3-8 semanas' },
+            { nombre: 'Fascitis Plantar', prevalencia: '15% de jugadores', tiempoRecuperacion: '3-12 meses' }
+        ],
+        programaPrevencion: [
+            'Calentamiento dinámico específico',
+            'Fortalecimiento de piernas y glúteos',
+            'Técnica de golpeo (evitar muñecazo)',
+            'Elección correcta de pala y calzado'
         ]
     }
 };
+
+// Datos del Blog - Artículos iniciales
+export const blog = [
+    {
+        id: 1,
+        slug: 'dolor-espalda-recurrente',
+        title: '¿Por qué tu dolor de espalda siempre vuelve? (y cómo evitarlo)',
+        excerpt: 'Has ido al fisio, te han dado un masaje, se te ha pasado... y a las dos semanas estás igual. Descubre el eslabón perdido en tu recuperación.',
+        category: 'Readaptación',
+        image: '/imagenes/hero/hero-image.jpg',
+        readTime: '4 min lectura',
+        date: '22 Ene 2026'
+    },
+    {
+        id: 2,
+        slug: 'fuerza-mujeres-40',
+        title: 'Fuerza en mujeres +40: El seguro de vida definitivo',
+        excerpt: 'La osteoporosis y la pérdida de masa muscular no son inevitables. El entrenamiento de fuerza es la "pastilla" más potente que existe para tu salud futura.',
+        category: 'Salud',
+        image: '/imagenes/testimonios/testimonio-video-mamen.jpg',
+        readTime: '5 min lectura',
+        date: '15 Ene 2026'
+    },
+    {
+        id: 3,
+        slug: 'operacion-menisco-mitos',
+        title: '¿Operarse de menisco? Lo que dicen los estudios',
+        excerpt: 'La artroscopia de rodilla es una de las cirugías más comunes, pero ¿es siempre necesaria? Analizamos cuándo compensa y cuándo el ejercicio es superior.',
+        category: 'Lesiones',
+        image: '/imagenes/hero/hero-image.jpg',
+        readTime: '6 min lectura',
+        date: '10 Ene 2026'
+    }
+];
