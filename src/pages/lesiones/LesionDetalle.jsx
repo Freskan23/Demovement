@@ -7,6 +7,21 @@ import SEOHead from '../../components/SEO/SEOHead';
 import Breadcrumbs from '../../components/SEO/Breadcrumbs';
 import FAQSection from '../../components/SEO/FAQSection';
 import ImageComparison from '../../components/ImageComparison';
+import { injuries } from '../../data/injuries';
+import RecoveryCalculator from '../../components/interactive/RecoveryCalculator';
+import SelfAssessmentTest from '../../components/interactive/SelfAssessmentTest';
+import SocialShare from '../../components/interactive/SocialShare';
+
+// Helper to map siteData keys to injuries.js keys
+const getInjuryKey = (categoria, detalle) => {
+    const map = {
+        'rodilla': { 'lca': 'rodilla-lca' },
+        'espalda': { 'dolor_lumbar': 'espalda-lumbalgia' },
+        'hombro': { 'manguito_rotador': 'hombro-rotador' },
+        'tobillo': { 'esguince_cronico': 'tobillo-esguince' }
+    };
+    return map[categoria]?.[detalle];
+};
 
 const LesionDetalle = () => {
     const { categoria, detalle } = useParams();
@@ -19,6 +34,8 @@ const LesionDetalle = () => {
     if (!lesionData) return <Navigate to={`/lesiones/${categoria}`} />;
 
     const content = lesionData.content;
+    const injuryKey = getInjuryKey(categoria, detalle);
+    const interactiveData = injuryKey ? injuries[injuryKey] : null;
 
     // SEO: Meta tags y Schema Markup
     const pageTitle = `${lesionData.title}: Protocolo de Readaptación`;
@@ -115,6 +132,7 @@ const LesionDetalle = () => {
                                 <p className="text-xl text-gray-700 leading-relaxed font-medium">
                                     {content.intro}
                                 </p>
+                                {interactiveData && <SocialShare title={lesionData.title} />}
                             </div>
 
                             {/* Visualizador de Evolución */}
@@ -209,6 +227,14 @@ const LesionDetalle = () => {
                                 </div>
                             </div>
 
+                            {/* Interactive Calculator */}
+                            {interactiveData && interactiveData.content.calculator && (
+                                <RecoveryCalculator
+                                    data={interactiveData.content.calculator}
+                                    injuryName={interactiveData.title}
+                                />
+                            )}
+
                             {/* Criterios de Alta */}
                             {content.criteriosAlta && (
                                 <div>
@@ -243,6 +269,11 @@ const LesionDetalle = () => {
 
                             {/* FAQs */}
                             <FAQSection faqs={faqs} />
+
+                            {/* Self Assessment Test */}
+                            {interactiveData && interactiveData.content.test && (
+                                <SelfAssessmentTest data={interactiveData.content.test} />
+                            )}
                         </div>
 
                         {/* Sidebar CTA */}

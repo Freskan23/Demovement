@@ -20,6 +20,7 @@ import LesionesIndex from './pages/lesiones/LesionesIndex';
 import LesionCategoria from './pages/lesiones/LesionCategoria';
 import LesionDetalle from './pages/lesiones/LesionDetalle';
 
+
 // Deportes
 import DeportesIndex from './pages/deportes/DeportesIndex';
 import DeportePage from './pages/deportes/DeportePage';
