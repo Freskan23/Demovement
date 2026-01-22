@@ -202,6 +202,25 @@ export const lesiones = {
                 description: 'Lumbalgia, ciática y rigidez. Aprende a moverte sin miedo.',
                 content: {
                     intro: 'El dolor lumbar suele venir acompañado de miedo: "me voy a romper", "tengo la espalda débil". Nada más lejos de la realidad. Tu espalda es fuerte y robusta, y necesita movimiento para estar sana.',
+                    estadisticas: [
+                        'El 80% de la población sufrirá dolor lumbar en algún momento de su vida',
+                        'El reposo prolongado aumenta el riesgo de cronificación en un 50%',
+                        'El ejercicio terapéutico reduce el dolor en un 70-80% de los casos',
+                        'Solo el 1-2% de lumbalgias requieren cirugía'
+                    ],
+                    mitos: [
+                        'MITO: "El reposo en cama es lo mejor" → REALIDAD: El movimiento acelera la recuperación',
+                        'MITO: "Mi espalda está dañada" → REALIDAD: El dolor no significa daño estructural',
+                        'MITO: "No puedo agacharme" → REALIDAD: Podemos enseñarte a hacerlo de forma segura',
+                        'MITO: "Necesito una resonancia" → REALIDAD: Muchas veces no aporta información útil'
+                    ],
+                    claves: [
+                        'Reducir el miedo al movimiento (kinesiofobia)',
+                        'Fortalecer el core sin hacer abdominales tradicionales',
+                        'Aprender patrones de movimiento seguros',
+                        'Gestión del estrés y factores psicosociales',
+                        'Progresión gradual hacia actividades de alta carga'
+                    ],
                     fases: [
                         {
                             title: 'Fase 1: Confianza y Movilidad',
@@ -234,6 +253,21 @@ export const lesiones = {
                         ]
                     },
                     limites: 'Empezamos sin dolor o con molestia muy leve (<3/10). No buscamos "sufrir" para mejorar.',
+                    criteriosAlta: [
+                        'Dolor en reposo <2/10',
+                        'Capacidad de levantar objetos del suelo sin miedo',
+                        'Sentarse más de 1 hora sin molestias',
+                        'Caminar 30+ minutos sin limitaciones',
+                        'Retomar actividades deportivas'
+                    ],
+                    ejerciciosClave: [
+                        'Dead Bug',
+                        'Bird Dog',
+                        'Plancha Frontal',
+                        'Peso Muerto',
+                        'Sentadilla Goblet',
+                        'Farmer Walk'
+                    ],
                     cta: 'Hablar con especialista en espalda'
                 }
             },
@@ -242,6 +276,25 @@ export const lesiones = {
                 description: 'Diagnóstico de hernia o protusión. Evita la cirugía con ejercicio.',
                 content: {
                     intro: 'Tener una hernia discal NO es una sentencia de por vida. De hecho, muchas hernias se reabsorben solas con el tiempo. Lo importante es tener una musculatura fuerte que proteja ese disco.',
+                    estadisticas: [
+                        'El 30-40% de personas sin dolor tienen hernias en resonancia',
+                        'El 70-90% de hernias mejoran con tratamiento conservador',
+                        'Las hernias pueden reabsorberse en 6-18 meses',
+                        'Solo el 5-10% requieren cirugía'
+                    ],
+                    mitos: [
+                        'MITO: "Hernia = cirugía obligatoria" → REALIDAD: El 90% mejora sin cirugía',
+                        'MITO: "No puedo hacer ejercicio" → REALIDAD: El ejercicio es el mejor tratamiento',
+                        'MITO: "La hernia se saldrá más" → REALIDAD: El movimiento controlado es seguro',
+                        'MITO: "Siempre tendré dolor" → REALIDAD: La mayoría recupera vida normal'
+                    ],
+                    claves: [
+                        'Evitar compresión excesiva en fase aguda',
+                        'Fortalecer glúteos y core profundo',
+                        'Aprender bisagra de cadera correcta',
+                        'Gestión de cargas progresiva',
+                        'Control de dolor irradiado (ciática)'
+                    ],
                     fases: [
                         {
                             title: 'Fase 1: Descompresión y Alivio',
@@ -274,6 +327,21 @@ export const lesiones = {
                         ]
                     },
                     limites: 'Evitamos estrictamente cualquier movimiento que aumente el dolor irradiado (hacia la pierna).',
+                    criteriosAlta: [
+                        'Sin dolor irradiado a la pierna',
+                        'Fuerza simétrica en ambas piernas',
+                        'Capacidad de sentarse sin molestias',
+                        'Levantar 20kg del suelo de forma segura',
+                        'Volver a deporte/actividad previa'
+                    ],
+                    ejerciciosClave: [
+                        'Press Pallof',
+                        'Plancha Lateral',
+                        'Puente Glúteo',
+                        'Bisagra de Cadera',
+                        'Peso Muerto Rumano',
+                        'McGill Big 3'
+                    ],
                     cta: 'Evaluar mi hernia'
                 }
             },
@@ -282,6 +350,25 @@ export const lesiones = {
                 description: 'Tensión cuello, hombros y dolor de cabeza tensional.',
                 content: {
                     intro: 'El "cuello de texto" y el estrés se acumulan en tus cervicales. La solución no es solo masajear, es fortalecer la musculatura profunda del cuello para que tu cabeza "pese menos".',
+                    estadisticas: [
+                        'El 70% de personas tendrá dolor cervical alguna vez',
+                        'La cabeza adelantada aumenta carga cervical hasta 27kg',
+                        'El 60% de casos mejora con ejercicio en 4-6 semanas',
+                        'El 45% de dolores de cabeza son de origen cervical'
+                    ],
+                    mitos: [
+                        'MITO: "Debo hacer crujir el cuello" → REALIDAD: No aporta beneficio duradero',
+                        'MITO: "Solo necesito masajes" → REALIDAD: El fortalecimiento es clave',
+                        'MITO: "Es por estrés solamente" → REALIDAD: La postura y debilidad muscular influyen',
+                        'MITO: "No puedo usar el ordenador" → REALIDAD: Con ergonomía correcta, sí puedes'
+                    ],
+                    claves: [
+                        'Mejorar ergonomía del puesto de trabajo',
+                        'Fortalecer flexores profundos del cuello',
+                        'Trabajo escapular (base del cuello)',
+                        'Reducir tiempo en dispositivos móviles',
+                        'Gestión del estrés y tensión muscular'
+                    ],
                     fases: [
                         {
                             title: 'Fase 1: Movilidad y Conciencia',
@@ -314,6 +401,21 @@ export const lesiones = {
                         ]
                     },
                     limites: 'Si tienes mareos o vértigos, avísanos inmediatamente para adaptar los ejercicios.',
+                    criteriosAlta: [
+                        'Sin dolor al girar la cabeza',
+                        'Trabajar >2 horas sin molestias',
+                        'Dormir sin despertarse por dolor',
+                        'Fuerza cervical simétrica',
+                        'Sin dolores de cabeza recurrentes'
+                    ],
+                    ejerciciosClave: [
+                        'Retracción Cervical',
+                        'Face Pull',
+                        'Y-T-W',
+                        'Remo Invertido',
+                        'Flexión Craneocervical',
+                        'Isométricos Cervicales'
+                    ],
                     cta: 'Aliviar mi cuello'
                 }
             }
@@ -329,10 +431,24 @@ export const lesiones = {
                 description: 'Dolor e imposibilidad para levantar el brazo o dormir sobre ese lado.',
                 content: {
                     intro: 'Muy común en mujeres +40 y deportistas de raqueta. A veces se confunde con "hombro congelado". El trabajo de fuerza suave es clave para dejar de sentir pinzamientos.',
+                    estadisticas: [
+                        'Afecta al 30% de personas mayores de 60 años',
+                        'El 75-80% mejora con ejercicio terapéutico',
+                        'Solo el 20% de roturas requieren cirugía',
+                        'El fortalecimiento reduce el dolor en un 70%'
+                    ],
                     mitos: [
-                        'MITO: "No puedo mover el brazo nunca más" → REALIDAD: El movimiento controlado cura.',
-                        'MITO: "La cirugía es la única opción" → REALIDAD: El tratamiento conservador (ejercicio) tiene tasas de éxito altísimas.',
-                        'MITO: "Si cruje es malo" → REALIDAD: Los ruidos articulares sin dolor son normales.'
+                        'MITO: "No puedo mover el brazo nunca más" → REALIDAD: El movimiento controlado cura',
+                        'MITO: "La cirugía es la única opción" → REALIDAD: El 80% mejora sin cirugía',
+                        'MITO: "Si cruje es malo" → REALIDAD: Los ruidos sin dolor son normales',
+                        'MITO: "Debo reposar el brazo" → REALIDAD: El reposo empeora la rigidez'
+                    ],
+                    claves: [
+                        'Recuperar movilidad sin dolor antes que fuerza',
+                        'Fortalecer estabilizadores escapulares',
+                        'Evitar pinzamiento en elevaciones',
+                        'Progresión muy gradual de cargas',
+                        'Trabajo de movilidad torácica'
                     ],
                     fases: [
                         {
@@ -365,6 +481,21 @@ export const lesiones = {
                         ]
                     },
                     limites: 'Evitamos la sensación de "pinzamiento" agudo. La molestia muscular es aceptable, el dolor articular no.',
+                    criteriosAlta: [
+                        'Elevar brazo sobre cabeza sin dolor',
+                        'Dormir sobre el lado afectado',
+                        'Fuerza simétrica en rotaciones',
+                        'Realizar actividades overhead sin limitaciones',
+                        'Retomar deporte de raqueta/natación'
+                    ],
+                    ejerciciosClave: [
+                        'Péndulos',
+                        'Rotación Externa con Banda',
+                        'Serrato Anterior',
+                        'Face Pull',
+                        'Press Militar',
+                        'Turkish Get Up'
+                    ],
                     cta: 'Recuperar mi hombro'
                 }
             }
@@ -380,10 +511,24 @@ export const lesiones = {
                 description: 'Recuperación tras operación o tratamiento conservador.',
                 content: {
                     intro: 'La lesión más temida, pero con un camino muy claro. Sea operado o conservador, tu rodilla puede volver a ser estable y fuerte si respetamos los tiempos biológicos.',
+                    estadisticas: [
+                        'Tiempo medio de retorno al deporte: 9-12 meses',
+                        'El 90% vuelve a actividad deportiva con buen protocolo',
+                        'El riesgo de re-lesión baja del 20% al 5% con readaptación adecuada',
+                        'La fuerza del cuádriceps es el predictor #1 de éxito'
+                    ],
                     mitos: [
-                        'MITO: "No podré volver a esquiar/jugar" → REALIDAD: Con buena readaptación, la vuelta al deporte es el objetivo.',
-                        'MITO: "La rodillera me protege" → REALIDAD: Tu mejor rodillera es tu cuádriceps.',
-                        'MITO: "Cuanto antes corra, mejor" → REALIDAD: Las prisas son la causa #1 de recaída.'
+                        'MITO: "No podré volver a mi deporte" → REALIDAD: El 90% vuelve con protocolo adecuado',
+                        'MITO: "La rodillera me protege" → REALIDAD: Tu cuádriceps es tu mejor protección',
+                        'MITO: "A los 6 meses puedo volver" → REALIDAD: Depende de criterios funcionales, no tiempo',
+                        'MITO: "Debo correr cuanto antes" → REALIDAD: Las prisas aumentan recaídas'
+                    ],
+                    claves: [
+                        'Recuperar extensión completa (0°) desde día 1',
+                        'Activación temprana del cuádriceps',
+                        'Fuerza simétrica >90% antes de correr',
+                        'Trabajo unipodal y control neuromuscular',
+                        'Progresión: fuerza → pliometría → agilidad → deporte'
                     ],
                     fases: [
                         {
@@ -417,6 +562,21 @@ export const lesiones = {
                         ]
                     },
                     limites: 'Respetamos estrictamente los plazos de cicatrización del injerto (si hay cirugía).',
+                    criteriosAlta: [
+                        'Extensión completa de rodilla (0°)',
+                        'Fuerza del cuádriceps >90% vs pierna sana',
+                        'Test de salto unipodal >90% simetría',
+                        'Aterrizajes controlados sin colapso valgo',
+                        'Criterios funcionales aprobados para RTS (Return to Sport)'
+                    ],
+                    ejerciciosClave: [
+                        'Extensiones de Rodilla',
+                        'Sentadilla a Cajón',
+                        'Peso Muerto Unipodal',
+                        'Nordic Hamstring',
+                        'Drop Jumps',
+                        'Cutting Drills'
+                    ],
                     cta: 'Plan recuperar rodilla'
                 }
             },
@@ -425,10 +585,24 @@ export const lesiones = {
                 description: 'Dolor al girar o bloquear la rodilla. Recupera la función sin cirugía en la mayoría de casos.',
                 content: {
                     intro: 'El menisco es el amortiguador de tu rodilla. Muchas roturas degenerativas NO necesitan operación, sino mejorar la estabilidad de la pierna y la absorción de impactos.',
+                    estadisticas: [
+                        'El 60% de personas >65 años tienen roturas de menisco sin dolor',
+                        'La cirugía de menisco NO es superior al ejercicio en roturas degenerativas',
+                        'El 70-80% mejora con tratamiento conservador',
+                        'La meniscectomía aumenta riesgo de artrosis a largo plazo'
+                    ],
                     mitos: [
-                        'MITO: "Solo se cura operando" → REALIDAD: El ejercicio es igual de efectivo que la cirugía en la mayoría de roturas.',
-                        'MITO: "Tengo un trozo suelto" → REALIDAD: Tu cuerpo puede adaptar la articulación perfectamente.',
-                        'MITO: "No volveré a correr" → REALIDAD: Muchos corredores viven con roturas de menisco asintomáticas.'
+                        'MITO: "Solo se cura operando" → REALIDAD: El ejercicio es igual de efectivo en roturas degenerativas',
+                        'MITO: "Tengo un trozo suelto" → REALIDAD: Tu cuerpo se adapta perfectamente',
+                        'MITO: "No volveré a correr" → REALIDAD: Muchos corredores tienen roturas asintomáticas',
+                        'MITO: "Debo evitar doblar la rodilla" → REALIDAD: El movimiento controlado la cura'
+                    ],
+                    claves: [
+                        'Fortalecer cuádriceps e isquiotibiales',
+                        'Mejorar control neuromuscular de rodilla',
+                        'Reducir peso corporal si hay sobrepeso',
+                        'Progresión gradual de impactos',
+                        'Evitar giros bruscos en fase aguda'
                     ],
                     fases: [
                         {
@@ -462,6 +636,21 @@ export const lesiones = {
                         ]
                     },
                     limites: 'Evitamos el dolor de tipo "pinchazo" interno. La fatiga muscular es buena.',
+                    criteriosAlta: [
+                        'Sin dolor en giros controlados',
+                        'Sin bloqueos articulares',
+                        'Sentadilla profunda sin molestias',
+                        'Correr sin inflamación posterior',
+                        'Retomar actividades deportivas'
+                    ],
+                    ejerciciosClave: [
+                        'Sentadilla Controlada',
+                        'Peso Muerto Unipodal',
+                        'Step Down Excéntrico',
+                        'Sentadilla Búlgara',
+                        'Saltos de Aterrizaje',
+                        'Giros Progresivos'
+                    ],
                     cta: 'Valorar mi menisco'
                 }
             },
@@ -470,10 +659,24 @@ export const lesiones = {
                 description: 'El movimiento es el mejor tratamiento para el desgaste articular.',
                 content: {
                     intro: 'El desgaste es normal con la edad (como las canas). "Hueso contra hueso" suena terrible, pero el dolor disminuye drásticamente si tus músculos absorben el impacto en lugar de tu articulación.',
+                    estadisticas: [
+                        'El 50% de personas >65 años tienen artrosis de rodilla',
+                        'El ejercicio reduce el dolor en un 40-50%',
+                        'La pérdida de 5kg reduce el dolor un 20%',
+                        'El fortalecimiento puede retrasar la prótesis 5-10 años'
+                    ],
                     mitos: [
-                        'MITO: "Si me muevo se desgasta más" → REALIDAD: El sedentarismo oxida la articulación; el movimiento la engrasa.',
-                        'MITO: "Solo me queda la prótesis" → REALIDAD: Una buena musculatura puede retrasar o evitar la prótesis años.',
-                        'MITO: "Debo dejar de hacer deporte" → REALIDAD: Debes adaptar el deporte, no abandonarlo.'
+                        'MITO: "Si me muevo se desgasta más" → REALIDAD: El movimiento lubrica la articulación',
+                        'MITO: "Solo me queda la prótesis" → REALIDAD: El fortalecimiento puede retrasarla años',
+                        'MITO: "Debo dejar de hacer deporte" → REALIDAD: Adapta, no abandones',
+                        'MITO: "El dolor indica daño" → REALIDAD: El dolor mejora con ejercicio aunque haya desgaste'
+                    ],
+                    claves: [
+                        'El movimiento genera líquido sinovial (lubricación)',
+                        'Fortalecer para que el músculo absorba impacto',
+                        'Control del peso corporal',
+                        'Ejercicio de bajo impacto regular',
+                        'Expectativas realistas y manejo del dolor'
                     ],
                     fases: [
                         {
@@ -507,6 +710,21 @@ export const lesiones = {
                         ]
                     },
                     limites: 'Respetamos el "dolor del día siguiente". Si al despertar estás mucho peor, bajamos la dosis.',
+                    criteriosAlta: [
+                        'Dolor en reposo <3/10',
+                        'Caminar 30+ minutos sin molestias',
+                        'Subir/bajar escaleras con normalidad',
+                        'Realizar AVD sin limitaciones',
+                        'Mantener calidad de vida activa'
+                    ],
+                    ejerciciosClave: [
+                        'Bicicleta Estática',
+                        'Natación/Aquagym',
+                        'Sentadilla Isométrica',
+                        'Step Ups Controlados',
+                        'Caminatas Progresivas',
+                        'Fortalecimiento General'
+                    ],
                     cta: 'Programa Artrosis'
                 }
             }
@@ -522,6 +740,25 @@ export const lesiones = {
                 description: 'Recuperación tras torceduras. Evita que se vuelva crónico.',
                 content: {
                     intro: 'Un esguince mal curado es el primer paso para una inestabilidad crónica. No se trata solo de que baje la inflamación, sino de recuperar el control y los reflejos de tu tobillo.',
+                    estadisticas: [
+                        'El 40% de esguinces mal tratados se vuelven crónicos',
+                        'El riesgo de re-esguince es 3-4x mayor sin rehabilitación',
+                        'La propiocepción se recupera en 6-8 semanas con ejercicio',
+                        'El apoyo precoz reduce tiempo de recuperación un 50%'
+                    ],
+                    mitos: [
+                        'MITO: "Debo inmovilizar 3 semanas" → REALIDAD: El apoyo precoz acelera la curación',
+                        'MITO: "Si no duele, está curado" → REALIDAD: Falta recuperar estabilidad y reflejos',
+                        'MITO: "Las tobilleras me protegen" → REALIDAD: Pueden debilitar si se usan crónicamente',
+                        'MITO: "Nunca volverá a ser igual" → REALIDAD: Con buena rehab puede ser más fuerte'
+                    ],
+                    claves: [
+                        'Movilización temprana y apoyo precoz',
+                        'Trabajo intensivo de propiocepción',
+                        'Recuperar dorsiflexión completa',
+                        'Fortalecimiento de músculos estabilizadores',
+                        'Progresión hacia cambios de dirección'
+                    ],
                     fases: [
                         {
                             title: 'Fase 1: Movilidad y Desinflamación',
@@ -554,6 +791,21 @@ export const lesiones = {
                         ]
                     },
                     limites: 'Evitamos la inestabilidad. Si el tobillo flaquea, el ejercicio es demasiado difícil.',
+                    criteriosAlta: [
+                        'Sin inflamación ni dolor en reposo',
+                        'Equilibrio unipodal >30 segundos',
+                        'Dorsiflexión simétrica respecto al otro pie',
+                        'Saltos unipodales sin miedo ni dolor',
+                        'Retorno completo a actividad deportiva'
+                    ],
+                    ejerciciosClave: [
+                        'Abecedarios con el Pie',
+                        'Equilibrio Unipodal',
+                        'Calf Raises',
+                        'Peroneos con Banda',
+                        'Saltos Laterales',
+                        'Agilidad en Escalera'
+                    ],
                     cta: 'Recuperar mi tobillo'
                 }
             }
