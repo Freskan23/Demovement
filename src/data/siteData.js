@@ -569,6 +569,25 @@ export const lesiones = {
                 description: 'Dolor en el lateral de la cadera, especialmente al dormir de lado.',
                 content: {
                     intro: 'Lo que llamamos bursitis suele ser en realidad una tendinopatía de los glúteos. El reposo no lo cura; necesitamos fortalecer la zona para que soporte la carga.',
+                    estadisticas: [
+                        'Afecta principalmente a mujeres entre 40-60 años (ratio 4:1)',
+                        'El 90% mejora con ejercicio terapéutico en 6-8 semanas',
+                        'El fortalecimiento del glúteo medio reduce el dolor en un 80%',
+                        'Dormir del lado afectado puede aumentar el dolor hasta un 60%'
+                    ],
+                    mitos: [
+                        'MITO: "Es una inflamación de la bursa" → REALIDAD: En el 95% de casos es una tendinopatía del glúteo medio',
+                        'MITO: "El reposo lo curará" → REALIDAD: El reposo debilita el tendón y prolonga el dolor',
+                        'MITO: "Necesito infiltraciones" → REALIDAD: El ejercicio progresivo es más efectivo a largo plazo',
+                        'MITO: "No puedo hacer ejercicio" → REALIDAD: El ejercicio controlado es la mejor medicina'
+                    ],
+                    claves: [
+                        'Gestión de cargas: Evitar compresión lateral mientras fortalecemos',
+                        'Fortalecimiento progresivo del glúteo medio y menor',
+                        'Corrección de patrones de movimiento en actividades diarias',
+                        'Control de factores agravantes (dormir de lado, cruzar piernas)',
+                        'Paciencia: Los tendones tardan 12-16 semanas en adaptarse completamente'
+                    ],
                     fases: [
                         {
                             title: 'Fase 1: Gestión de Carga',
@@ -601,6 +620,21 @@ export const lesiones = {
                         ]
                     },
                     limites: 'Evitamos ejercicios que provoquen dolor sordo persistente después de entrenar.',
+                    criteriosAlta: [
+                        'Dormir de lado sin dolor',
+                        'Subir escaleras sin cojera',
+                        'Caminar más de 30 minutos sin molestias',
+                        'Realizar sentadilla a una pierna con control',
+                        'Volver a actividades deportivas sin restricciones'
+                    ],
+                    ejerciciosClave: [
+                        'Monster Walk',
+                        'Clamshells',
+                        'Plancha Lateral',
+                        'Step Down',
+                        'Single Leg Deadlift',
+                        'Sentadilla Isométrica'
+                    ],
                     cta: 'Aliviar mi cadera'
                 }
             }

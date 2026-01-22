@@ -3,6 +3,9 @@ import { useParams, Navigate, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ChevronLeft, Activity, AlertCircle, Check, Dumbbell } from 'lucide-react';
 import { lesiones } from '../../data/siteData';
+import SEOHead from '../../components/SEO/SEOHead';
+import Breadcrumbs from '../../components/SEO/Breadcrumbs';
+import FAQSection from '../../components/SEO/FAQSection';
 
 const LesionDetalle = () => {
     const { categoria, detalle } = useParams();
@@ -16,16 +19,70 @@ const LesionDetalle = () => {
 
     const content = lesionData.content;
 
+    // SEO: Meta tags y Schema Markup
+    const pageTitle = `${lesionData.title}: Protocolo de Readaptación`;
+    const pageDescription = lesionData.description + ' Tratamiento personalizado basado en ciencia en Las Rozas, Madrid.';
+    const pageKeywords = `${lesionData.title.toLowerCase()}, readaptación ${lesionData.title.toLowerCase()}, tratamiento ${lesionData.title.toLowerCase()}, fisioterapia ${categoriaData.title.toLowerCase()}, las rozas`;
+    const canonicalUrl = `/lesiones/${categoria}/${detalle}`;
+
+    // Schema Markup para Condición Médica
+    const medicalSchema = {
+        "@context": "https://schema.org",
+        "@type": "MedicalCondition",
+        "name": lesionData.title,
+        "description": lesionData.description,
+        "possibleTreatment": {
+            "@type": "MedicalTherapy",
+            "name": "Protocolo de Readaptación Progresiva",
+            "procedureType": "Ejercicio Terapéutico",
+            "bodyLocation": {
+                "@type": "BodyPartSpecification",
+                "name": categoriaData.title
+            }
+        }
+    };
+
+    // Breadcrumbs
+    const breadcrumbItems = [
+        { label: 'Lesiones', path: '/lesiones' },
+        { label: categoriaData.title, path: `/lesiones/${categoria}` },
+        { label: lesionData.title, path: canonicalUrl }
+    ];
+
+    // FAQs específicas para cada lesión (ejemplo genérico, personalizar según lesión)
+    const faqs = [
+        {
+            question: `¿Cuánto tiempo tarda en curarse ${lesionData.title.toLowerCase()}?`,
+            answer: `El tiempo de recuperación de ${lesionData.title.toLowerCase()} varía según cada persona, pero generalmente observamos mejoras significativas en 6-12 semanas con un programa de readaptación progresiva. Cada caso es único y establecemos objetivos realistas en la valoración inicial.`
+        },
+        {
+            question: '¿Necesito un diagnóstico médico antes de empezar?',
+            answer: 'No es obligatorio, pero sí recomendable si tienes dolor intenso o prolongado. Trabajamos en colaboración con tu equipo médico y nos adaptamos a cualquier recomendación de tu fisioterapeuta o traumatólogo.'
+        },
+        {
+            question: '¿El tratamiento es doloroso?',
+            answer: 'No buscamos provocar dolor. Trabajamos en rangos seguros y cómodos, progresando gradualmente. Es normal sentir molestias leves durante el ejercicio (2-3/10), pero nunca dolor agudo. Tú controlas la intensidad en todo momento.'
+        },
+        {
+            question: '¿Cuántas sesiones necesitaré?',
+            answer: 'Depende de tu situación inicial y objetivos. Algunos clientes ven mejoras en 8-10 sesiones, mientras que casos más complejos pueden requerir 16-20 sesiones. En la valoración inicial te daremos una estimación personalizada.'
+        }
+    ];
+
     return (
         <div className="bg-white min-h-screen pt-32">
+            <SEOHead
+                title={pageTitle}
+                description={pageDescription}
+                keywords={pageKeywords}
+                canonical={canonicalUrl}
+                schema={medicalSchema}
+            />
             {/* Hero */}
             <section className="py-20 bg-gray-50 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 translate-x-20" />
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
-                    <Link to={`/lesiones/${categoria}`} className="inline-flex items-center gap-2 text-primary font-black uppercase tracking-widest text-xs mb-8 hover:gap-4 transition-all">
-                        <ChevronLeft size={16} />
-                        {categoriaData.title}
-                    </Link>
+                    <Breadcrumbs items={breadcrumbItems} />
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -62,7 +119,7 @@ const LesionDetalle = () => {
                             {/* Estadísticas */}
                             {content.estadisticas && (
                                 <div className="bg-primary/5 p-10 rounded-[40px]">
-                                    <h3 className="text-xl font-black text-gray-900 uppercase mb-8">LO QUE DICE LA CIENCIA</h3>
+                                    <h2 className="text-xl font-black text-gray-900 uppercase mb-8">LO QUE DICE LA CIENCIA</h2>
                                     <div className="space-y-4">
                                         {content.estadisticas.map((stat, i) => (
                                             <div key={i} className="flex gap-4 items-start">
@@ -77,7 +134,7 @@ const LesionDetalle = () => {
                             {/* Mitos */}
                             {content.mitos && (
                                 <div className="bg-gray-900 text-white p-10 rounded-[40px]">
-                                    <h3 className="text-xl font-black uppercase mb-8">MITOS VS REALIDAD</h3>
+                                    <h2 className="text-xl font-black uppercase mb-8">MITOS VS REALIDAD</h2>
                                     <div className="space-y-4">
                                         {content.mitos.map((mito, i) => (
                                             <div key={i} className="flex gap-4 items-start">
@@ -92,7 +149,7 @@ const LesionDetalle = () => {
                             {/* Claves */}
                             {content.claves && (
                                 <div className="bg-primary/5 p-10 rounded-[40px]">
-                                    <h3 className="text-xl font-black text-gray-900 uppercase mb-8">CLAVES DEL TRATAMIENTO</h3>
+                                    <h2 className="text-xl font-black text-gray-900 uppercase mb-8">CLAVES DEL TRATAMIENTO</h2>
                                     <div className="space-y-4">
                                         {content.claves.map((clave, i) => (
                                             <div key={i} className="flex gap-4 items-start">
@@ -106,7 +163,7 @@ const LesionDetalle = () => {
 
                             {/* Fases de Recuperación */}
                             <div className="bg-gray-900 p-12 rounded-[50px] text-white">
-                                <h3 className="text-3xl font-black uppercase italic mb-12">FASES DE RECUPERACIÓN</h3>
+                                <h2 className="text-3xl font-black uppercase italic mb-12">FASES DE RECUPERACIÓN</h2>
                                 <div className="space-y-12">
                                     {content.fases.map((fase, i) => (
                                         <motion.div
@@ -122,7 +179,7 @@ const LesionDetalle = () => {
                                                     {(i + 1).toString().padStart(2, '0')}
                                                 </div>
                                                 <div>
-                                                    <h4 className="text-white font-black text-xl uppercase mb-2">{fase.title}</h4>
+                                                    <h3 className="text-white font-black text-xl uppercase mb-2">{fase.title}</h3>
                                                     <p className="text-gray-400 font-medium text-lg">{fase.desc}</p>
                                                 </div>
                                             </div>
@@ -143,7 +200,7 @@ const LesionDetalle = () => {
                             {/* Criterios de Alta */}
                             {content.criteriosAlta && (
                                 <div>
-                                    <h3 className="text-2xl font-black text-gray-900 uppercase mb-8">CRITERIOS DE ALTA</h3>
+                                    <h2 className="text-2xl font-black text-gray-900 uppercase mb-8">CRITERIOS DE ALTA</h2>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                         {content.criteriosAlta.map((criterio, i) => (
                                             <div key={i} className="flex gap-4 items-center bg-gray-50 p-6 rounded-2xl">
@@ -160,7 +217,7 @@ const LesionDetalle = () => {
                             {/* Ejercicios Clave */}
                             {content.ejerciciosClave && (
                                 <div>
-                                    <h3 className="text-2xl font-black text-gray-900 uppercase mb-8">EJERCICIOS CLAVE</h3>
+                                    <h2 className="text-2xl font-black text-gray-900 uppercase mb-8">EJERCICIOS CLAVE</h2>
                                     <div className="flex flex-wrap gap-4">
                                         {content.ejerciciosClave.map((ej, i) => (
                                             <span key={i} className="px-6 py-3 bg-primary/10 text-primary font-bold uppercase tracking-widest text-xs rounded-full flex items-center gap-2">
@@ -171,6 +228,9 @@ const LesionDetalle = () => {
                                     </div>
                                 </div>
                             )}
+
+                            {/* FAQs */}
+                            <FAQSection faqs={faqs} />
                         </div>
 
                         {/* Sidebar CTA */}
