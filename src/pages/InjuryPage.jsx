@@ -52,22 +52,65 @@ const InjuryPage = () => {
                         <div>
                             <span className="text-primary font-black uppercase tracking-[0.3em] text-xs mb-4 block">Evaluación Inicial</span>
                             <h2 className="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-tight mb-8">ABORDAJE BASADO EN CIENCIA</h2>
-                            <p className="text-xl text-gray-600 leading-relaxed font-medium">
+                            <p className="text-xl text-gray-600 leading-relaxed font-medium mb-6">
                                 {injury.content.intro}
                             </p>
+                            {injury.content.description && (
+                                <p className="text-lg text-gray-600 leading-relaxed">
+                                    {injury.content.description}
+                                </p>
+                            )}
                         </div>
 
-                        {/* Why Us / Context */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            {injury.content.whyUs.map((item, i) => (
-                                <div key={i} className="p-10 bg-gray-50 rounded-[40px] border border-gray-100 hover:shadow-2xl hover:bg-white transition-all">
-                                    <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-gray-100 text-primary">
-                                        <Shield size={24} />
-                                    </div>
-                                    <h4 className="text-gray-900 text-xl font-black mb-4 uppercase tracking-tight">{item.title}</h4>
-                                    <p className="text-gray-600 font-medium leading-relaxed">{item.desc}</p>
+                        {/* Symptoms */}
+                        {injury.content.symptoms && injury.content.symptoms.length > 0 && (
+                            <div>
+                                <h3 className="text-2xl md:text-3xl font-black text-gray-900 uppercase tracking-tight mb-8">SÍNTOMAS COMUNES</h3>
+                                <div className="space-y-6">
+                                    {injury.content.symptoms.map((symptom, i) => (
+                                        <div key={i} className="flex gap-4 p-6 bg-gray-50 rounded-3xl border border-gray-100">
+                                            <div className="flex-shrink-0 w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                                                <div className="w-3 h-3 bg-primary rounded-full" />
+                                            </div>
+                                            <div>
+                                                <h4 className="text-gray-900 text-lg font-black mb-2 uppercase tracking-tight">{symptom.title}</h4>
+                                                <p className="text-gray-600 leading-relaxed">{symptom.desc}</p>
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
-                            ))}
+                            </div>
+                        )}
+
+                        {/* Causes */}
+                        {injury.content.causes && injury.content.causes.length > 0 && (
+                            <div>
+                                <h3 className="text-2xl md:text-3xl font-black text-gray-900 uppercase tracking-tight mb-8">CAUSAS PRINCIPALES</h3>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    {injury.content.causes.map((cause, i) => (
+                                        <div key={i} className="p-8 bg-white rounded-3xl border-2 border-gray-100 hover:border-primary/20 transition-all">
+                                            <h4 className="text-gray-900 text-lg font-black mb-3 uppercase tracking-tight">{cause.title}</h4>
+                                            <p className="text-gray-600 leading-relaxed text-sm">{cause.desc}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Why Us / Context */}
+                        <div>
+                            <h3 className="text-2xl md:text-3xl font-black text-gray-900 uppercase tracking-tight mb-8">NUESTRO ENFOQUE</h3>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                {injury.content.whyUs.map((item, i) => (
+                                    <div key={i} className="p-10 bg-gray-50 rounded-[40px] border border-gray-100 hover:shadow-2xl hover:bg-white transition-all">
+                                        <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-gray-100 text-primary">
+                                            <Shield size={24} />
+                                        </div>
+                                        <h4 className="text-gray-900 text-xl font-black mb-4 uppercase tracking-tight">{item.title}</h4>
+                                        <p className="text-gray-600 font-medium leading-relaxed">{item.desc}</p>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
 
                         {/* Process Phases */}
@@ -88,6 +131,41 @@ const InjuryPage = () => {
                                 ))}
                             </div>
                         </div>
+
+                        {/* Prevention */}
+                        {injury.content.prevention && injury.content.prevention.length > 0 && (
+                            <div>
+                                <h3 className="text-2xl md:text-3xl font-black text-gray-900 uppercase tracking-tight mb-8">PREVENCIÓN</h3>
+                                <div className="space-y-4">
+                                    {injury.content.prevention.map((item, i) => (
+                                        <div key={i} className="flex gap-4 items-start p-6 bg-primary/5 rounded-3xl border border-primary/10">
+                                            <div className="flex-shrink-0 w-6 h-6 bg-primary rounded-full flex items-center justify-center text-white text-xs font-black">
+                                                {i + 1}
+                                            </div>
+                                            <div>
+                                                <h4 className="text-gray-900 font-black mb-2 uppercase tracking-tight">{item.title}</h4>
+                                                <p className="text-gray-600 leading-relaxed text-sm">{item.desc}</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        {/* FAQ */}
+                        {injury.content.faq && injury.content.faq.length > 0 && (
+                            <div>
+                                <h3 className="text-2xl md:text-3xl font-black text-gray-900 uppercase tracking-tight mb-8">PREGUNTAS FRECUENTES</h3>
+                                <div className="space-y-6">
+                                    {injury.content.faq.map((item, i) => (
+                                        <div key={i} className="p-8 bg-white rounded-3xl border-2 border-gray-100">
+                                            <h4 className="text-gray-900 text-lg font-black mb-4 uppercase tracking-tight">{item.question}</h4>
+                                            <p className="text-gray-600 leading-relaxed">{item.answer}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
                     </div>
 
                     {/* Sidebar CTA */}
