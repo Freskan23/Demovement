@@ -196,6 +196,15 @@ export const lesiones = {
         title: 'Espalda y Cuello',
         description: 'Dolor lumbar, cervical, hernias y molestias crónicas. Enfoque seguro para perder el miedo a moverse.',
         intro: 'El 80% de la población tendrá dolor de espalda alguna vez. En DE MOVEMENT te ayudamos a que el dolor no controle tu vida.',
+        stats: [
+            { label: 'Incidencia', value: '80%', text: 'de la población sufrirá dolor lumbar' },
+            { label: 'Eficacia', value: '90%', text: 'mejoran con tratamiento activo' }
+        ],
+        highlights: [
+            'Especialistas en Hernia Discal',
+            'Protocolos de Descompresión Activa',
+            'Prevención de Recaídas'
+        ],
         subcategorias: {
             dolor_lumbar: {
                 title: 'Dolor Lumbar',
@@ -268,7 +277,11 @@ export const lesiones = {
                         'Sentadilla Goblet',
                         'Farmer Walk'
                     ],
-                    cta: 'Hablar con especialista en espalda'
+                    cta: 'Hablar con especialista en espalda',
+                    visualizer: {
+                        before: '/imagenes/lesiones/visualizer/espalda_antes.png',
+                        after: '/imagenes/lesiones/visualizer/espalda_despues.png'
+                    }
                 }
             },
             hernia_discal: {
@@ -342,7 +355,11 @@ export const lesiones = {
                         'Peso Muerto Rumano',
                         'McGill Big 3'
                     ],
-                    cta: 'Evaluar mi hernia'
+                    cta: 'Evaluar mi hernia',
+                    visualizer: {
+                        before: '/imagenes/lesiones/visualizer/espalda_antes.png',
+                        after: '/imagenes/lesiones/visualizer/espalda_despues.png'
+                    }
                 }
             },
             cervical: {
@@ -416,7 +433,11 @@ export const lesiones = {
                         'Flexión Craneocervical',
                         'Isométricos Cervicales'
                     ],
-                    cta: 'Aliviar mi cuello'
+                    cta: 'Aliviar mi cuello',
+                    visualizer: {
+                        before: '/imagenes/lesiones/visualizer/espalda_antes.png',
+                        after: '/imagenes/lesiones/visualizer/espalda_despues.png'
+                    }
                 }
             }
         }
@@ -425,6 +446,15 @@ export const lesiones = {
         title: 'Hombro',
         description: 'Tendinitis, dolor al levantar el brazo, hombro congelado.',
         intro: 'El hombro necesita un equilibrio fino entre movilidad y estabilidad. Recuperamos ese equilibrio.',
+        stats: [
+            { label: 'Éxito', value: '80%', text: 'de mejora sin cirugía' },
+            { label: 'Frecuencia', value: '30%', text: 'afectados en población adulta' }
+        ],
+        highlights: [
+            'Readaptación Manguito Rotador',
+            'Movilidad Escapular Avanzada',
+            'Hombro de Lanzador y Nadador'
+        ],
         subcategorias: {
             manguito: {
                 title: 'Manguito Rotador',
@@ -496,7 +526,11 @@ export const lesiones = {
                         'Press Militar',
                         'Turkish Get Up'
                     ],
-                    cta: 'Recuperar mi hombro'
+                    cta: 'Recuperar mi hombro',
+                    visualizer: {
+                        before: '/imagenes/lesiones/visualizer/hombro_antes.png',
+                        after: '/imagenes/lesiones/visualizer/hombro_despues.png'
+                    }
                 }
             }
         }
@@ -505,6 +539,15 @@ export const lesiones = {
         title: 'Rodilla',
         description: 'Lesiones de ligamentos, menisco o desgaste.',
         intro: 'La rodilla soporta gran carga. Recuperar su función es vital para volver a caminar o correr sin dolor.',
+        stats: [
+            { label: 'Deporte', value: '90%', text: 'vuelve a su nivel previo' },
+            { label: 'Prevención', value: '3x', text: 'menos riesgo de relesión' }
+        ],
+        highlights: [
+            'Expertos en Post-Operatorio LCA',
+            'Tratamiento Meniscal Conservador',
+            'Artrosis en Movimiento'
+        ],
         subcategorias: {
             lca: {
                 title: 'Ligamento Cruzado (LCA)',
@@ -577,7 +620,11 @@ export const lesiones = {
                         'Drop Jumps',
                         'Cutting Drills'
                     ],
-                    cta: 'Plan recuperar rodilla'
+                    cta: 'Plan recuperar rodilla',
+                    visualizer: {
+                        before: '/imagenes/lesiones/visualizer/rodilla_antes.png',
+                        after: '/imagenes/lesiones/visualizer/rodilla_despues.png'
+                    }
                 }
             },
             menisco: {
@@ -651,7 +698,11 @@ export const lesiones = {
                         'Saltos de Aterrizaje',
                         'Giros Progresivos'
                     ],
-                    cta: 'Valorar mi menisco'
+                    cta: 'Valorar mi menisco',
+                    visualizer: {
+                        before: '/imagenes/lesiones/visualizer/rodilla_antes.png',
+                        after: '/imagenes/lesiones/visualizer/rodilla_despues.png'
+                    }
                 }
             },
             desgaste: {
@@ -725,7 +776,11 @@ export const lesiones = {
                         'Caminatas Progresivas',
                         'Fortalecimiento General'
                     ],
-                    cta: 'Programa Artrosis'
+                    cta: 'Programa Artrosis',
+                    visualizer: {
+                        before: '/imagenes/lesiones/visualizer/rodilla_antes.png',
+                        after: '/imagenes/lesiones/visualizer/rodilla_despues.png'
+                    }
                 }
             }
         }
@@ -734,6 +789,15 @@ export const lesiones = {
         title: 'Tobillo',
         description: 'Esguinces crónicos, inestabilidad y recuperación post-fractura.',
         intro: 'El tobillo es tu conexión con el suelo. Si falla, todo lo que hay arriba (rodilla, cadera, espalda) sufrirá las consecuencias.',
+        stats: [
+            { label: 'Recurrencia', value: '-70%', text: 'de riesgo con readaptación' },
+            { label: 'Recuperación', value: '2-4', text: 'semanas para vida normal' }
+        ],
+        highlights: [
+            'Estabilidad Crónica de Tobillo',
+            'Propiocepción de Alto Nivel',
+            'Vuelta al Trote Segura'
+        ],
         subcategorias: {
             esguince: {
                 title: 'Esguince de Tobillo',
@@ -806,7 +870,11 @@ export const lesiones = {
                         'Saltos Laterales',
                         'Agilidad en Escalera'
                     ],
-                    cta: 'Recuperar mi tobillo'
+                    cta: 'Recuperar mi tobillo',
+                    visualizer: {
+                        before: '/imagenes/lesiones/visualizer/tobillo_antes.png',
+                        after: '/imagenes/lesiones/visualizer/tobillo_despues.png'
+                    }
                 }
             }
         }
@@ -815,6 +883,15 @@ export const lesiones = {
         title: 'Cadera',
         description: 'Bursitis, choque femoroacetabular y molestias en el glúteo.',
         intro: 'La cadera es el motor de potencia de tu cuerpo. Unos glúteos fuertes son la mejor medicina para cualquier dolor de cadera o zona lumbar.',
+        stats: [
+            { label: 'Eficacia', value: '90%', text: 'en tratamiento de bursitis' },
+            { label: 'Mujeres', value: '4:1', text: 'ratio de afectación en cadera' }
+        ],
+        highlights: [
+            'Tratamiento Trocanteritis',
+            'Glúteo como Motor de Salud',
+            'Movilidad Femoroacetabular'
+        ],
         subcategorias: {
             bursitis: {
                 title: 'Bursitis / Trocanteritis',
@@ -887,7 +964,11 @@ export const lesiones = {
                         'Single Leg Deadlift',
                         'Sentadilla Isométrica'
                     ],
-                    cta: 'Aliviar mi cadera'
+                    cta: 'Aliviar mi cadera',
+                    visualizer: {
+                        before: '/imagenes/lesiones/visualizer/cadera_antes.png',
+                        after: '/imagenes/lesiones/visualizer/cadera_despues.png'
+                    }
                 }
             }
         }

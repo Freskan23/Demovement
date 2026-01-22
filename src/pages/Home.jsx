@@ -2,10 +2,16 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronRight, Check, Play, MapPin, Phone, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEOHead from '../components/SEO/SEOHead';
 
 const Home = () => {
     return (
         <div className="bg-white min-h-screen">
+            <SEOHead
+                title="Centro de Readaptación de Lesiones en Las Rozas"
+                description="Especialistas en readaptación deportiva, fisioterapia activa y entrenamiento personal en Las Rozas. Recupera tu movilidad sin dolor ni miedo."
+                keywords="readaptación lesiones las rozas, entrenamiento personal las rozas, fisioterapia activa, recuperación deportiva"
+            />
             {/* ========== HERO SECTION ========== */}
             <section className="relative min-h-screen flex items-center overflow-hidden">
                 {/* Background Image */}
@@ -70,15 +76,6 @@ const Home = () => {
                     </motion.div>
                 </div>
 
-                {/* WhatsApp Floating */}
-                <a
-                    href="https://wa.me/34690285023"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="fixed bottom-8 right-8 z-50 transition-transform hover:scale-110 active:scale-95"
-                >
-                    <img src="/imagenes/iconos/icon-whatsapp-button.png" alt="WhatsApp" className="w-16 h-16 drop-shadow-2xl" />
-                </a>
             </section>
 
             {/* ========== PROBLEMA / SOLUCIÓN ========== */}

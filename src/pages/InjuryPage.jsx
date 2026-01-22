@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Activity, Shield, MapPin, ChevronLeft, ArrowRight } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Activity, Shield, MapPin, ChevronLeft, ArrowRight, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { injuries } from '../data/injuries';
+import SEOHead from '../components/SEO/SEOHead';
 
 const InjuryPage = () => {
     const { slug } = useParams();
@@ -11,10 +12,116 @@ const InjuryPage = () => {
 
     if (!injury) return <Navigate to="/" />;
 
+    // Generate SEO metadata
+    const pageTitle = `${injury.title} - ${injury.subtitle} | Las Rozas`;
+    const metaDescription = injury.content.intro.substring(0, 155) + '...';
+
+    // Generate keywords from content
+    const keywords = `${injury.title.toLowerCase()}, ${injury.subtitle.toLowerCase()}, readaptación ${slug}, fisioterapia deportiva Las Rozas, recuperación lesiones Majadahonda, ${injury.content.symptoms?.map(s => s.title.toLowerCase()).join(', ') || ''}`;
+
+    // Schema Markup: FAQPage
+    const faqSchema = injury.content.faq ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": injury.content.faq.map(item => ({
+            "@type": "Question",
+            "name": item.question,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": item.answer
+            }
+        }))
+    } : null;
+
+    // Schema Markup: MedicalCondition
+    const medicalConditionSchema = {
+        "@context": "https://schema.org",
+        "@type": "MedicalCondition",
+        "name": injury.subtitle,
+        "alternateName": injury.title,
+        "description": injury.content.description || injury.content.intro,
+        "signOrSymptom": injury.content.symptoms?.map(s => ({
+            "@type": "MedicalSignOrSymptom",
+            "name": s.title,
+            "description": s.desc
+        })) || [],
+        "riskFactor": injury.content.causes?.map(c => c.title) || [],
+        "possibleTreatment": {
+            "@type": "MedicalTherapy",
+            "name": "Readaptación Funcional",
+            "description": "Programa progresivo de readaptación basado en evidencia científica"
+        }
+    };
+
+    // Schema Markup: LocalBusiness (Demovement)
+    const localBusinessSchema = {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "Demovement",
+        "description": "Centro de Readaptación Funcional en Las Rozas",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Las Rozas",
+            "addressRegion": "Madrid",
+            "addressCountry": "ES"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "40.4900",
+            "longitude": "-3.8700"
+        },
+        "medicalSpecialty": "Readaptación Funcional y Fisioterapia Deportiva"
+    };
+
+    // Combine schemas
+    const combinedSchema = {
+        "@context": "https://schema.org",
+        "@graph": [
+            medicalConditionSchema,
+            localBusinessSchema,
+            ...(faqSchema ? [faqSchema] : [])
+        ]
+    };
+
     return (
         <div className="bg-white min-h-screen">
-            {/* Hero Minimalista y Profesional */}
-            <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-gray-50 overflow-hidden">
+            <SEOHead
+                title={pageTitle}
+                description={metaDescription}
+                keywords={keywords}
+                canonical={`/lesiones/${slug}`}
+                schema={combinedSchema}
+                ogImage={injury.heroImage}
+            />
+
+            {/* Breadcrumbs */}
+            <nav className="bg-gray-50 border-b border-gray-100">
+                <div className="max-w-7xl mx-auto px-6 py-4">
+                    <ol className="flex items-center gap-2 text-sm" itemScope itemType="https://schema.org/BreadcrumbList">
+                        <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
+                            <Link to="/" itemProp="item" className="text-gray-500 hover:text-primary transition-colors">
+                                <span itemProp="name">Inicio</span>
+                            </Link>
+                            <meta itemProp="position" content="1" />
+                        </li>
+                        <span className="text-gray-300">/</span>
+                        <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
+                            <Link to="/servicios/readaptacion-lesiones" itemProp="item" className="text-gray-500 hover:text-primary transition-colors">
+                                <span itemProp="name">Readaptación de Lesiones</span>
+                            </Link>
+                            <meta itemProp="position" content="2" />
+                        </li>
+                        <span className="text-gray-300">/</span>
+                        <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem" className="font-semibold text-gray-900">
+                            <span itemProp="name">{injury.title}</span>
+                            <meta itemProp="position" content="3" />
+                        </li>
+                    </ol>
+                </div>
+            </nav>
+
+            {/* Hero Minimalista y Profesional - Optimized for Mobile */}
+            <section className="relative pt-20 pb-12 md:pt-48 md:pb-32 bg-gray-50 overflow-hidden">
                 <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 translate-x-20" />
 
                 <div className="relative z-10 max-w-7xl mx-auto px-6">
@@ -152,20 +259,37 @@ const InjuryPage = () => {
                             </div>
                         )}
 
-                        {/* FAQ */}
+                        {/* FAQ Accordion */}
                         {injury.content.faq && injury.content.faq.length > 0 && (
-                            <div>
-                                <h3 className="text-2xl md:text-3xl font-black text-gray-900 uppercase tracking-tight mb-8">PREGUNTAS FRECUENTES</h3>
-                                <div className="space-y-6">
-                                    {injury.content.faq.map((item, i) => (
-                                        <div key={i} className="p-8 bg-white rounded-3xl border-2 border-gray-100">
-                                            <h4 className="text-gray-900 text-lg font-black mb-4 uppercase tracking-tight">{item.question}</h4>
-                                            <p className="text-gray-600 leading-relaxed">{item.answer}</p>
-                                        </div>
-                                    ))}
+                            <FAQAccordion faqs={injury.content.faq} />
+                        )}
+
+                        {/* Final CTA */}
+                        <div className="bg-gradient-to-br from-primary to-primary-dark p-10 md:p-14 rounded-[60px] text-white relative overflow-hidden shadow-2xl">
+                            <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 blur-[100px] rounded-full translate-x-1/2 -translate-y-1/2" />
+                            <div className="relative z-10">
+                                <h3 className="text-3xl md:text-4xl font-black mb-6 uppercase tracking-tight">¿Listo para Comenzar tu Recuperación?</h3>
+                                <p className="text-white/90 text-lg mb-8 max-w-2xl leading-relaxed">
+                                    No esperes más para volver a hacer lo que amas. Nuestro equipo de especialistas en readaptación está listo para diseñar tu plan personalizado de recuperación.
+                                </p>
+                                <div className="flex flex-col sm:flex-row gap-4">
+                                    <Link
+                                        to="/reservar/valoracion-inicial"
+                                        className="inline-flex items-center justify-center gap-3 bg-white text-primary px-8 py-5 rounded-2xl font-black uppercase tracking-widest hover:scale-105 active:scale-95 transition-all shadow-xl"
+                                    >
+                                        <Activity size={20} />
+                                        Reservar Valoración
+                                    </Link>
+                                    <Link
+                                        to="/contacto"
+                                        className="inline-flex items-center justify-center gap-3 bg-white/10 text-white px-8 py-5 rounded-2xl font-black uppercase tracking-widest hover:bg-white/20 transition-all border-2 border-white/30"
+                                    >
+                                        Contactar
+                                        <ArrowRight size={20} />
+                                    </Link>
                                 </div>
                             </div>
-                        )}
+                        </div>
                     </div>
 
                     {/* Sidebar CTA */}
@@ -189,17 +313,69 @@ const InjuryPage = () => {
                                 ))}
                             </ul>
 
-                            <a
-                                href="#valoracion"
+                            <Link
+                                to="/reservar/valoracion-inicial"
                                 className="block w-full text-center bg-primary text-white py-5 rounded-2xl font-black uppercase tracking-widest hover:bg-primary-dark transition-all shadow-xl shadow-primary/20 hover:scale-105 active:scale-95 flex items-center justify-center gap-3"
                             >
                                 <Activity size={18} />
                                 Iniciar Proceso
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
             </section>
+        </div>
+    );
+};
+
+// FAQ Accordion Component
+const FAQAccordion = ({ faqs }) => {
+    const [openIndex, setOpenIndex] = useState(null);
+
+    const toggleFAQ = (index) => {
+        setOpenIndex(openIndex === index ? null : index);
+    };
+
+    return (
+        <div>
+            <h3 className="text-2xl md:text-3xl font-black text-gray-900 uppercase tracking-tight mb-8">PREGUNTAS FRECUENTES</h3>
+            <div className="space-y-4">
+                {faqs.map((item, i) => (
+                    <div key={i} className="bg-white rounded-3xl border-2 border-gray-100 overflow-hidden">
+                        <button
+                            onClick={() => toggleFAQ(i)}
+                            className="w-full p-6 md:p-8 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
+                            aria-expanded={openIndex === i}
+                        >
+                            <h4 className="text-gray-900 text-base md:text-lg font-black uppercase tracking-tight pr-4">
+                                {item.question}
+                            </h4>
+                            <motion.div
+                                animate={{ rotate: openIndex === i ? 180 : 0 }}
+                                transition={{ duration: 0.3 }}
+                                className="flex-shrink-0"
+                            >
+                                <ChevronDown size={24} className="text-primary" />
+                            </motion.div>
+                        </button>
+                        <AnimatePresence>
+                            {openIndex === i && (
+                                <motion.div
+                                    initial={{ height: 0, opacity: 0 }}
+                                    animate={{ height: "auto", opacity: 1 }}
+                                    exit={{ height: 0, opacity: 0 }}
+                                    transition={{ duration: 0.3 }}
+                                    className="overflow-hidden"
+                                >
+                                    <div className="px-6 md:px-8 pb-6 md:pb-8">
+                                        <p className="text-gray-600 leading-relaxed">{item.answer}</p>
+                                    </div>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };

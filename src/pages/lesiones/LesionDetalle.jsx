@@ -6,6 +6,7 @@ import { lesiones } from '../../data/siteData';
 import SEOHead from '../../components/SEO/SEOHead';
 import Breadcrumbs from '../../components/SEO/Breadcrumbs';
 import FAQSection from '../../components/SEO/FAQSection';
+import ImageComparison from '../../components/ImageComparison';
 
 const LesionDetalle = () => {
     const { categoria, detalle } = useParams();
@@ -115,6 +116,17 @@ const LesionDetalle = () => {
                                     {content.intro}
                                 </p>
                             </div>
+
+                            {/* Visualizador de Evolución */}
+                            {content.visualizer && (
+                                <div className="py-4">
+                                    <ImageComparison
+                                        before={content.visualizer.before}
+                                        after={content.visualizer.after}
+                                        label={lesionData.title}
+                                    />
+                                </div>
+                            )}
 
                             {/* Estadísticas */}
                             {content.estadisticas && (
