@@ -1094,6 +1094,17 @@ export const deportes = {
 // Datos del Blog - Artículos iniciales
 export const blog = [
     {
+        id: 4,
+        slug: 'readaptacion-activa-vs-reposo',
+        title: 'Readaptación Activa vs Reposo: Qué Dice la Ciencia',
+        excerpt: 'El viejo paradigma del reposo absoluto ya no funciona. Descubre por qué el movimiento controlado acelera tu recuperación hasta un 30% y previene el dolor crónico.',
+        category: 'Readaptación',
+        image: '/imagenes/blog/readaptacion-activa.jpg',
+        readTime: '8 min lectura',
+        date: '02 Feb 2026',
+        featured: true
+    },
+    {
         id: 1,
         slug: 'dolor-espalda-recurrente',
         title: '¿Por qué tu dolor de espalda siempre vuelve? (y cómo evitarlo)',
@@ -1124,3 +1135,191 @@ export const blog = [
         date: '10 Ene 2026'
     }
 ];
+
+// Contenido completo de los artículos del Blog
+export const blogPosts = {
+    'readaptacion-activa-vs-reposo': {
+        title: 'Readaptación Activa vs Reposo: Qué Dice la Ciencia',
+        subtitle: 'El viejo paradigma que debes olvidar',
+        image: '/imagenes/blog/readaptacion-activa.jpg',
+        category: 'Readaptación',
+        date: '02 Feb 2026',
+        readTime: '8 min lectura',
+        author: 'Equipo DeMovement',
+        seo: {
+            keyword: 'Readaptación activa vs reposo',
+            lsi: ['Movilización temprana', 'recuperación funcional', 'circulación sanguínea', 'readaptación deportiva', 'reposo prolongado', 'atrofia muscular', 'rigidez articular', 'fases de recuperación'],
+            intent: 'Decisión/Educación'
+        },
+        intro: `Hace años, cuando alguien se lesionaba, la receta era única: reposo absoluto. "Quédate quieto en la cama o el sofá y verás cómo se cura todo solo."
+
+La realidad es diferente. Y más dolorosa.
+
+El reposo prolongado no solo alarga tu recuperación: transforma una lesión aguda en un problema crónico. Músculos atrofiados, rigidez articular, dolores que persisten meses después de que "debería estar curado". Esa es la verdad incómoda del reposo absoluto.
+
+Pero la ciencia moderna ha encontrado algo mejor.`,
+        sections: [
+            {
+                title: 'Qué es realmente la Readaptación Activa',
+                content: `La readaptación activa no significa volver a correr una maratón al día siguiente. No es arriesgar tu lesión "para ser valiente".
+
+**La readaptación activa es movimiento controlado y progresivo desde el primer día.**
+
+Es el acto de reintroducir movimiento adaptado a lo que tu cuerpo puede hacer en cada momento, no a lo que quieres que haga. No es reposar en completa inmovilidad. Es entrenar inteligentemente.`,
+                comparison: {
+                    reposo: 'Evitar todo movimiento',
+                    readaptacion: 'Movimiento sin dolor → Fuerza → Potencia → Deporte específico'
+                }
+            },
+            {
+                title: 'La Evidencia: Datos Que Convencen',
+                subtitle: 'La ciencia es clara. Te mostramos los números reales de estudios recientes:',
+                evidencias: [
+                    {
+                        title: 'Acelera la Recuperación hasta 30%',
+                        content: `Estudios demuestran que la movilización temprana (readaptación activa) acelera la recuperación funcional hasta 30% en comparación con el reposo pasivo.`,
+                        stats: [
+                            { label: 'Con reposo prolongado', value: '12 semanas para volver a actividad básica' },
+                            { label: 'Con readaptación activa', value: '8-9 semanas para los mismos resultados' }
+                        ],
+                        conclusion: 'No son pocas semanas. Son meses de tu vida recuperando lo que te hace feliz.'
+                    },
+                    {
+                        title: 'Estimula la Circulación Sanguínea',
+                        content: `El movimiento estimula la circulación sanguínea en el área lesionada. Esa circulación lleva:`,
+                        benefits: [
+                            'Oxígeno a los tejidos dañados',
+                            'Nutrientes para reconstruir músculos y tendones',
+                            'Células de reparación que aceleran la curación',
+                            'Eliminación de sustancias de desecho que causa rigidez'
+                        ],
+                        conclusion: 'El reposo, por el contrario, ralentiza la circulación. Tu cuerpo no "sana más rápido descansando." Sana mejor cuando hay movimiento controlado.'
+                    },
+                    {
+                        title: 'Previene Dolores Crónicos',
+                        content: `Este es el dato más importante: el reposo prolongado NO previene dolor crónico. Lo causa.`,
+                        causes: [
+                            'Atrofia muscular (pérdida de músculo que protege las articulaciones)',
+                            'Rigidez articular (pérdida de rango de movimiento)',
+                            'Sensibilización del nervio (el cuerpo "olvida" cómo procesar el movimiento normal)'
+                        ],
+                        conclusion: 'Resultado: Acabas con dolores crónicos que no tenías antes de la lesión. Con readaptación activa, los músculos se recuperan manteniendo su función. El cuerpo no "olvida" cómo moverse.'
+                    },
+                    {
+                        title: 'Recupera la Función Deportiva (No Solo la Movilidad Básica)',
+                        content: `Recuperar capacidad para caminar NO es lo mismo que recuperar capacidad para hacer deporte.`,
+                        phases: [
+                            { fase: 'Fase 1', desc: 'Movimiento sin dolor' },
+                            { fase: 'Fase 2', desc: 'Desarrollo de fuerza' },
+                            { fase: 'Fase 3', desc: 'Trabajo de potencia y velocidad' },
+                            { fase: 'Fase 4', desc: 'Gestos deportivos específicos' }
+                        ],
+                        conclusion: 'Cada fase prepara tu cuerpo para la siguiente. El resultado: vuelves a tu deporte, no solo a tu vida cotidiana.'
+                    }
+                ]
+            }
+        ],
+        semaforo: {
+            title: 'El Semáforo: Cuándo SÍ Necesitas Reposo Absoluto',
+            intro: 'Aquí viene lo importante: el reposo NO es malo en todos los casos.',
+            levels: [
+                {
+                    color: 'rojo',
+                    title: 'Reposo Necesario (Alto Riesgo)',
+                    items: [
+                        'Fracturas inestables que requieren cirugía inmediata',
+                        'Fases agudas inflamatorias muy severas (primeras 24-72 horas en lesiones graves)',
+                        'Contraindicación médica explícita del traumatólogo'
+                    ],
+                    note: 'En estos casos, el reposo protege. Es un escudo temporal mientras esperas cirugía o mientras baja la inflamación aguda.'
+                },
+                {
+                    color: 'amarillo',
+                    title: 'Reposo Limitado (Cuidado)',
+                    items: [
+                        'Primeros 2-3 días después de una lesión aguda',
+                        'Cuando duele significativamente con el movimiento'
+                    ],
+                    note: 'Aquí el reposo sirve para controlar el dolor inicial y la inflamación. Pero no debe prolongarse indefinidamente.'
+                },
+                {
+                    color: 'verde',
+                    title: 'Readaptación Activa (La Mayoría de Casos)',
+                    items: [
+                        'Después de pasar la fase aguda (2-3 días)',
+                        'Lesiones de tejidos blandos (esguinces, distensiones, tendinitis)',
+                        'Post-operatorio (sí, incluso después de cirugía)',
+                        'Cuando el dolor es tolerable con movimiento controlado'
+                    ],
+                    note: 'Aquí es donde sucede la magia de la recuperación real.'
+                }
+            ]
+        },
+        fuentes: {
+            title: 'Lo Que Dice la Literatura Científica',
+            intro: 'No nos lo inventamos. Estos son estudios reales:',
+            studies: [
+                'Movilización temprana vs reposo prolongado: Múltiples estudios de RCT (ensayos controlados aleatorizados) demuestran recuperación funcional más rápida con movimiento progresivo.',
+                'Estrés mecánico en tejidos lesionados: Los estudios biomecánicos muestran que el estrés mecánico controlado es esencial para la organización correcta de fibras de colágeno durante la reparación.',
+                'Prevención de rigidez articular: La inmovilización prolongada causa adhesiones de colágeno que limitan el rango de movimiento. Estos cambios son irreversibles si se prolongan.'
+            ],
+            sources: [
+                'Training and Treatment (trainingandtreatment.es)',
+                'Literatura científica en readaptación deportiva moderna',
+                'Protocolos de centros de readaptación avanzada'
+            ]
+        },
+        demovement: {
+            title: 'Por Qué DeMovement Usa Readaptación Activa Desde el Día 1',
+            intro: 'En DeMovement, entendemos que tu objetivo no es simplemente "no tener dolor." Es volver a tu deporte. Volver a lo que te hace feliz.',
+            benefits: [
+                'Evaluación biomecánica completa desde la primera visita',
+                'Plan personalizado basado en tu fase de lesión',
+                'Readaptación activa desde el primer día (adaptada a lo que tu cuerpo puede hacer)',
+                'Progresión científica hacia tu objetivo deportivo',
+                'Colaboración con tu equipo médico (traumatólogo, fisioterapeuta)'
+            ],
+            conclusion: 'No esperas en una cama. Trabajas. Y vuelves.'
+        },
+        tiempos: {
+            title: '¿Cuánto Tiempo Realmente Toma?',
+            intro: 'Una pregunta común: "¿Cuándo puedo volver a [tu deporte]?"',
+            items: [
+                { lesion: 'Lesiones de tejidos blandos (esguinces, distensiones)', tiempo: '4-8 semanas típicamente' },
+                { lesion: 'Lesiones más complejas (menisco, ligamentos)', tiempo: '3-6 meses' },
+                { lesion: 'Post-operatorio ACL', tiempo: '6-9 meses para retorno deportivo seguro' }
+            ],
+            note: 'Lo importante: Con readaptación activa, estos son los mínimos reales. Con reposo prolongado, son máximos que raramente se alcanzan.'
+        },
+        cta: {
+            title: 'Tu Siguiente Paso',
+            intro: 'No dejes que tu lesión se vuelva crónica.',
+            message: 'La diferencia entre recuperarte en 8 semanas o 12 semanas no es solo tiempo. Es la diferencia entre volver más fuerte o volver con limitaciones.',
+            highlight: 'Tu evaluación inicial es gratuita.',
+            benefits: [
+                'Analizamos tu lesión biomecánicamente',
+                'Diseñamos tu plan de readaptación personalizado',
+                'Te explicamos exactamente cuánto tiempo toma tu recuperación',
+                'Empiezas a moverte (sin riesgo) desde el primer día'
+            ],
+            duration: '75 minutos',
+            buttonText: 'Reserva tu valoración inicial gratuita',
+            buttonLink: '/reservar/valoracion-inicial'
+        },
+        postscript: 'P.D.: Si tu traumatólogo ya te da el alta pero tú sigues con miedo, no es debilidad. Es un síntoma común post-lesión. En DeMovement sabemos cómo enseñarte a confiar en tu cuerpo de nuevo. Eso es parte de la readaptación.',
+        faqs: [
+            {
+                question: '¿No es arriesgado moverse con una lesión?',
+                answer: 'No. El riesgo es NO moverse. La atrofia muscular, la rigidez y el dolor crónico son más probables con reposo prolongado que con readaptación activa supervisada.'
+            },
+            {
+                question: '¿Y si el dolor empeora con el movimiento?',
+                answer: 'Es señal de que estamos progresando demasiado rápido O no estamos haciendo el movimiento correcto. Por eso la supervisión individual es crítica. En DeMovement ajustamos cada sesión según cómo respondes.'
+            },
+            {
+                question: '¿Cuál es la diferencia con la fisioterapia tradicional?',
+                answer: 'La fisioterapia tradicional trata de "recuperar movilidad." La readaptación deportiva te lleva más allá: te prepara para volver a tu deporte con confianza y seguridad.'
+            }
+        ]
+    }
+};

@@ -185,6 +185,15 @@ export const Navbar = () => {
                         Precios
                     </Link>
 
+                    {/* Blog */}
+                    <Link
+                        to="/blog"
+                        className={`px-4 py-2 text-[11px] font-black uppercase tracking-widest transition-colors hover:text-primary ${location.pathname.startsWith('/blog') ? 'text-primary' : (scrolled || !isHome ? 'text-gray-900' : 'text-white')
+                            }`}
+                    >
+                        Blog
+                    </Link>
+
                     {/* Contacto */}
                     <Link
                         to="/contacto"
@@ -199,8 +208,8 @@ export const Navbar = () => {
                 <Link
                     to="/reservar/valoracion-inicial"
                     className={`hidden lg:flex items-center gap-2 px-6 py-3 rounded-xl font-black uppercase tracking-widest text-xs transition-all shadow-lg ${scrolled || !isHome
-                            ? 'bg-primary text-white hover:bg-primary-dark shadow-primary/20'
-                            : 'bg-white text-primary hover:bg-gray-100'
+                        ? 'bg-primary text-white hover:bg-primary-dark shadow-primary/20'
+                        : 'bg-white text-primary hover:bg-gray-100'
                         }`}
                 >
                     <Activity size={16} />
@@ -256,6 +265,7 @@ export const Navbar = () => {
                     </div>
 
                     <Link to="/precios" onClick={() => setIsOpen(false)} className="block text-2xl font-black text-gray-900 uppercase tracking-tight">Precios</Link>
+                    <Link to="/blog" onClick={() => setIsOpen(false)} className="block text-2xl font-black text-gray-900 uppercase tracking-tight">Blog</Link>
                     <Link to="/contacto" onClick={() => setIsOpen(false)} className="block text-2xl font-black text-gray-900 uppercase tracking-tight">Contacto</Link>
                 </div>
 
