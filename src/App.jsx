@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import WhatsAppButton from './components/ui/WhatsAppButton';
+import SEODocumentation from './components/SEODocumentation';
 
 // Páginas Principales
 import Home from './pages/Home';
@@ -98,6 +99,7 @@ function App() {
                         <Route path="/politica-cookies" element={<Cookies />} />
                     </Routes>
                 </main>
+                <SEODocumentation />
                 <Footer />
                 <WhatsAppButton />
             </div>
