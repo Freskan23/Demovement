@@ -1148,6 +1148,7 @@ export const blogPosts = {
         author: 'Equipo DeMovement',
         seo: {
             keyword: 'Readaptación activa vs reposo',
+            description: 'Descubre por qué el reposo absoluto no funciona y cómo la readaptación activa acelera tu recuperación hasta un 30%. Guía basada en ciencia con semáforo de decisión.',
             lsi: ['Movilización temprana', 'recuperación funcional', 'circulación sanguínea', 'readaptación deportiva', 'reposo prolongado', 'atrofia muscular', 'rigidez articular', 'fases de recuperación'],
             intent: 'Decisión/Educación'
         },
